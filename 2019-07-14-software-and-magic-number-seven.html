@@ -22,8 +22,11 @@
         pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
         img { max-width: 100%; height: auto; margin: 1.5rem 0; }
         hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
-        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; }
-        footer a { color: #999; }
+        footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #eee; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; text-decoration: none; }
+        footer a:hover { color: #1a1a1a; text-decoration: underline; }
+        .footer-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-bottom: 0.75rem; }
+        .footer-byline { color: #bbb; font-size: 0.8rem; margin-top: 0.5rem; }
     </style>
 </head>
 <body>
@@ -270,10 +273,16 @@
     are arguably the largest, most efficient, and safest, organization
     in existence.</p>
 
-    <hr>
-    <p style="font-size:0.9rem;color:#555">Read and subscribe on <a href="https://shablag.com/article/software-and-the-magic-number-seven/">Substack</a></p>
+    <p style="font-size:0.9rem;color:#555;margin-top:2rem">Read and subscribe on <a href="https://shablag.com/article/software-and-the-magic-number-seven/">Substack</a></p>
     <footer>
-        <p style="margin-top:0.75rem"><a href="index.html">← Back to #!blag</a></p>
+        <div class="footer-nav">
+            <a href="index.html">← #!blag</a>
+            <a href="https://shablag.substack.com" target="_blank" rel="noopener">Subscribe</a>
+            <a href="https://darwin-finch.github.io" target="_blank" rel="noopener">Finch — Local AI</a>
+            <a href="https://givelotus.github.io" target="_blank" rel="noopener">Lotus Research</a>
+            <a href="https://github.com/schancel" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="footer-byline">Shammah Chancellor</div>
     </footer>
 </body>
 </html>
