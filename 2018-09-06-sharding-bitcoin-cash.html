@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Shammah Chancellor" />
+  <meta name="dcterms.date" content="2018-09-06" />
+  <title>Blog Post</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Blog Post</h1>
+<p class="author">Shammah Chancellor</p>
+<p class="date">2018-09-06</p>
+</header>
+<h1 id="sharding-bitcoin-cash">Sharding Bitcoin Cash</h1>
+<p>Moore’s law is often applied to Bitcoin as an argument for how
+Bitcoin can be scaled along with increased future usage. Indeed Moore’s
+law as it pertains to number of transistors meets this criterion.
+However, it is of note that clock speeds of a single core have not
+increased — this is due to physical limitations. Instead, CPU
+manufacturers have increased the number of cores for parallel
+processing.</p>
+<p>This means that in order for Bitcoin to scale with Moore’s law, block
+construction and validation must make use of additional CPU cores. In
+order to make use of additional cores effectively, the data which they
+use must be process localized. This process of organizing data for local
+processing is called sharding.</p>
+<p>However, Bitcoin currently employs data structures for computing the
+Merkle root of the block header which prevent data from being localized.
+By changing the ordering of the Merkle root computation via a
+canonicalization, the data may be sharded. This new Merkle root would be
+calculated as follows, for a block with 4 transactions that are in
+lexicographical order by hash (where TX_A HASH &lt; TX_B HASH and so on,
+from left to right). It’s important to note that this reordering of the
+Merkle root still allows Merkle proofs with equal security to the
+original ordering.</p>
+<p><img src="https://shablag.com/merklix.jpg"
+alt="Visualization of Merkle/Merklix root calculation" /> <em>Figure 1.
+Visualization of Merkle/Merklix root calculation</em></p>
+<p>If we can sort the transactions into ranges over the canonical
+ordering of transactions, we can calculate hash of subtree B and subtree
+C using two independent processes. The results of these computations can
+be returned to an aggregator to produce subtree A. This in turn can be
+combined with the coinbase hash to produce a valid Merkle root for a
+block template.</p>
+<p>Currently, the Merkle root for a block must be computed from a list
+of transactions maintained in topological order (spending transactions
+come after spent transactions). However, shards must maintain data based
+on consistent ranges. Due to the mismatch between the possible locality
+of data, in a sharded system, and the set of data upon which the subtree
+hash must be calculated, the individual shards are unable to pre-compute
+subtree hashes without significant synchronization. In order to solve
+this problem, the Merkle tree must be organized so that it is computed
+as an aggregate of subtree hashes which can be calculated by an
+individual shard.</p>
+<p>Another useful property of canonicalizing transaction order by hash
+is that mempool acceptance can also be sharded across multiple
+processes. This can be done by placing multiple transaction “routers” in
+front of multiple mempool processors.</p>
+<p><img src="https://shablag.com/parallel-mempool-acceptance.jpg"
+alt="potential parallel mempool acceptance architecture" /> <em>Figure
+2. Illustrative example of a potential parallel mempool acceptance
+architecture</em></p>
+<p>In this architecture, Router 1 and Router 2 can send transactions,
+within the same range, to previously agreed upon mempool acceptors.
+Using a similar method, mempool acceptors can query each other, and the
+UTXO database, to ensure that parent transactions exist and are
+spendable.</p>
+<p>With the mempool sharded across multiple processes, either API
+request processor can query for hashes of various Merkle subtrees. From
+Figure (1) we could request Subtree B, and Subtree C. Subsequently, we
+can then continue to aggregate them into the Merkle root.</p>
+<p>In order to build a node with the above architecture, the proper data
+structures must first be in place in the blockchain. The software cannot
+be easily written to take advantage of sharding prior to the data
+structures for sharding being used for computing the Merkle root.
+Canonical transaction ordering should precede the creation of any such
+software.</p>
+<p>This is the reason ABC is advocating for these changes today. We must
+be ready for future demand, and that means we need to start working now
+on a node which can handle extremely large blocks — this is not an easy
+task and will take years to complete.</p>
+<p>Some people have asked that ABC produce performance benchmarks of how
+this optimization could work. As stated above, no such benchmarks can be
+produced since the software must first exist. As this will take multiple
+years, benchmarks cannot be done on it — real engineering must be done
+in advance to plan for it. A summary of that engineering work is
+manifested above.</p>
+<p>In order to support a smooth protocol upgrade, the current version
+must be able to produce and validate both types of blocks — the result
+is slower block template production and some minor impact on validation.
+In fact, the current version of Bitcoin-ABC v0.18.0 will be slightly
+slower in creating block templates due to the need to re-sort
+transactions after the initial topological sorting. This is intentional,
+and will be addressed when the code can be refactored after CTO, and
+eventually Merklix Trees, are able to be activated.</p>
+<p>Sharding is not optional for Bitcoin Cash if we want it to scale with
+Moore’s law. Individual CPUs will not be getting significantly faster.
+Specialized hardware cannot solve this issue alone. The protocol must
+facilitate node software that is capable of being scaled horizontally,
+because vertical scaling will not work beyond blocks of roughly 1GB in
+size. This change is for Bitcoin, layer 1, so that miners can collect
+fees at global scale. Bitcoin incentives must and will be
+maintained.</p>
+</body>
+</html>

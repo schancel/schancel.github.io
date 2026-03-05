@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Blog Post</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Blog Post</h1>
+</header>
+<h1 id="child-pays-for-parent-part-2">Child Pays for Parent: Part 2</h1>
+<p><strong>Publication Date:</strong> April 7, 2019
+<strong>Source:</strong> #!blag <strong>Categories:</strong> Bitcoin
+Cash, Technical Analysis, Software Engineering <strong>Archive
+URL:</strong>
+https://web.archive.org/web/20210512005434/https://shablag.com/article/child-pays-for-parent-part-2/</p>
+<p>After working for awhile toward the goals outlined in <a
+href="https://shablag.com/article/child-pays-for-parent">Child Pays For
+Parent</a> it has become apparent there was some problems with my
+initial design. Originally, I was hoping to make a simple copy of the
+<code>BlockAssembler</code> code. Then remove from it all the complexity
+surrounding mempool packages, and convert it to a long-lived object
+which can have transactions added and removed from it.</p>
+<p>However, the <code>BlockAssembler</code> needs to have a couple
+things happend:</p>
+<ol type="1">
+<li>It needs to know which block it’s building on top of for providing
+hashPrevBlock, and ensuring that only valid transactions are being
+mined.</li>
+<li>It needs to be able to be disposed of, or cleared, when a new
+chainTip is found.</li>
+</ol>
+<p>Unfortunately, the <code>mempool</code> is currently a global object.
+Meaning it’s initialization order is indeterminate with other global
+objects. Therefor it cannot create a <code>BlockAssembler</code> on
+startup given the dependency on a chainTip. Additionally, the mempool is
+not currently notified when a the chainTip is updated. Instead, it has
+calls such as <code>removeForBlock</code> which reconcile the mempool to
+the chainstate. but do not provide block information. Additionally,
+these calls occur multiple times during <code>ActivateBestChain</code>
+rather than only upon completion.</p>
+<p>While we could add new notifications to the mempool to handle this,
+it is not desirable. The reason being, is that when a new block arrives,
+we should immediately dispose of the current <code>BlockAssembler</code>
+and create a new blank one. If there are any transactions remaining in
+the mempool, these need to be added to the new
+<code>BlockAssembler.</code> Now, there normally should not be any, but
+in the case where there is a large mempool due to a spam attack, we want
+to be able to do this reprocessing out-of-line with block processing for
+<code>ActivateBestChain</code>.</p>
+<p>As such, it seems to be a better idea to:</p>
+<ol type="1">
+<li>Introduce a <code>BlockCandidate</code>, which is responsible for
+maintaining a CBlockHeader (minus the nonce), the coinbase, and a list
+of transactions. It will ensure that only transactions which would not
+render the block invalid may be added or removed. This take many of the
+responsibilities of <code>BlockAssembler</code>.</li>
+<li>Introduce a <code>Blockworks</code> which manages the lifetime of
+all <code>BlockCandidate</code>, shovelling transations from the mempool
+into the active BlockCandidate, and handling
+<code>getblocktemplate</code> RPC requests.</li>
+</ol>
+<p>This gives us the benefit that all our quality-of-service
+priotiziation code can be in one place, handled outside of the critical
+path. Additionally, all the validity checks for the block candidate will
+be self-contained. The ultimate result will be separation of
+concerns:</p>
+<ol type="1">
+<li>BlockCandiate will be limited to ensuring its own consistency.</li>
+<li>Blockworks will handle all transaciton prioritization code, and
+BlockCandidate lifecycles.</li>
+<li>Mempool will be limited to ensuring its own consistency.</li>
+</ol>
+<p>Onward…</p>
+</body>
+</html>

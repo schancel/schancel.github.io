@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Exploring how Miller’s law and the psychological significance of the number seven applies to software engineering, code structure, and team organization." />
+  <title>Blog Post</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Blog Post</h1>
+</header>
+<h1 id="software-and-the-magic-number-seven">Software and the Magic
+Number Seven</h1>
+<h2 id="the-magic-number-seven-give-or-take-two">The Magic Number Seven,
+Give or Take Two</h2>
+<p>If you want to be part of a high efficiency software engineering team
+then you should pay attention to the number seven. If you learn the
+secrets of the number seven, your team will produce more valuable code,
+produce it more quickly, produce it with less bugs, and ultimately make
+more profit.</p>
+<p>Now, the number seven comes up constantly in the mystical traditions
+of every culture. Software Engineering should not concern itself with
+mysticism, and modern rationalism rejects the concepts associated with
+numerology. However, I believe that the mysticism surrounding seven is
+actually reflection of human limitation. A quick perusal of psychology,
+management, and marketing literature, will reveal that the number seven
+is indeed “set apart” from other numbers.</p>
+<p><a
+href="https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two">Miller’s
+law</a> tells us that human working memory on average can old seven
+chunks of information (plus or minus 2 depending on the person). This is
+incredibly important, and under-appreciated, within the discipline of
+software engineering. It has huge ramifications, and so it bears stating
+explicitly!</p>
+<h2 id="impact-on-software-structure">Impact On Software Structure</h2>
+<p>The impact of this fact means that a software engineer, or any
+creative worker, can only hold 7 interacting chucks at any given time.
+This means that software code, user interfaces, and other functionality,
+should be structured around that limitation. This is not to say that
+people can’t work with more than seven things at a time, but they must
+be able to be nicely grouped into 7 “chunks” that can be thought about
+independently.</p>
+<p>Functions should take a <em>most</em> seven parameters. This should
+preferrably fewer since there are likely local variables to deal with as
+well. If you see a function like this:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="at">static</span> <span class="dt">bool</span> AcceptToMemoryPoolWorker<span class="op">(</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">const</span> Config <span class="op">&amp;</span>config<span class="op">,</span> CTxMemPool <span class="op">&amp;</span>pool<span class="op">,</span> CValidationState <span class="op">&amp;</span>state<span class="op">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">const</span> CTransactionRef <span class="op">&amp;</span>ptx<span class="op">,</span> <span class="dt">bool</span> fLimitFree<span class="op">,</span> <span class="dt">bool</span> <span class="op">*</span>pfMissingInputs<span class="op">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int64_t</span> nAcceptTime<span class="op">,</span> <span class="dt">bool</span> fOverrideMempoolLimit<span class="op">,</span> <span class="at">const</span> Amount nAbsurdFee<span class="op">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>vector<span class="op">&lt;</span>COutPoint<span class="op">&gt;</span> <span class="op">&amp;</span>coins_to_uncache<span class="op">,</span> <span class="dt">bool</span> test_accept<span class="op">)</span></span></code></pre></div>
+<p>you should think: “what the expletive?” and then fix it. Clearly from
+looking at this, there are number of configuration parameters to change
+behavior, and one excess return value. A fixed version of this function,
+while very verbose, looks like this:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ValidationState <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span><span class="op">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">enum</span> AcceptanceStatus <span class="op">:</span> <span class="dt">uint8_t</span> <span class="op">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        Accepted <span class="op">=</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        MissingInputs <span class="op">=</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> state<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    ValidationState<span class="op">(</span>AcceptanceStatus _state<span class="op">)</span> <span class="op">:</span> state<span class="op">(</span>_state<span class="op">)</span> <span class="op">{}</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span><span class="op">:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    ValidationState<span class="op">()</span> <span class="op">:</span> state<span class="op">(</span>AcceptanceStatus<span class="op">::</span>Accepted<span class="op">)</span> <span class="op">{}</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">bool</span> IsAccepted<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> state <span class="op">==</span> AcceptanceStatus<span class="op">::</span>Accepted<span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">bool</span> IsMissingInputs<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">(</span>state <span class="op">&amp;</span> MissingInputs<span class="op">)</span> <span class="op">!=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    ValidationState Merge<span class="op">(</span><span class="at">const</span> ValidationState a<span class="op">)</span> <span class="at">const</span> <span class="op">{</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> AcceptanceStatus<span class="op">(</span>a<span class="op">.</span>state <span class="op">&amp;</span> state<span class="op">);</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> AcceptanceOptions <span class="op">{</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span><span class="op">:</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">enum</span> AcceptanceFlags <span class="op">:</span> <span class="dt">uint8_t</span> <span class="op">{</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        None <span class="op">=</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        LimitFree <span class="op">=</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        OverrideMempoolLimit <span class="op">=</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        TestAcceptance <span class="op">=</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> flags<span class="op">;</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    Amount nAbsurdFee<span class="op">;</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int64_t</span> AcceptTime<span class="op">;</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>vector<span class="op">&lt;</span>COutPoint<span class="op">&gt;</span> <span class="op">&amp;</span>coins_to_uncache<span class="op">;</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span><span class="op">:</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    AcceptanceOptions<span class="op">(</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>        <span class="co">/// ...</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>        <span class="bu">std::</span>vector<span class="op">&lt;</span>COutPoint<span class="op">&gt;</span> <span class="op">&amp;</span>uncache<span class="op">)</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>        <span class="op">:</span> coins_to_uncache<span class="op">(</span>uncache<span class="op">),</span> flags<span class="op">(</span>AcceptanceFlags<span class="op">::</span>None<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>        AcceptTime <span class="op">=</span> GetTime<span class="op">();</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>        <span class="co">//...</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co">// Use return value optimization instead of passing return values in!</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="co">// https://en.wikipedia.org/wiki/Copy_elision#Return_value_optimization</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>ValidationState AcceptToMemoryPoolWorker<span class="op">(</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        <span class="at">const</span> Config <span class="op">&amp;</span>config<span class="op">,</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        <span class="at">const</span> CTransactionRef <span class="op">&amp;</span>ptx<span class="op">,</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>        <span class="at">const</span> AcceptanceOptions<span class="op">&amp;</span> options<span class="op">,</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>        CTxMemPool <span class="op">&amp;</span>pool</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>        ValidationState state<span class="op">;</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>        <span class="co">// ...</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> state<span class="op">;</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Yes the above is <em>significantly</em> more typing and code.
+However, it really isn’t that much time and will be well worth the
+effort in the future. This sample is a real piece of code in a
+safety-critical piece of code: Bitcoind. The function body itself is 300
+lines of code. The extra 40 is well worth the cognitive load it will
+ease when working with this function.</p>
+<p>Second, as much as possible, functions should be limited to seven
+clearly demarcated stanzas (although every rule has expcetions)! If
+there is more than this, you should start considering how you could
+break the function up into clearly independent parts. Each part should
+take input and return input linearly. Each step should take something
+the output from the previous step, do something to it, and return a new
+output. Good ways to identify chunks to factor out are:</p>
+<ol type="1">
+<li>Code that has <a
+href="https://www.kernel.org/doc/html/v4.10/process/coding-style.html#indentation">multiple
+levels of indentation</a></li>
+<li>Chunks that have multiple preceeding operations required to produce
+their input:</li>
+</ol>
+<pre><code>func main() {
+    thingOne := ProcessA()
+    thingTwo := ProcessB()
+    thingThree := ProcessC()
+    err := MakeWidget(thingOne, thingTwo, thingThree)
+}</code></pre>
+<ol start="3" type="1">
+<li>Any other chunks which have local variables that are clearly scoped
+to one area.</li>
+</ol>
+<p>If the two rules above are followed, then every level of abstraction
+will have less than 7 chunks to it, and programmers can “bulk load” the
+entire mental context as they move up and down the hierarchy of the
+stack. Your code will look like a tree that mirrors directly the call
+stack:</p>
+<pre><code>1. main()
+  1. do something
+    1. do something else
+    ...
+    7. ...
+  2. call independent library function
+  3. call another library function
+  ...
+  7. return</code></pre>
+<p>Each bullet point should be able to be “collapsed” in your mind when
+working with it. It does “one thing” from the perspective of the a
+higher level of abstraction.</p>
+<p>Global variables should be avoided as these represent potential sites
+for <a href="https://en.wikipedia.org/wiki/Action_at_a_distance">action
+at a distance</a>. Action at a distance prevents code from being truly
+modular. This is a cause of leaky abstractions and prevents the
+individual pieces from being thought about as independent chunks. When
+both pieces read and update the same globals, their code ends up with a
+synergy that prevents them from being worked on independently.</p>
+<h3
+id="wait-if-youre-right-how-do-we-get-such-unwieldy-code-in-the-first-place">Wait…
+if you’re right, how do we get such unwieldy code in the first
+place!?</h3>
+<p>You might ask, if the above limitation were true, how does software
+become so unweildy in the first place? Did some super-intelligent God
+write the overly complicated pieces of software? No! Well, in some cases
+maybe someone with an exceptional working memory generates things with 9
+chunks, but in general no.</p>
+<p>Instead, what happens is progressive addition. A piece of code
+requires some added functionality, and an engineer (without fully
+understanding the existing code) adds something to what was already
+there. Several iterations of this, and you end up with functions that
+take too many parameters, that do too many things, and with broken
+abstractions. Why wants to be the poor sob who has to write the “extra
+40 lines of code” in the above example!?</p>
+<p>If already complex code is being added to, it should be first
+refactored to “chunk” it up. This should be enforced in <a
+href="https://shablag.com/article/code-reviews-an-incomplete-guide/">code
+reviews</a></p>
+<h2 id="the-magic-number-seven-and-corporations">The Magic Number Seven
+and Corporations</h2>
+<p>Finally, seven has a big impact on how teams should be structured.
+While <a href="https://en.wikipedia.org/wiki/Dunbar%27s_number">Dunbar’s
+Number</a> is 150, the actual value for social groups doing
+collaborative work is much smaller. It is <a
+href="http://www.lifewithalacrity.com/2004/03/the_dunbar_numb.html">around
+seven people</a>. In the Navy, there’s a “rule of seven” that states
+that any officer should have at most seven subordinates. This means you
+need <code>log_7(N)</code> levels of management for a company of
+<code>N</code> people. Too few, and managers are inefficiently loaded,
+and too many means they are not able to properly oversee the needs of
+their reports.</p>
+<p>This is also important from a software reliability and engineering
+perspective. <a
+href="https://en.wikipedia.org/wiki/Conway%27s_law">Conway’s law</a>
+tells us that:</p>
+<blockquote>
+<p>organizations which design systems … are constrained to produce
+designs which are copies of the communication structures of these
+organizations.</p>
+</blockquote>
+<p>This means that our organizations and communication structures should
+mirror the above rules for designing systems:</p>
+<ol type="1">
+<li>Organizations producing software should be organized into a
+hierarchy</li>
+<li>Each team should have no more than 7 people. Each manager should
+have no more than 7 reports.</li>
+<li>Each team should be given an area of responsibility, and be
+autonomous in making decisions over their processes
+<ol type="1">
+<li>Meaning they can make decisions independently</li>
+<li>They are responsible for the outcome of their decisions</li>
+</ol></li>
+<li>Meetings should follow the <a
+href="https://www.inc.com/business-insider/jeff-bezos-productivity-tip-two-pizza-rule.html">two-pizza
+rule</a></li>
+<li>Communication across teams, while it can happen, should be bubbled
+up and down the “<a
+href="https://en.wikipedia.org/wiki/Hierarchical_organization">organizational
+hierarchy</a>”</li>
+<li>If there is a need for a repeated type of cross-team communication,
+there should be a team that handles that process. (Somewhat like a
+software library)</li>
+</ol>
+<p>If an organization follows the above maxims, then it will be
+structured as hierarchy of independent pieces. This will result in the
+software being structured as a hierarchy of independent pieces. The end
+result will be software which engineers can easily and efficiently work
+on – and that means higher velocity, less bugs, and more revenue.</p>
+<p>Indeed, the US Nuclear Navy does follow the above maxims. They are
+arguably the largest, most efficient, and safest, organization in
+existence.</p>
+</body>
+</html>

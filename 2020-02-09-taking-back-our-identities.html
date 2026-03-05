@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="A vision for reclaiming digital anonymity and autonomy through Bitcoin Cash, anti-spam protocols, and decentralized communication systems." />
+  <title>Blog Post</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Blog Post</h1>
+</header>
+<h1 id="taking-back-our-identities">Taking Back Our Identities</h1>
+<p>The internet has become increasingly centralized. Google, Facebook,
+Reddit, etc., dominate online social forums and take more and more
+control over both our ability to speak to one another, but also our
+data. Yet, our ability to maintain a free society is at risk when we can
+no longer pseudonymously publish content online. Your anarchocapitalist
+twitter account? Twitter surely ships your data off to a place like
+LiveRamp that detangles all your accounts, and devices, into a single
+entity for online advertisers to track you. Speaking out anonymously,
+and safely, becomes impossible. Access to this data is one government
+request away.</p>
+<p>There are two main enablers of this destruction of our autonomy:</p>
+<ul>
+<li>Online digital payments are cumbersome. All digital payments require
+giving credit card and personal information over to a third party –
+violating your privacy and anonymity as much as service model based on
+advertising. Additionally, these services require time to set up over
+free services that make a profit on advertising. However, in an ad-based
+model, you are the product.</li>
+<li>The cost of messages on the internet rests on the receiver. Thus,
+digital spam has forced people to retreat off open protocols and onto
+centralized platforms that can moderate and remove spam. These services
+often tie your identity to some valuable resource like an email address
+or a phone number. Spammers lose access to their accounts quickly and
+the effort they took to sign up via that particular phone number or
+email. This has effectively centralized email to certain providers such
+as gmail, hotmail, and a few other major services.</li>
+</ul>
+<p>I believe the lack of true digital anonymity will be one of the
+biggest problems we face this decade. And I believe that Bitcoin Cash
+can solve both of these problems using what was the original purpose of
+Bitcoin. That is, to serve as a digital cash for likewise intangible
+valuables.</p>
+<p>Hal Finney, a key contributor to Bitcoin, had the dream of a digital
+currency he called “reusable proof of work” (RPoW). The concept is
+simple, digitally tokenize real world resource consumption. Here’s what
+he had to say about it:</p>
+<p>“RPOW would facilitate the use of POW tokens as a form of bit gold by
+allowing the tokens to be passed and exchanged from person to
+person.</p>
+<p>POW tokens have been proposed as a form of pseudo-payment in several
+applications. One example is email. An email message containing a POW
+token would be relatively costly to send in terms of computing power. A
+POW token could then be a sign that the message was not spam.”</p>
+<p>Bitcoin Cash is the working implementation of RPoW that Hal Finney
+envisioned. We now need to make the rest of his dream reality.</p>
+<p>While working on Bitcoin ABC, I thought about this concept quite a
+lot; and about how current wallets were not being developed for privacy
+and scale. About a year ago I stopped actively working on Bitcoin-ABC
+and instead started working on a new wallet and associated services to
+fix the aforementioned problems. Several other developers have joined me
+in working on this, and for that I am very grateful.</p>
+<p>This wallet, and associated open protocols, solve these problems and
+give us a chance to take back our online identities – being anonymous if
+we so choose. It solves these problems by providing frictionless
+payments for any digital service, and attaching real value to messages
+in order to limit spam and place the cost of spamming back on the sender
+of messages.</p>
+<p>We currently call the wallet “Stamp” and the intent is to serve as a
+reference implementation for a client that uses a set of protocols which
+any wallet can implement in the future. The protocols enable direct
+wallet-to-wallet communication via a network overlay on top of Bitcoin
+Cash.</p>
+<p>The overlay network (which we call the CashWeb) is able to be open
+and unmoderated due to the associated exchanges of BCH between users.
+Non-spammers pass small amounts of BCH amongst themselves while having
+high-value conversations for small mining fees. People broadcasting to
+many people will find themselves soon out of money. Every message,
+between users, is passed via relay servers similar to SMTP but encrypted
+end-to-end. Relay servers cannot read your messages, nor can they
+moderate based on the contents.</p>
+<p>Having a overlay network available to wallets enables a number of
+things which cryptocurrency enthusiasts have envisioned but not been
+able to implement for awhile:</p>
+<ul>
+<li>Stealth transactions</li>
+<li>Limited confidential transactions</li>
+<li>Pay to endpoint</li>
+<li>Trustless key revocations and rotations</li>
+<li>Direct messaging payment recipients</li>
+<li>Decentralized crypto exchanges and coin mixing</li>
+</ul>
+<p>It also enables a few things which were not envisioned:</p>
+<ul>
+<li>Moderation-free content exchange</li>
+<li>Frictionless payments for online services</li>
+<li>Ubiquitous one-click purchases</li>
+</ul>
+<p>An internet which is the product, rather than an internet where you
+are the product.There are so many other things which can be built on top
+that I cannot even imagine. My hope is that once the basic product is
+built and usable that many other developers will bring their own ideas
+and participate.We currently have a proof of concept built and are
+refining it as we use it and see where breaking changes need to be made.
+Here’s a screenshot of the current system:</p>
+<p>Although it currently looks like a telegram clone, this is just one
+option for how to layout a wallet, and there are many more things this
+technology enables beyond simple encrypted chat.</p>
+<p>If you think this is as exciting and important as I do please reach
+out to me via telegram or twitter.</p>
+<p>If you are not a developer, you can contribute time by alpha testing,
+or by contributing donations to
+bitcoincash:qq7vt04md0pt6fk5szhcx4cgsfuzmppy5u4hxshr4a or by tipping
+this article.</p>
+<p>These donations will be used to hire engineers and to accelerate
+development of a production-ready mobile version of this wallet.</p>
+</body>
+</html>

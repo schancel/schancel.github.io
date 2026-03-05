@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Blog Post</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Blog Post</h1>
+</header>
+<h1
+id="getting-started-with-finch-an-ai-coding-assistant-that-actually-remembers-you">Getting
+Started with Finch: An AI Coding Assistant That Actually Remembers
+You</h1>
+<p>Finch is a coding assistant you run in your terminal. You ask it
+questions, it reads your code, runs commands, and helps you build things
+— the same way a senior developer sitting next to you would. Unlike a
+web chatbot, it can actually open files, search your codebase, run
+tests, and <strong>remember what you worked on last week</strong>.</p>
+<p>It works with <strong>Grok</strong> (free with X Premium+), Claude,
+GPT-4, and several other AI providers. You don’t need to be a developer
+to use it. You do need a terminal.</p>
+<p>This guide will get you from zero to a working Finch installation in
+about ten minutes.</p>
+<hr />
+<h2 id="step-1-install-iterm2">Step 1: Install iTerm2</h2>
+<p>Your Mac comes with a built-in terminal app, but iTerm2 is
+significantly better — it handles the colors, scrolling, and text
+rendering that Finch uses for its interface.</p>
+<ol type="1">
+<li>Go to <strong><a href="https://iterm2.com">iterm2.com</a></strong>
+and click <strong>Download</strong></li>
+<li>Open the downloaded <code>.zip</code> file (it extracts
+automatically)</li>
+<li>Drag <strong>iTerm2</strong> into your Applications folder</li>
+<li>Open it from Applications or Spotlight (<code>Cmd+Space</code>, type
+“iTerm”)</li>
+</ol>
+<p>You should see a dark window with a blinking cursor. Leave it
+open.</p>
+<hr />
+<h2 id="step-2-get-your-api-key">Step 2: Get Your API Key</h2>
+<p>Finch needs an API key to talk to an AI provider. We recommend
+<strong>Grok</strong> if you have X Premium+ — it’s included at no extra
+cost.</p>
+<h3 id="option-a-grok-x-premium-subscribers">Option A: Grok (X Premium+
+subscribers)</h3>
+<ol type="1">
+<li>Go to <strong><a
+href="https://console.x.ai">console.x.ai</a></strong> and sign in with
+your X account</li>
+<li>In the left sidebar, click <strong>API Keys</strong></li>
+<li>Click <strong>Create API Key</strong>, give it a name (e.g.,
+“Finch”), click <strong>Create</strong></li>
+<li>Copy the key — it starts with <code>xai-</code></li>
+</ol>
+<blockquote>
+<p><strong>Important:</strong> The key is shown only once. Save it in
+your password manager before closing the page.</p>
+</blockquote>
+<h3 id="option-b-claude-anthropic">Option B: Claude (Anthropic)</h3>
+<ol type="1">
+<li>Go to <strong><a
+href="https://console.anthropic.com">console.anthropic.com</a></strong>,
+create an account</li>
+<li>Click <strong>API Keys</strong> → <strong>Create Key</strong>, copy
+it</li>
+</ol>
+<p>Claude requires a paid account ($5 minimum credit purchase). Usage is
+billed per request.</p>
+<hr />
+<h2 id="step-3-download-finch">Step 3: Download Finch</h2>
+<p>In iTerm2, paste the command for your Mac:</p>
+<p><strong>Apple Silicon (M1, M2, M3, or M4):</strong></p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://github.com/schancel/shammah/releases/latest/download/finch-macos-arm64.tar.gz <span class="kw">|</span> <span class="fu">tar</span> xz</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mv finch /usr/local/bin/</span></code></pre></div>
+<p><strong>Intel Mac:</strong></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://github.com/schancel/shammah/releases/latest/download/finch-macos-x86_64.tar.gz <span class="kw">|</span> <span class="fu">tar</span> xz</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mv finch /usr/local/bin/</span></code></pre></div>
+<blockquote>
+<p>Not sure which chip you have? Click the Apple menu → <strong>About
+This Mac</strong>. If it says “Apple M1/M2/M3/M4”, you have Apple
+Silicon. If it says “Intel”, use the second command.</p>
+</blockquote>
+<p>After running those commands, macOS will ask for your password. Type
+it and press Enter — nothing will appear as you type, which is
+normal.</p>
+<p>Verify it worked:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">finch</span> <span class="at">--version</span></span></code></pre></div>
+<hr />
+<h2 id="step-4-run-setup">Step 4: Run Setup</h2>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">finch</span> setup</span></code></pre></div>
+<p>The wizard opens inside your terminal. Use arrow keys to navigate,
+Enter to select.</p>
+<ol type="1">
+<li>On the <strong>Teachers</strong> tab, press <strong>A</strong> to
+add a provider</li>
+<li>Select <strong>Grok</strong> (or Claude)</li>
+<li>Paste your API key (<code>Cmd+V</code> to paste in iTerm2)</li>
+<li>Press <strong>F</strong> to finish and save</li>
+</ol>
+<p>You only need to do this once.</p>
+<hr />
+<h2 id="step-5-start-chatting">Step 5: Start Chatting</h2>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">finch</span> <span class="at">--cloud-only</span></span></code></pre></div>
+<p>The <code>--cloud-only</code> flag skips the local AI model download
+and goes straight to your provider. This is the right choice to get
+started immediately.</p>
+<p>You’ll see a prompt appear. Type your question and press Enter:</p>
+<pre><code>&gt; How do I read a file line by line in Python?</code></pre>
+<p>Finch will respond, and you can keep the conversation going.</p>
+<hr />
+<h2 id="what-finch-can-do">What Finch Can Do</h2>
+<p>Finch isn’t just a chatbot — it can take actions with your
+permission.</p>
+<p><strong>Read your files:</strong></p>
+<pre><code>&gt; Read my README.md and suggest improvements</code></pre>
+<p><strong>Search your code:</strong></p>
+<pre><code>&gt; Find everywhere I&#39;m using the old API in this project</code></pre>
+<p><strong>Run commands:</strong></p>
+<pre><code>&gt; Run the tests and tell me what&#39;s failing</code></pre>
+<p><strong>Remember past sessions:</strong></p>
+<pre><code>&gt; What was wrong with the auth bug we fixed last month?</code></pre>
+<p>Finch stores every conversation locally and uses semantic search to
+pull in relevant history. Navigate to your project folder first
+(<code>cd ~/my-project</code>) and Finch will read and search files
+right there.</p>
+<hr />
+<h2 id="useful-shortcuts">Useful Shortcuts</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>finch --cloud-only</code></td>
+<td>Start immediately, no model download</td>
+</tr>
+<tr>
+<td><code>finch setup</code></td>
+<td>Open the setup wizard</td>
+</tr>
+<tr>
+<td><code>/teacher grok</code></td>
+<td>Switch to Grok mid-conversation</td>
+</tr>
+<tr>
+<td><code>/teacher claude</code></td>
+<td>Switch to Claude mid-conversation</td>
+</tr>
+<tr>
+<td><code>Ctrl+C</code></td>
+<td>Cancel a response in progress</td>
+</tr>
+<tr>
+<td><code>Shift+PgUp</code></td>
+<td>Scroll up through history</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>macOS won’t open Finch (“unidentified
+developer”):</strong></p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xattr</span> <span class="at">-dr</span> com.apple.quarantine /usr/local/bin/finch</span></code></pre></div>
+<p><strong>“API key invalid”:</strong> Re-run <code>finch setup</code>
+and paste the full key including the <code>xai-</code> prefix.</p>
+<p><strong>Finch is slow:</strong> If you ran without
+<code>--cloud-only</code>, it’s downloading a local AI model in the
+background (one-time). Use <code>--cloud-only</code> while that
+happens.</p>
+<hr />
+<h2 id="your-privacy">Your Privacy</h2>
+<p>Everything Finch stores is in <code>~/.finch/</code> on your
+computer. No account required. No data sent to us. The only outbound
+traffic is your message to your AI provider (Grok, Claude, etc.).</p>
+<p>To delete all stored memory:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> ~/.finch/memory.db</span></code></pre></div>
+<hr />
+<p>Finch is open source and written in Rust. Source and releases at <a
+href="https://github.com/schancel/shammah">github.com/schancel/shammah</a>.
+File issues there.</p>
+</body>
+</html>

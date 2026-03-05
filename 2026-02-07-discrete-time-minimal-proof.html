@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-02-07" />
+  <meta name="description" content="Formal axioms-based proof that continuous completed block time cannot accommodate threshold computational irreducibility through demonstrable logical incompatibility" />
+  <title>Blog Post</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Blog Post</h1>
+<p class="date">2026-02-07</p>
+</header>
+<h1
+id="no-timeless-shortcut-why-completed-block-time-cannot-contain-irreducible-computation">No
+Timeless Shortcut: Why Completed Block Time Cannot Contain Irreducible
+Computation</h1>
+<p><strong>Abstract:</strong> Any continuous completed block time (where
+all truths co-exist timelessly as actually true) forces consequential
+outcomes to exist without generative realization—creating logical
+contradiction with threshold computational irreducibility (e.g., Sudoku
+constraint-resolution work). The proof is domain-neutral and blocks
+common escapes.</p>
+<p><strong>Central Puzzle</strong>: Consider a Sudoku puzzle with a
+unique solution. Even efficient algorithms must perform some
+constraint-verification work that cannot be eliminated—checking that
+numbers satisfy row/column/box constraints and ruling out invalid
+placements. In a timeless block universe H: ℝ → S, where does this
+irreducible verification work live? If H timelessly specifies “solved
+grid” at H(t_final), how is this outcome fixed as the unique valid
+solution without performing any constraint-resolution work
+whatsoever?</p>
+<p><strong>Visual Comparison</strong>:</p>
+<pre><code>Generative (allowed): t₁ → t₂ → … → tₙ → [constraint checks] → Solved Sudoku
+
+Timeless Block (question): H: ℝ → S with &quot;Solved Sudoku&quot; already there at t_final
+                                       ↑
+Either the exclusion structure is present (and computation is in the block)
+or it isn&#39;t (and &#39;solved&#39; is uninterpreted as mere arrangement)</code></pre>
+<p><strong>Core Thesis</strong>: Continuous completed block
+time—targeting the common eternalist thesis that “all truths are equally
+actual; becoming is not ontological” combined with continuous temporal
+parameterization—cannot accommodate processes with threshold
+irreducibility. This creates formal logical incompatibility, not mere
+conceptual tension.</p>
+<p><strong>Formal Strategy</strong>: Establish axioms about foundational
+versus consequential truth, derive strengthening lemmas, then prove
+theorem showing continuous completion forces logical contradiction.</p>
+<p><strong>Key Definition - Performed Computation</strong>: The
+constraint-resolution work required to eliminate inconsistent
+possibilities and fix an outcome as the unique solution. Even with
+efficient algorithms, this work has a threshold of irreducibility—it can
+be optimized but not eliminated entirely. This is not temporal execution
+but ontological exclusion—the informational work that rules out
+alternatives must exist somewhere as an ontological fact, whether
+enacted dynamically or encoded statically.</p>
+<p><strong>Constraint-Fixing Irreducibility</strong>: The uniqueness of
+a solution cannot be established without non-eliminable
+exclusion/verification structure. For many natural families of
+nontrivial constraint-satisfaction instances (including NP-complete
+families), establishing uniqueness tends to require search-like
+exclusion of alternatives.</p>
+<p><strong>Formal Target</strong>: Let Solved(G,C) mean “Grid G
+satisfies constraints C and G is the unique completion consistent with
+the clues.” The central puzzle concerns Solved(G,C) being actual, not
+mere constraint satisfaction.</p>
+<p><strong>Critical Warning - Primitive Exclusion Collapse</strong>: One
+cannot escape this argument by declaring exclusion facts “primitive” or
+“brute.” Making constraint-exclusions primitive destroys the
+foundational/consequential distinction entirely—if all exclusions just
+“exist” without work, then all consequential truths become
+foundational-by-brute. This collapses the distinction into
+meaninglessness and commits one to saying that everything is
+foundational, which makes “solution” vs “arbitrary arrangement” an empty
+distinction.</p>
+<hr />
+<h2 id="i.-axioms-foundational-distinctions">I. Axioms: Foundational
+Distinctions</h2>
+<h3 id="axiom-1-foundational-vs-consequential-distinction"><strong>Axiom
+1: Foundational vs Consequential Distinction</strong></h3>
+<p>Foundational truths (axioms, rule-sets, initial conditions) may exist
+timelessly as potential structure. Consequential truths are generated
+from other truths via entailment processes and require generative
+realization for actual truth.</p>
+<h3 id="axiom-2-domain-neutrality-scope"><strong>Axiom 2: Domain
+Neutrality Scope</strong></h3>
+<p>This argument targets any view that (i) treats consequential truths
+as actually co-existing timelessly, and (ii) denies that any
+entailment/exclusion structure is constitutive of those truths. This
+applies across domains (physical spacetime, divine intellect, Platonic
+realm, modal space) without exemptions for the views under analysis.</p>
+<hr />
+<h2 id="ii.-lemmas-formal-logical-dependencies">II. Lemmas: Formal
+Logical Dependencies</h2>
+<p><strong>Dependency Structure</strong>: The logical chain proceeds:
+(L2) truthmaker bridge principle → (L3) no free actuality → (L4)
+constitutive dependence creates asymmetry → (L6) timeless co-existence
+eliminates constitutive dependence → (L7) completed specification forces
+co-existence → therefore contradiction with (L1/L8).</p>
+<h3
+id="lemma-1-threshold-irreducibility-as-consequential-truth"><strong>Lemma
+1: Threshold Irreducibility as Consequential Truth</strong></h3>
+<p>If outcome O exhibits threshold irreducibility (requiring
+constraint-resolution work that can be optimized but not eliminated),
+then O is consequential truth requiring generative realization for
+actual truth rather than foundational truth existing through structural
+specification.</p>
+<p><strong>Proof</strong>: Threshold irreducibility means O’s truth
+depends on constraint-resolution work that, while optimizable through
+efficient algorithms, cannot be completely eliminated—some
+verification/exclusion work remains necessary. This makes O
+consequential (dependent on this irreducible core of
+constraint-resolution) rather than foundational (derivable from axioms
+alone without any resolution work). The residual work-dependence makes O
+consequential by Axiom 1. ∎</p>
+<h3 id="lemma-2-truthmaker-bridge-principle"><strong>Lemma 2: Truthmaker
+Bridge Principle</strong></h3>
+<p>If proposition P is consequential (depends on
+entailment/transformation from other truths), then P’s actual truth
+requires a truthmaker containing the relevant entailment structure, not
+mere static correlation.</p>
+<p><strong>Proof</strong>: If you want your talk of “consequential” to
+mean anything, you don’t get consequential actuality for free. If P’s
+truthmaker contains only static mapping H(t) = P with no constitutive
+entailment structure, you’ve reclassified consequential truths as
+foundational-by-brute. This collapses the foundational/consequential
+distinction (Axiom 1) entirely, making “consequential” an empty
+category. To maintain semantic coherence, P’s truthmaker must include
+the entailment structure doing the generative work. By Axiom 2 (scope),
+this requirement applies in any domain without exception.</p>
+<p><strong>Optional Commitment</strong>: This is the bridge from formal
+derivability to ontological generation. Denying this lemma forces
+collapse of ontological irreducibility into epistemic
+irreducibility—making “derived” purely epistemic rather than
+ontological. The cost: adopting purely extensional semantics where
+constraint-resolution work has no ontological reality. ∎</p>
+<h3 id="lemma-3-no-free-actuality"><strong>Lemma 3: No Free
+Actuality</strong></h3>
+<p>If P is consequential, then P is not actual unless its truthmaker
+includes the generating entailment/exclusion structure.</p>
+<p><strong>Proof</strong>: Immediate from Lemma 2 (Truthmaker Bridge
+Principle). ∎</p>
+<p><strong>Remark</strong>: This establishes that potential truth
+(specified by foundational structure) does not entail eternal actual
+truth. Actual generated consequential truths cannot co-exist timelessly
+prior to generative realization that constitutes their truthmaking.</p>
+<h3 id="lemma-4-constitutive-dependence-implies-order"><strong>Lemma 4:
+Constitutive Dependence Implies Order</strong></h3>
+<p>If the actuality of T₂ constitutively depends on the realization of
+T₁, then the domain containing that dependence has an asymmetric order
+relation T₁ ≺ T₂.</p>
+<p><strong>Proof</strong>: Constitutive dependence is asymmetric by
+definition—if T₂ depends on T₁ in the truthmaking sense, the dependence
+relation cannot be reversed without changing its nature. Any domain
+containing real asymmetric dependence must contain a real ordering
+relation. For any view in the target class (Axiom 2), this ordering
+requirement applies to domains containing actual consequential truths.
+Therefore, constitutive dependence induces ontological ordering, not
+merely descriptive correlation.</p>
+<p><strong>Rejection Cost</strong>: Denying this lemma commits you to
+“dependence without asymmetry”—an incoherent position where T₂ depends
+on T₁ but no ordering exists between them. ∎</p>
+<h3 id="lemma-5-order-from-generation"><strong>Lemma 5: Order from
+Generation</strong></h3>
+<p>If realization of consequential truth T₂ depends on realization of
+T₁, the domain in which realization occurs is ordered with respect to T₁
+and T₂. Purely logical or descriptive ordering is insufficient for
+generative realization; if new truths become actual, the ordering is
+ontological, not merely conceptual.</p>
+<p><strong>Proof</strong>: By Lemma 4, constitutive dependence creates
+asymmetric ordering. Generative realization requires actual
+actualization sequence where T₁ becomes actual, then T₂ becomes actual
+through the generative process. Purely logical ordering (like
+mathematical structure H: ℝ → S) provides only structural correlation
+without actual actualization sequence. By Lemma 2, consequential truths
+require truthmakers with entailment structure, not mere correlation.
+Therefore, any domain containing generative realization must exhibit
+ontological ordering through actual before/after asymmetry in
+actualization. ∎</p>
+<h3
+id="lemma-6-timeless-co-existence-eliminates-generation"><strong>Lemma
+6: Timeless Co-existence Eliminates Generation</strong></h3>
+<p>If all actual generated consequential truths co-exist timelessly
+within any domain, then no generative realization occurs within that
+domain—consequential truths exist without the constitutive entailment
+processes required for their actual truth.</p>
+<p><strong>Proof</strong>: By Lemma 2, consequential truths require
+truthmakers containing entailment structure. Timeless co-existence makes
+all truths exist through the same mechanism (domain specification),
+eliminating the asymmetric generative dependence required by Lemma 4.
+This violates the truthmaking requirement for consequential truths.
+∎</p>
+<h3
+id="lemma-7-completed-global-specification-forces-co-existence"><strong>Lemma
+7: Completed Global Specification Forces Co-existence</strong></h3>
+<p>Completed block time H: T → S (whether continuous or discrete)—any
+domain where all consequential truths co-exist as actually true without
+generative ordering—makes all computational outcomes actually true
+simultaneously, eliminating generative dependence.</p>
+<p><strong>Proof</strong>: For any computational sequence s₁ → s₂ → … →
+s_N resulting in outcome O, function H: T → S must specify H(t_N) = O
+timelessly as part of its total specification. This makes O exist
+through H’s mathematical structure rather than through the generative
+sequence required by Lemma 2, violating the truthmaking requirement for
+consequential truth O. By Lemma 5, this eliminates the ontological
+ordering required for generative realization. ∎</p>
+<h3 id="lemma-8-anti-representation-lemma"><strong>Lemma 8:
+Anti-Representation Lemma</strong></h3>
+<p>Let O be outcome of threshold-irreducible constraint-resolution
+process (like a uniquely solved Sudoku). No timeless domain can render
+an ontologically irreducible outcome O actually true as the unique
+solution without either (a) containing the irreducible core of
+constraint-resolution/exclusion work or (b) collapsing irreducibility by
+permitting a shortcut. A domain that merely “contains” the completed
+outcome without verification structure has not fixed O but only selected
+one arrangement among many.</p>
+<p><strong>Proof</strong>: By Lemma 1, O is consequential truth
+requiring constraint-resolution for actual truth. A fixed outcome with
+threshold irreducibility means the irreducible core of exclusion work
+has been performed—even efficient algorithms must verify constraints and
+rule out alternatives. If a timeless domain makes O actually true
+without containing any verification structure, then either: (a) O is not
+actually fixed (no exclusion work performed), or (b) the domain contains
+the irreducible core of constraint-resolution work, or (c) the threshold
+irreducibility is denied entirely. Options (a) and (c) contradict the
+assumption that O is a fixed threshold-irreducible outcome. Therefore
+option (b): the domain must contain the performed computation as
+ontological exclusion work. By Axiom 2, applies to any domain under
+analysis. ∎</p>
+<h3 id="lemma-9-no-timeless-consequence"><strong>Lemma 9: No Timeless
+Consequence</strong></h3>
+<p>A consequential truth cannot be actually true prior to the
+realization of the entailment that generates it.</p>
+<p><strong>Proof</strong>: Direct consequence of Lemma 3 (No Free
+Actuality). If consequential truth T exists actually before its
+generating entailment is realized, then T co-exists timelessly with its
+generating conditions, violating Lemma 3’s prohibition on actuality
+without constitutive structure. ∎</p>
+<hr />
+<h2 id="iii.-central-theorem-and-proof">III. Central Theorem and
+Proof</h2>
+<h3
+id="theorem-completed-block-time-cannot-accommodate-threshold-irreducibility"><strong>Theorem:
+Completed Block Time Cannot Accommodate Threshold
+Irreducibility</strong></h3>
+<p>Completed block time H: T → S (whether continuous or discrete) cannot
+accommodate processes with threshold irreducibility because it forces
+timeless co-existence of all actual consequential truths, eliminating
+even the irreducible core of constraint-resolution work required for
+their actual truth.</p>
+<p><strong>Proof</strong>:</p>
+<ol type="1">
+<li><p>Let O be computational outcome requiring exactly N irreducible
+steps (Lemma 1: O is consequential truth requiring generative
+realization for actual truth).</p></li>
+<li><p>By Lemma 2 (Truthmaker Bridge Principle), O’s actual truth
+requires a truthmaker containing the relevant N-step entailment
+structure, not mere static correlation.</p></li>
+<li><p>Completed block time H: T → S must specify H(t_final) = O
+timelessly (by definition: domain where all consequential truths
+co-exist as actually true).</p></li>
+<li><p>By Lemma 7 (Completed Global Specification Forces Co-existence),
+H forces O to exist actually through timeless specification rather than
+through N-step generative sequence, violating the truthmaking
+requirement from step (2).</p></li>
+<li><p>By Lemma 8 (Anti-Representation), H cannot make O actually true
+as a fixed outcome without either containing the irreducible core of
+constraint-resolution work or collapsing irreducibility—contradicting
+the timeless specification claim.</p></li>
+<li><p>Therefore: O is both actually true (H’s timeless specification)
+AND cannot be actually true without constraint-resolution structure
+(Lemmas 2, 7, 8).</p></li>
+<li><p>Logical contradiction. ∎</p></li>
+</ol>
+<p><strong>Strategic Note</strong>: Rejecting this conclusion forces
+eternalists to choose between semantic coherence and their position.
+They must explicitly deny either:</p>
+<ul>
+<li><strong>Lemma 2</strong>: “Consequential truths are foundational
+after all” (collapses meaningful distinctions)</li>
+<li><strong>Lemma 4</strong>: “Dependence exists without asymmetry”
+(logically incoherent)</li>
+<li><strong>Lemma 8</strong>: “Solved puzzles need no
+constraint-verification” (makes ‘solution’ meaningless)</li>
+</ul>
+<p>Each denial is a visible, expensive metaphysical move rather than a
+technical objection.</p>
+<p><strong>The Epistemic Collapse Trap</strong>: If eternalists claim
+“the block just IS the solved Sudoku,” they must accept that the block
+contains, as ontological fact, the exclusion of all invalid grids. This
+exclusion work IS the performed computation—they’ve implicitly accepted
+option (C) in the trilemma. There is no escape through epistemic
+reduction because constraint-exclusion is structural, not epistemic.</p>
+<hr />
+<h2 id="iv.-paradigmatic-objections-and-formal-blocking">IV.
+Paradigmatic Objections and Formal Blocking</h2>
+<h3
+id="objection-1-structural-encoding-preserves-computation"><strong>Objection
+1: “Structural Encoding Preserves Computation”</strong></h3>
+<p><strong>Response</strong>: Violates Axiom 1 and Lemma 2. See Lemma
+7.</p>
+<h3
+id="objection-2-computational-results-exist-like-π"><strong>Objection 2:
+“Computational Results Exist Like π”</strong></h3>
+<p><strong>Response</strong>: Misapplies Axiom 1. π is foundational
+truth via axioms; irreducible constraint-resolution outcomes like
+uniquely solved Sudokus are consequential truths requiring elimination
+work to fix the solution (Lemma 8). The completed grid exists as one
+logical possibility among many; what requires work is the exclusion of
+all other possibilities.</p>
+<h3
+id="objection-3-threshold-irreducibility-is-epistemic-only"><strong>Objection
+3: “Threshold Irreducibility is Epistemic Only”</strong></h3>
+<p><strong>Response</strong>: Abandons the ontological reality of
+irreducible constraint-resolution cores. Violates Axiom 2 (scope)
+(domain neutrality) by claiming consequential truths with threshold
+irreducibility exist as foundational truths without any verification
+work.</p>
+<h3
+id="objection-4-exclusion-facts-are-just-primitive"><strong>Objection 4:
+“Exclusion Facts Are Just Primitive”</strong></h3>
+<p><strong>Response</strong>: Destroys the foundational/consequential
+distinction entirely. If constraint-exclusions are primitive rather than
+generated, then all consequential truths become foundational-by-brute,
+collapsing the distinction into meaninglessness. This commits one to
+saying that “solved Sudoku” vs “arbitrary number grid” is a primitive
+distinction rather than one established through constraint-verification
+work. The metaphysical cost is accepting that everything is
+foundational.</p>
+<hr />
+<h2 id="v.-corollaries">V. Corollaries</h2>
+<p><strong>C1. Determinism Compatibility</strong>: Deterministic laws
+(foundational truths) compatible with discrete generative
+realization.</p>
+<p><strong>C2. Divine Foreknowledge</strong>: Omniscience as potential
+structure permitted; actual co-existence of generated truths in divine
+intellect violates Axiom 2.</p>
+<p><strong>C3. Relational Implication</strong>: Threshold irreducibility
+preserves genuine freedom for authentic ‘yes’ or ‘no’ in relationship,
+supporting open/relational theism over classical eternalist models where
+outcomes are timelessly fixed.</p>
+<p><strong>C4. Domain-Neutral Application</strong>: By Axiom 2 (scope),
+any domain (Platonic, divine, modal, physical) claiming timeless
+co-existence of actual generated truths cannot accommodate ontological
+computational irreducibility.</p>
+<p><strong>C5. Continuous vs Discrete Completion</strong>:</p>
+<ul>
+<li><strong>Completed continuous block</strong> → fails
+(Anti-Representation Lemma + no generative slots)</li>
+<li><strong>Completed discrete block</strong> → still precomputed →
+still fails (same Anti-Representation Lemma)</li>
+<li><strong>Discrete generative growth</strong> (causal sets, growing
+blocks, rule-based emergence) → allowed in principle</li>
+</ul>
+<p><strong>Why Discreteness Alone Cannot Save Completed
+Eternalism</strong>: A discrete but completed block time that timelessly
+specifies all computational outcomes at discrete points still makes
+outcomes actually true through structural specification rather than
+generative realization. Lemma 7 applies equally: discrete global
+specification H: {t₁, t₂, …} → S making irreducible outcome O actually
+true at t_final must encode the computation or collapse irreducibility.
+Discreteness changes representation but not the fundamental
+specification problem.</p>
+<hr />
+<h2 id="vi.-forced-choice">VI. Forced Choice</h2>
+<h3
+id="clarification-no-independent-escape-via-anti-constraint-resolution"><strong>Clarification:
+No Independent Escape via Anti-Constraint-Resolution</strong></h3>
+<p>Any view that rejects constraint-resolution actuality by treating all
+consequential truths as timelessly foundational thereby denies
+ontological irreducibility. Given Lemma 7, there is no coherent position
+in which irreducible outcomes are both (a) fixed as actual truths and
+(b) not resolved via equivalent exclusion work.</p>
+<h3 id="trilemmatic-choice"><strong>Trilemmatic Choice</strong></h3>
+<p>One must deny either:</p>
+<p><strong>(A) Threshold irreducibility</strong> (constraint-fixing work
+has no ontological reality), or <strong>(B) Continuous completed block
+time</strong> (not all truths are equally actual), or <strong>(C)
+Computation-free specification</strong> (accept the block contains
+performed computation)</p>
+<p><strong>Interpretations:</strong></p>
+<ul>
+<li><strong>A</strong> = irreducibility is epistemic only</li>
+<li><strong>B</strong> = becoming is ontologically real</li>
+<li><strong>C</strong> = the block is computation-laden, either as
+<strong>(C1)</strong> encoded computation (intermediate states/structure
+present) or <strong>(C2)</strong> primitive outcomes (without exclusion
+structure, making “solved” uninterpreted)</li>
+</ul>
+<p><strong>Note</strong>: (C1) is not an escape hatch; it is an
+admission that the block is computation-laden. A timeless block doesn’t
+remove computation; it relocates it into structure.</p>
+<p>Note: “Rejecting generative truth” falls under option (A). No fourth
+option is coherent.</p>
+<p><strong>Thus, any theory preserving continuous completed block time
+must either deny ontological computational irreducibility or accept that
+the block contains performed computation.</strong></p>
+<hr />
+<h2 id="appendix-a-common-illegal-moves">Appendix A: Common Illegal
+Moves</h2>
+<h3 id="foundational-vs-consequential-confusion"><strong>Foundational vs
+Consequential Confusion</strong></h3>
+<ul>
+<li><strong>“Computational outcomes are foundational like
+axioms”</strong> → Violates Axiom 1</li>
+</ul>
+<h3 id="potential-vs-actual-conflation"><strong>Potential vs Actual
+Conflation</strong></h3>
+<ul>
+<li><strong>“Timeless potential structure = actual
+co-existence”</strong> → Violates Axiom 2 (scope)</li>
+<li><strong>“God knows outcomes therefore they exist actually”</strong>
+→ Violates Corollary 2</li>
+</ul>
+<h3 id="domain-escape-attempts"><strong>Domain Escape
+Attempts</strong></h3>
+<ul>
+<li><strong>“Exists in Platonic realm beyond generation”</strong> →
+Violates Axiom 2 (scope) (domain neutrality)</li>
+<li><strong>“Divine intellect contains all actual truths
+timelessly”</strong> → Violates Axiom 2 (timeless co-existence)</li>
+</ul>
+<h3 id="generation-vs-specification-conflation"><strong>Generation vs
+Specification Conflation</strong></h3>
+<ul>
+<li><strong>“Timeless specification = generative realization”</strong> →
+Violates Axiom 2</li>
+<li><strong>“Computational structure IS performed computation”</strong>
+→ Violates Lemma 7</li>
+</ul>
+<h3 id="primitive-exclusion-escape-attempts"><strong>Primitive Exclusion
+Escape Attempts</strong></h3>
+<ul>
+<li><strong>“Exclusion facts are just primitive/brute”</strong> →
+Destroys foundational/consequential distinction, makes everything
+foundational</li>
+<li><strong>“Solutions just exist without verification work”</strong> →
+Makes “solved” vs “arbitrary” meaningless</li>
+</ul>
+<hr />
+<h2 id="appendix-b-representative-escape-attempts">Appendix B:
+Representative Escape Attempts</h2>
+<p><strong>Work-Structure Non-Equivalence</strong>: Mathematical
+structure encoding final states ≠ constraint-resolution work that
+excludes alternatives (Lemma 7). A completed Sudoku grid without any
+verification structure is not a fixed solution but one number
+arrangement among many possible grids. Even efficient algorithms must
+perform the irreducible core of constraint-checking work.</p>
+<p><strong>Eternalist Responses</strong>:</p>
+<ul>
+<li>Structural correlation → violates Axiom 1</li>
+<li>Discovery model → violates Lemma 5</li>
+<li>Epistemic reduction → violates Axiom 2 (scope)</li>
+</ul>
+<h2 id="appendix-c-technical-connections-brief">Appendix C: Technical
+Connections (Brief)</h2>
+<p><strong>Physics</strong>: Landauer’s Principle, Assembly Theory, and
+Quantum Computation all support work requirements for computational
+outcomes.</p>
+<p><strong>Compatible Frameworks</strong>: Growing Block Theory,
+Discrete Substrates, Process Ontology may preserve computational
+generation.</p>
+<p><strong>Research Direction</strong>: Discrete generative models
+(causal sets, growing blocks) remain open—they avoid completed
+precomputation.</p>
+</body>
+</html>
