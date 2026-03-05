@@ -1,158 +1,167 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="description" content="A comprehensive guide to effective code reviews focusing on collaboration, quality improvement, and engineering best practices." />
-  <title>Code Reviews: An incomplete guide</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Reviews: An incomplete guide — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; }
+    </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Code Reviews: An incomplete guide</h1>
-</header>
-<h1 id="code-reviews-an-incomplete-guide">Code Reviews: An incomplete
-guide</h1>
-<h2 id="why">Why?</h2>
-<p>For years, many software projects could be easily completed by a
-single programmer working alone. However, most of the valuable
-single-man projects are long conquered. Sure, there are many places for
-small tools that do specific jobs, but most easy projects are finished.
-Complex projects dominate, and complex projects require armies of
-coders.</p>
-<p>Participating with an army of other programmers requires special
-discipline. Now, if a programmer wants to have a real impact they must
-become a “Software Engineer.” The primary divergence between engineering
-and programming is the scale of teamwork. Team-oriented programming is
-no longer just a project of writing instructions for computers, but also
-a interpersonal communications problem. Unfortunately, most of us by our
-nature are not social animals – preferring instead to interact with
-computers more than humans.</p>
-<p>If we want to become a software engineers, we must understand, and
-practice, working with other software engineers. Since software
-engineering uses code reviews as the fundamental unit of work, it makes
-sense to start with, and focus, there.</p>
-<h2 id="goals-of-a-code-review">Goals of a Code Review</h2>
-<p>Code reviews exist in order to provide an opportunity for engineers
-to collaborate in order to produce the highest quality, bug free code.
-Code reviews should be seen as an opportunity to learn – both for the
-reviewer and the reviewee – and as an opportunity to put the “finishing
-touches” on a piece of code. It is similar to the process of an editor
-helping a writer ready their book, or essay, for publishing.</p>
-<p>This process of collaborating and editing is in contrast to acting as
-an adversary who is trying to prevent “bad code” from making into the
-master branch. However, this does not mean “rubber-stamping” pull
-requests should be done as a way to avoid conflict or collaboration.
-Additionally, reviews do not depend on the experience level of the
-person reviewing, if you don’t understand what is being done in a pull
-request, probably other people won’t either: ask questions!</p>
-<p>Reviews should be taken seriously regardless of the relative
-experience of the engineers involved. Every person has unique life
-experiences and perspectives, and this overflows into the way they see
-engineering problems. That is to say, each member of a team can provide
-valuable insights that can make our software better – even the most
-junior of team members. Everyone has something to learn, and to
-teach.</p>
-<h2 id="how-to-begin-a-pull-request">How To Begin a Pull Request</h2>
-<p>Prior to writing any code, you should discuss the feature, or change,
-with another engineer and come up with a plan for how the code will
-change – pull requests should not be a surprise to the repository owner.
-As you work through the process of changing the code in the agreed upon
-way, you may run into roadblocks. It is sometimes beneficial to put up a
-“Work In Progress” (WIP) pull requests, and discuss where you’re having
-difficulties. Some struggling is good for learning, but software
-engineering is a team effort and getting help is preferable to
-struggling in silence. There is no shame in asking for help.</p>
-<p>Once your code is in good working order, and tests pass, put the code
-up for final review. Squash your personal work using
-<code>git fetch &amp;&amp; git rebase -i origin/master</code> and write
-a compelling commit message by rewording and “fixing up” your commits.
-There is no good reason to have 15 “fixup” commits in a pull request,
-nor is it useful to have them as automated bullet points in an automatic
-squash commit message generated by Github. It is <em>definitely</em> not
-useful to have these commits showing up in the merge tree for the master
-branch. Yet, all rules are meant to be broken, sometimes it can be
-useful to have multiple commits on a branch that is merged (rather than
-squashed) in to master depending on the complexity of the feature. Those
-commits should still be atomic units of working code.</p>
-<h2 id="break-up-your-work"><a
-href="https://medium.com/@kurtisnusbaum/large-diffs-are-hurting-your-ability-to-ship-e0b2b41e8acf">Break
-up your work</a></h2>
-<p>Often when working on a feature, some amount of refactoring is
-required. In order to make sure that code is reviewed properly, it needs
-to have as few changes as possible. This is important because:</p>
-<ul>
-<li>Large change sets won’t get reviewed properly. Reviewers typically
-find the same number of bugs regardless of size!</li>
-<li>Reverting large diffs is hard</li>
-<li>Rebasing and merging large diffs is hard</li>
-<li>In the future, if an engineer has a question about a line of code,
-they will use <code>git blame</code> to find the commit, and commit
-message for that change.
-<ul>
-<li>All the code changed in the commit should be closely related to help
-give an understanding of what was being changed and why</li>
-<li>The commit message should be informative to why the change was made
-in the code.</li>
-<li>These points are especially important when responding to critical
-incidents involving behavioral changes in the software.</li>
-</ul></li>
-</ul>
-<h2 id="commit-message-not-pull-request-message"><a
-href="https://chris.beams.io/posts/git-commit/">Commit Message (Not Pull
-Request Message!)</a></h2>
-<p>The goal of a commit message is to inform the reader about why the
-code is being changed in the way you are doing. Telling the reader what
-and how the code is changing is not helpful, as you are merely restating
-what the code itself tells the reviewer, or auditor. A basic commit
-message should tell you:</p>
-<ul>
-<li>What was the code doing before</li>
-<li>Why the code is being changed</li>
-<li>What the new behavior is</li>
-<li>Any tickets/issues associated with the change.</li>
-</ul>
-<p>Commit message should be formatted to be easily legible. The commit
-summary (first line) should be less than 80 characters, and it should
-have a <code>Summary</code> and <code>Test Plan</code> section. The
-summary should be one or more paragraphs that clearly state the above
-three points. You should assume any engineer, with limited context, is
-reading your commit message. The test plan may simply be a command that
-would need to be ran to verify the commit does what is intended. Assume
-a robot with no context is going to test your commit without your
-help.</p>
-<p>Please note, it is easy to conflate the pull request message with a
-commit message. These are not the same thing – although they should be.
-If you fill out your commit messages, and squash as recommended above,
-Github will propagate your message through into the pull request body,
-and the commit message when merged. If you do not include these contents
-when writing your commit message, and instead only include them when
-generating a pull-request, these contents will likely get lost when
-merging. It is important that the above information makes it into the
-commit message in the git repository!</p>
-<h3 id="commit-message-example">Commit Message Example</h3>
-<pre><code>Add the ability to send money to the wallet screen
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    <div class="meta">July 14, 2019</div>
+    
+    <div class="substack-link">Also on <a href="https://shablag.com/article/code-reviews-an-incomplete-guide/">Substack</a></div>
+
+    <h1 id="code-reviews-an-incomplete-guide">Code Reviews: An
+    incomplete guide</h1>
+    <h2 id="why">Why?</h2>
+    <p>For years, many software projects could be easily completed by a
+    single programmer working alone. However, most of the valuable
+    single-man projects are long conquered. Sure, there are many places
+    for small tools that do specific jobs, but most easy projects are
+    finished. Complex projects dominate, and complex projects require
+    armies of coders.</p>
+    <p>Participating with an army of other programmers requires special
+    discipline. Now, if a programmer wants to have a real impact they
+    must become a “Software Engineer.” The primary divergence between
+    engineering and programming is the scale of teamwork. Team-oriented
+    programming is no longer just a project of writing instructions for
+    computers, but also a interpersonal communications problem.
+    Unfortunately, most of us by our nature are not social animals –
+    preferring instead to interact with computers more than humans.</p>
+    <p>If we want to become a software engineers, we must understand,
+    and practice, working with other software engineers. Since software
+    engineering uses code reviews as the fundamental unit of work, it
+    makes sense to start with, and focus, there.</p>
+    <h2 id="goals-of-a-code-review">Goals of a Code Review</h2>
+    <p>Code reviews exist in order to provide an opportunity for
+    engineers to collaborate in order to produce the highest quality,
+    bug free code. Code reviews should be seen as an opportunity to
+    learn – both for the reviewer and the reviewee – and as an
+    opportunity to put the “finishing touches” on a piece of code. It is
+    similar to the process of an editor helping a writer ready their
+    book, or essay, for publishing.</p>
+    <p>This process of collaborating and editing is in contrast to
+    acting as an adversary who is trying to prevent “bad code” from
+    making into the master branch. However, this does not mean
+    “rubber-stamping” pull requests should be done as a way to avoid
+    conflict or collaboration. Additionally, reviews do not depend on
+    the experience level of the person reviewing, if you don’t
+    understand what is being done in a pull request, probably other
+    people won’t either: ask questions!</p>
+    <p>Reviews should be taken seriously regardless of the relative
+    experience of the engineers involved. Every person has unique life
+    experiences and perspectives, and this overflows into the way they
+    see engineering problems. That is to say, each member of a team can
+    provide valuable insights that can make our software better – even
+    the most junior of team members. Everyone has something to learn,
+    and to teach.</p>
+    <h2 id="how-to-begin-a-pull-request">How To Begin a Pull
+    Request</h2>
+    <p>Prior to writing any code, you should discuss the feature, or
+    change, with another engineer and come up with a plan for how the
+    code will change – pull requests should not be a surprise to the
+    repository owner. As you work through the process of changing the
+    code in the agreed upon way, you may run into roadblocks. It is
+    sometimes beneficial to put up a “Work In Progress” (WIP) pull
+    requests, and discuss where you’re having difficulties. Some
+    struggling is good for learning, but software engineering is a team
+    effort and getting help is preferable to struggling in silence.
+    There is no shame in asking for help.</p>
+    <p>Once your code is in good working order, and tests pass, put the
+    code up for final review. Squash your personal work using
+    <code>git fetch &amp;&amp; git rebase -i origin/master</code> and
+    write a compelling commit message by rewording and “fixing up” your
+    commits. There is no good reason to have 15 “fixup” commits in a
+    pull request, nor is it useful to have them as automated bullet
+    points in an automatic squash commit message generated by Github. It
+    is <em>definitely</em> not useful to have these commits showing up
+    in the merge tree for the master branch. Yet, all rules are meant to
+    be broken, sometimes it can be useful to have multiple commits on a
+    branch that is merged (rather than squashed) in to master depending
+    on the complexity of the feature. Those commits should still be
+    atomic units of working code.</p>
+    <h2 id="break-up-your-work"><a
+    href="https://medium.com/@kurtisnusbaum/large-diffs-are-hurting-your-ability-to-ship-e0b2b41e8acf">Break
+    up your work</a></h2>
+    <p>Often when working on a feature, some amount of refactoring is
+    required. In order to make sure that code is reviewed properly, it
+    needs to have as few changes as possible. This is important
+    because:</p>
+    <ul>
+    <li>Large change sets won’t get reviewed properly. Reviewers
+    typically find the same number of bugs regardless of size!</li>
+    <li>Reverting large diffs is hard</li>
+    <li>Rebasing and merging large diffs is hard</li>
+    <li>In the future, if an engineer has a question about a line of
+    code, they will use <code>git blame</code> to find the commit, and
+    commit message for that change.
+    <ul>
+    <li>All the code changed in the commit should be closely related to
+    help give an understanding of what was being changed and why</li>
+    <li>The commit message should be informative to why the change was
+    made in the code.</li>
+    <li>These points are especially important when responding to
+    critical incidents involving behavioral changes in the
+    software.</li>
+    </ul></li>
+    </ul>
+    <h2 id="commit-message-not-pull-request-message"><a
+    href="https://chris.beams.io/posts/git-commit/">Commit Message (Not
+    Pull Request Message!)</a></h2>
+    <p>The goal of a commit message is to inform the reader about why
+    the code is being changed in the way you are doing. Telling the
+    reader what and how the code is changing is not helpful, as you are
+    merely restating what the code itself tells the reviewer, or
+    auditor. A basic commit message should tell you:</p>
+    <ul>
+    <li>What was the code doing before</li>
+    <li>Why the code is being changed</li>
+    <li>What the new behavior is</li>
+    <li>Any tickets/issues associated with the change.</li>
+    </ul>
+    <p>Commit message should be formatted to be easily legible. The
+    commit summary (first line) should be less than 80 characters, and
+    it should have a <code>Summary</code> and <code>Test Plan</code>
+    section. The summary should be one or more paragraphs that clearly
+    state the above three points. You should assume any engineer, with
+    limited context, is reading your commit message. The test plan may
+    simply be a command that would need to be ran to verify the commit
+    does what is intended. Assume a robot with no context is going to
+    test your commit without your help.</p>
+    <p>Please note, it is easy to conflate the pull request message with
+    a commit message. These are not the same thing – although they
+    should be. If you fill out your commit messages, and squash as
+    recommended above, Github will propagate your message through into
+    the pull request body, and the commit message when merged. If you do
+    not include these contents when writing your commit message, and
+    instead only include them when generating a pull-request, these
+    contents will likely get lost when merging. It is important that the
+    above information makes it into the commit message in the git
+    repository!</p>
+    <h3 id="commit-message-example">Commit Message Example</h3>
+    <pre><code>Add the ability to send money to the wallet screen
 
 Summary:
 This commit adds the ability to send money to the GUI wallet screen. We found through user studies that they would like to be able to send money directly from the GUI, rather than have to go to a CLI tool. This commit enables that functionality by adding a send money button and dialog.
@@ -165,40 +174,47 @@ Test Plan:
 3. Click &quot;send money&quot;
 4. Fill out the required information
 5. Verify in a block explorer that the test coins were sent where you intended.</code></pre>
-<h2 id="reviewing-code">Reviewing Code</h2>
-<p>As stated in the section on goals, reviewing a pull request should be
-an exercise in editing a teammates work to make sure it is as good as it
-can be. If you see things you think are wrong, or can be improved, you
-should suggest alternatives with sample code and within the pull
-request. Multiple review cycles due to unclear instructions is
-undesirable – both the reviewer and reviewee should be seeking to
-minimize this.</p>
-<p>Reviewers should keep in mind that submitting code to be reviewed by
-another person is a very vulnerable act. The person submitting the code
-is, in many ways, revealing their imperfect ability to write software.
-However, there is no perfect software engineer. We all submit code with
-mistakes in it; but this does not change how negative and
-non-constructive feedback can be perceived when coming from a place of
-vulnerability.</p>
-<p>Reviewers should do their best to communicate clearly, and
-constructively, when reviewing pull requests. Attached are two very good
-references on dos, and do-nots, of reviewing code. Additionally,
-reviewees should do their best to understand that their personal
-identity, and their competency, is not wrapped up in the code they
-submit.</p>
-<ol type="1">
-<li><a href="https://mtlynch.io/human-code-reviews-1/">How to review
-code like a human Part 1</a></li>
-<li><a href="https://mtlynch.io/human-code-reviews-2/">How to review
-code like a human Part 2</a></li>
-</ol>
-<h2 id="merging-a-pull-request">Merging a Pull Request</h2>
-<p>In some code review processes, after a commit is approved, the code
-reviewee merges the code. However, the name “pull request” implies the
-owner of the repository is being requested to “pull” the code. The
-primary reason for this in open source software is one of permissions.
-However, it is also an act of acknowledgement that the code is
-finalized, and shared responsibility for the outcome (pull request
-reviewer and owner) of adding this source code to the master branch.</p>
+    <h2 id="reviewing-code">Reviewing Code</h2>
+    <p>As stated in the section on goals, reviewing a pull request
+    should be an exercise in editing a teammates work to make sure it is
+    as good as it can be. If you see things you think are wrong, or can
+    be improved, you should suggest alternatives with sample code and
+    within the pull request. Multiple review cycles due to unclear
+    instructions is undesirable – both the reviewer and reviewee should
+    be seeking to minimize this.</p>
+    <p>Reviewers should keep in mind that submitting code to be reviewed
+    by another person is a very vulnerable act. The person submitting
+    the code is, in many ways, revealing their imperfect ability to
+    write software. However, there is no perfect software engineer. We
+    all submit code with mistakes in it; but this does not change how
+    negative and non-constructive feedback can be perceived when coming
+    from a place of vulnerability.</p>
+    <p>Reviewers should do their best to communicate clearly, and
+    constructively, when reviewing pull requests. Attached are two very
+    good references on dos, and do-nots, of reviewing code.
+    Additionally, reviewees should do their best to understand that
+    their personal identity, and their competency, is not wrapped up in
+    the code they submit.</p>
+    <ol type="1">
+    <li><a href="https://mtlynch.io/human-code-reviews-1/">How to review
+    code like a human Part 1</a></li>
+    <li><a href="https://mtlynch.io/human-code-reviews-2/">How to review
+    code like a human Part 2</a></li>
+    </ol>
+    <h2 id="merging-a-pull-request">Merging a Pull Request</h2>
+    <p>In some code review processes, after a commit is approved, the
+    code reviewee merges the code. However, the name “pull request”
+    implies the owner of the repository is being requested to “pull” the
+    code. The primary reason for this in open source software is one of
+    permissions. However, it is also an act of acknowledgement that the
+    code is finalized, and shared responsibility for the outcome (pull
+    request reviewer and owner) of adding this source code to the master
+    branch.</p>
+
+    <hr>
+    <p style="font-size:0.9rem;color:#555">Read and subscribe on <a href="https://shablag.com/article/code-reviews-an-incomplete-guide/">Substack</a></p>
+    <footer>
+        <p style="margin-top:0.75rem"><a href="index.html">← Back to #!blag</a></p>
+    </footer>
 </body>
 </html>

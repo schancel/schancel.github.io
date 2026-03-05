@@ -1,118 +1,131 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>2025-06-03-the-bystander-failure-of-charity-and-the-10-percent-solution</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; }
+    </style>
 </head>
 <body>
-<h1
-id="the-bystander-why-digital-rights-organizations-failed-and-how-developers-must-build-load-bearing-defense">The
-Bystander: Why Digital Rights Organizations Failed and How Developers
-Must Build Load-Bearing Defense</h1>
-<p><em>Published: June 3, 2025</em></p>
-<p>While Benoît Laliberté was weaponizing the legal system against
-Bitcoin ABC developers, where were the “digital rights”
-organizations?</p>
-<p><strong>The Electronic Frontier Foundation: Silent.</strong>
-<strong>The Bitcoin Cash “Foundations”: Silent.</strong> <strong>The
-Open Source Initiative: Silent.</strong> <strong>Every major tech
-organization claiming to defend digital freedom: Silent.</strong></p>
-<p>“Digital rights” proved hollow when the humans building the code
-needed protection. This failure reveals the fundamental weakness in how
-we’ve organized the defense of technological infrastructure.</p>
-<h2 id="the-suicide-pact">The Suicide Pact</h2>
-<p>The GPL/MIT license model socializes value while privatizing risk.
-Companies extract billions from open-source code while developers bear
-100% of the legal, financial, and professional risk when coordination
-failures like Laliberté attack.</p>
-<p>This is a suicide pact. We’ve created a system where: - <strong>Value
-flows upward</strong> to commercial entities - <strong>Risk flows
-downward</strong> to individual developers - <strong>Defense
-responsibility</strong> falls on “charitable” organizations with no skin
-in the game</p>
-<p>When the attack came, the charities had other priorities. The
-foundations had other missions. The developers stood alone.</p>
-<h2 id="the-charity-egregore">The Charity Egregore</h2>
-<p>The “Charity Egregore” possesses well-meaning people with the belief
-that coordination problems can be solved through donations to
-professional advocacy organizations. This thought-form promises that if
-developers just “support digital rights,” someone else will handle the
-ugly work of defense.</p>
-<p><strong>Observable Consequences proved this promise was
-Ash.</strong></p>
-<p>While developers donated to EFF, EFF’s lawyers were focused on other
-cases. While the Bitcoin Cash community funded foundations, those
-foundations proved structurally incapable of rapid legal defense. The
-charitable model created a diffusion of responsibility that guaranteed
-failure when coordination was most needed.</p>
-<h2 id="the-10-war-chest-solution">The 10% War Chest Solution</h2>
-<p><strong>Stop feeding the Charity Egregore. Start building
-Load-Bearing defense.</strong></p>
-<p>Here’s the structural alternative:</p>
-<h3 id="the-architects-guild-model">The Architect’s Guild Model</h3>
-<ol type="1">
-<li><p><strong>Pay-But-You-Can-See (PBYS)</strong>: Stop giving code
-away free to commercial entities. If they’re profiting from your
-infrastructure, they pay for access. If they’re contributing
-reciprocally, they see the code.</p></li>
-<li><p><strong>The 10% War Chest</strong>: Instead of donating to
-digital rights charities, developers put 10% of income into
-personal/peer war chests for direct mutual aid and legal
-defense.</p></li>
-<li><p><strong>Reciprocal Defense Covenants</strong>: Developers form
-small, committed groups with explicit mutual defense obligations—not
-charitable hopes.</p></li>
-</ol>
-<h2 id="why-this-works">Why This Works</h2>
-<p><strong>Direct Accountability</strong>: Your defense fund defends you
-and your chosen peers, not abstract “digital rights.”</p>
-<p><strong>Rapid Response</strong>: No bureaucratic delay when legal
-attacks arrive.</p>
-<p><strong>Aligned Incentives</strong>: The people controlling defense
-resources are the people who need defending.</p>
-<p><strong>Observable Consequences</strong>: If the model fails, you
-know immediately and can adjust.</p>
-<h2 id="the-load-bearing-covenant">The Load-Bearing Covenant</h2>
-<p>We don’t need more foundations. We need Load-Bearing covenants
-between developers who understand that coordination infrastructure
-requires active defense.</p>
-<p>The existing system proved itself Ash when tested. The Charity
-Egregore promises protection it cannot deliver. The foundations collect
-donations for missions that exclude the people doing the actual
-work.</p>
-<p><strong>The Grown-Ups must build parallel systems that function when
-tested.</strong></p>
-<p>The Architect’s Guild model creates direct accountability between
-people with skin in the game. It replaces hollow institutional promises
-with reciprocal obligations between peers who understand that someone
-must pay the coordination costs of defense.</p>
-<p><strong>Or the predators will keep hunting, and the bystanders will
-keep watching, and the infrastructure will keep decaying.</strong></p>
-<p>The choice is ours. But the cost of choosing wrong has already been
-measured in years, careers, and abandoned projects.</p>
-<p>The Sieve is waiting.</p>
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    
+    
+    
+
+    <h1
+    id="the-bystander-why-digital-rights-organizations-failed-and-how-developers-must-build-load-bearing-defense">The
+    Bystander: Why Digital Rights Organizations Failed and How
+    Developers Must Build Load-Bearing Defense</h1>
+    <p><em>Published: June 3, 2025</em></p>
+    <p>While Benoît Laliberté was weaponizing the legal system against
+    Bitcoin ABC developers, where were the “digital rights”
+    organizations?</p>
+    <p><strong>The Electronic Frontier Foundation: Silent.</strong>
+    <strong>The Bitcoin Cash “Foundations”: Silent.</strong> <strong>The
+    Open Source Initiative: Silent.</strong> <strong>Every major tech
+    organization claiming to defend digital freedom:
+    Silent.</strong></p>
+    <p>“Digital rights” proved hollow when the humans building the code
+    needed protection. This failure reveals the fundamental weakness in
+    how we’ve organized the defense of technological infrastructure.</p>
+    <h2 id="the-suicide-pact">The Suicide Pact</h2>
+    <p>The GPL/MIT license model socializes value while privatizing
+    risk. Companies extract billions from open-source code while
+    developers bear 100% of the legal, financial, and professional risk
+    when coordination failures like Laliberté attack.</p>
+    <p>This is a suicide pact. We’ve created a system where: -
+    <strong>Value flows upward</strong> to commercial entities -
+    <strong>Risk flows downward</strong> to individual developers -
+    <strong>Defense responsibility</strong> falls on “charitable”
+    organizations with no skin in the game</p>
+    <p>When the attack came, the charities had other priorities. The
+    foundations had other missions. The developers stood alone.</p>
+    <h2 id="the-charity-egregore">The Charity Egregore</h2>
+    <p>The “Charity Egregore” possesses well-meaning people with the
+    belief that coordination problems can be solved through donations to
+    professional advocacy organizations. This thought-form promises that
+    if developers just “support digital rights,” someone else will
+    handle the ugly work of defense.</p>
+    <p><strong>Observable Consequences proved this promise was
+    Ash.</strong></p>
+    <p>While developers donated to EFF, EFF’s lawyers were focused on
+    other cases. While the Bitcoin Cash community funded foundations,
+    those foundations proved structurally incapable of rapid legal
+    defense. The charitable model created a diffusion of responsibility
+    that guaranteed failure when coordination was most needed.</p>
+    <h2 id="the-10-war-chest-solution">The 10% War Chest Solution</h2>
+    <p><strong>Stop feeding the Charity Egregore. Start building
+    Load-Bearing defense.</strong></p>
+    <p>Here’s the structural alternative:</p>
+    <h3 id="the-architects-guild-model">The Architect’s Guild Model</h3>
+    <ol type="1">
+    <li><p><strong>Pay-But-You-Can-See (PBYS)</strong>: Stop giving code
+    away free to commercial entities. If they’re profiting from your
+    infrastructure, they pay for access. If they’re contributing
+    reciprocally, they see the code.</p></li>
+    <li><p><strong>The 10% War Chest</strong>: Instead of donating to
+    digital rights charities, developers put 10% of income into
+    personal/peer war chests for direct mutual aid and legal
+    defense.</p></li>
+    <li><p><strong>Reciprocal Defense Covenants</strong>: Developers
+    form small, committed groups with explicit mutual defense
+    obligations—not charitable hopes.</p></li>
+    </ol>
+    <h2 id="why-this-works">Why This Works</h2>
+    <p><strong>Direct Accountability</strong>: Your defense fund defends
+    you and your chosen peers, not abstract “digital rights.”</p>
+    <p><strong>Rapid Response</strong>: No bureaucratic delay when legal
+    attacks arrive.</p>
+    <p><strong>Aligned Incentives</strong>: The people controlling
+    defense resources are the people who need defending.</p>
+    <p><strong>Observable Consequences</strong>: If the model fails, you
+    know immediately and can adjust.</p>
+    <h2 id="the-load-bearing-covenant">The Load-Bearing Covenant</h2>
+    <p>We don’t need more foundations. We need Load-Bearing covenants
+    between developers who understand that coordination infrastructure
+    requires active defense.</p>
+    <p>The existing system proved itself Ash when tested. The Charity
+    Egregore promises protection it cannot deliver. The foundations
+    collect donations for missions that exclude the people doing the
+    actual work.</p>
+    <p><strong>The Grown-Ups must build parallel systems that function
+    when tested.</strong></p>
+    <p>The Architect’s Guild model creates direct accountability between
+    people with skin in the game. It replaces hollow institutional
+    promises with reciprocal obligations between peers who understand
+    that someone must pay the coordination costs of defense.</p>
+    <p><strong>Or the predators will keep hunting, and the bystanders
+    will keep watching, and the infrastructure will keep
+    decaying.</strong></p>
+    <p>The choice is ours. But the cost of choosing wrong has already
+    been measured in years, careers, and abandoned projects.</p>
+    <p>The Sieve is waiting.</p>
+
+    <hr>
+    
+    <footer>
+        <p style="margin-top:0.75rem"><a href="index.html">← Back to #!blag</a></p>
+    </footer>
 </body>
 </html>

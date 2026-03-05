@@ -1,356 +1,371 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Shammah Chancellor" />
-  <title>What Comes After Bitcoin (3 of 3)</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Comes After Bitcoin (3 of 3) — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; }
+    </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">What Comes After Bitcoin (3 of 3)</h1>
-<p class="subtitle">Inflation corrodes time horizons and social
-trust.</p>
-<p class="author">Shammah Chancellor</p>
-</header>
-<p><img
-src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_03.png" /></p>
-<p>](images/2026-01-18-what-comes-after-bitcoin-3-of-3_06.png)</p>
-<h3
-id="fixing-bitcoin-properly-without-recreating-the-system-it-tried-to-escape">Fixing
-Bitcoin Properly — Without Recreating the System It Tried to Escape</h3>
-<p><a
-href="https://shablag.substack.com/p/the-quiet-engine-of-social-breakdown">Parts
-1</a> and <a
-href="https://shablag.substack.com/p/bitcoins-real-breakthrough-and-why">Part
-2</a> established the problem, and the attempt at fixing it.</p>
-<p>Inflation corrodes time horizons and social trust.</p>
-<p>“There is no subtler, no surer means of overturning the existing
-basis of society<br />
-than to debauch the currency.”<br />
-— <em>John Maynard Keynes</em></p>
-<p>Bitcoin proved that monetary rules could be enforced without
-institutions — but failed to function as usable money.<br />
-Stablecoins restored usability by reintroducing trust, censorship, and
-inflation through the back door.</p>
-<p><img
-src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_02.png" /></p>
-<p>An illustration of “currency” using water</p>
-<p>What remains is the unfinished work.</p>
-<p>If we want a system that actually lowers time preference — one that
-people can <em>use</em>, not merely hold — we need to be precise about
-what such a system must do, and what it must never do.</p>
-<p>This is not about ideology.<br />
-It is about design constraints.</p>
-<p><img
-src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_01.png" /></p>
-<p>Value over time of various currency regimes</p>
-<p>“You can’t solve a problem on the same level that it was
-created.”<br />
-— <em>Albert Einstein</em></p>
-<h2 id="what-a-post-bitcoin-monetary-system-must-do">What a Post-Bitcoin
-Monetary System Must Do</h2>
-<p>Any serious attempt to improve on Bitcoin must
-satisfy <strong>all</strong> of the following constraints
-simultaneously. Failing any one of them reintroduces the same failures
-under a different name.</p>
-<h3 id="stability-without-pegs-or-discretion">1. Stability Without Pegs
-or Discretion</h3>
-<p>Most attempts to stabilize crypto anchor value to something
-external:</p>
-<p>fiat pegs<br />
-price oracles<br />
-reserve baskets<br />
-committees</p>
-<p>Each of these recreates centralized trust. When the anchor fails, the
-system fails with it. When discretion enters, political pressure
-inevitably follows.</p>
-<p>A viable system must stabilize purchasing
-power <strong>endogenously</strong> — through rule-bound feedback tied
-to actual network use.</p>
-<p>Not “what should this be worth?”<br />
-But “what is being used, right now?”</p>
-<p>Stability must emerge from behavior, not belief.</p>
-<p>“In the absence of the gold standard, there is no way to protect
-savings from confiscation through inflation.”<br />
-— <em>Alan Greenspan (1966)</em></p>
-<h3 id="incentives-that-favor-circulation-not-hoarding">2. Incentives
-That Favor Circulation, Not Hoarding</h3>
-<p>Bitcoin’s fixed supply makes it an excellent speculative asset — and
-a poor currency.</p>
-<p>When money is expected to appreciate simply by existing, rational
-actors delay spending. Economic activity shifts from coordination to
-hoarding. Volatility becomes structural. Unit-of-account failure is
-inevitable.</p>
-<p>A functional currency must reward <strong>use</strong>, not mere
-possession.</p>
-<p>If money does not move, it does not create coordination.</p>
-<p><img
-src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_07.png" /></p>
-<p>Table comparing token economics of Bitcoin and a potential
-successor</p>
-<p>“Show me the incentive and I’ll show you the outcome.”— <em>Charlie
-Munger</em></p>
-<h3 id="a-native-redemption-loop">3. A Native Redemption Loop</h3>
-<p>Bitcoin has no internal mechanism that ties issuance and destruction
-to real economic activity. Value enters through exchanges, not utility.
-As a result, Bitcoin never escapes being priced in fiat. All attempts at
-creating Bitcoin-native economies have ultimately failed.</p>
-<p>A post-Bitcoin system requires a <strong>closed loop</strong>:</p>
-<ul>
-<li><p>issuance responds to demand</p></li>
-<li><p>circulation enables coordination</p></li>
-<li><p>value exits the system through native use</p></li>
-<li><p>use cases that can be prices in the native token itself</p></li>
-</ul>
-<p>Without a redemption loop, stability is impossible. With one,
-speculation becomes secondary to function.</p>
-<p>In other words, value must primarily enter and exit the system
-through native use, not external speculation.</p>
-<p>“There are no solutions. There are only trade-offs.”<br />
-— <em>Thomas Sowell</em></p>
-<h3 id="utility-that-cannot-be-selectively-shut-down">4. Utility That
-Cannot Be Selectively Shut Down</h3>
-<p>Stability alone is insufficient.</p>
-<p>A currency that depends on utility which can be denied by banks,
-platforms, or regulators has not escaped institutional control — it has
-merely delayed it.</p>
-<p>We have already seen how this plays out:</p>
-<p>payment processors terminating lawful businesses<br />
-banks closing accounts based on associations or speech<br />
-platforms erasing livelihoods overnight</p>
-<p>“The power to tax is the power to destroy.”<br />
-— <em>John Marshall</em></p>
-<p>Control does not require devaluing money if you can prevent people
-from using it.</p>
-<p>Therefore, the utility anchoring the currency must have <strong>no
-off-switch</strong>.</p>
-<p>It must be:</p>
-<ul>
-<li><p>essential enough that demand persists under pressure</p></li>
-<li><p>decentralized enough that no administrator can be
-coerced</p></li>
-<li><p>integrated deeply enough that attacking it means attacking
-critical internet infrastructure</p></li>
-</ul>
-<p>Only one category of utility reliably meets these constraints.</p>
-<hr />
-<h2 id="why-the-use-case-must-be-uncensorable-communication">Why the Use
-Case Must Be Uncensorable Communication</h2>
-<p>Communication and coordination are not optional features of society.
-They are prerequisites for everything else.</p>
-<p>People must speak.<br />
-They must organize.<br />
-They must transact.</p>
-<p>“Whoever controls the means of communication controls the
-society.”<br />
-— <em>Attributed to Marshall McLuhan</em></p>
-<p>When communication is mediated through centralized platforms,
-censorship is easy. When money is mediated through centralized rails,
-exclusion is trivial.</p>
-<p>But when <strong>money and communication are intertwined</strong> —
-when transactions enable speech, and speech requires transactions —
-enforcement costs rise dramatically.</p>
-<p><img
-src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_04.png" /></p>
-<p>Traditional communication stack vs Proposed</p>
-<p>Not impossible to attack.<br />
-But impossible to finish attacking.</p>
-<p>This is not about evading the law. It is about designing systems
-where power is constrained by architecture rather than selectively
-applied discretion. It is about building systems where enforcement
-requires dismantling the system itself — where power is constrained by
-architecture rather than promises.</p>
-<p>“Code is law.”<br />
-— <em>Lawrence Lessig</em></p>
-<p>That demand already exists. It is structural, not ideological. And it
-is growing as financial and speech controls become baseline compliance
-rather than exceptional measures.</p>
-<p>Finally, speech has value — but no marginal cost, and no supply
-chain. This enables pricing it in native units rather than government
-currency.</p>
-<h2 id="adaptive-issuance-fixing-bitcoins-core-failure">Adaptive
-Issuance: Fixing Bitcoin’s Core Failure</h2>
-<p>Bitcoin proved that monetary rules could be enforced by code. What it
-failed to solve was <strong>feedback</strong>.</p>
-<p>A post-Bitcoin system must adjust supply based on <em>actual
-use</em>, not external price signals.</p>
-<p><img
-src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_05.png" /></p>
-<p>Discretionary control vs Automatic feedback</p>
-<p>Adaptive issuance does exactly this.</p>
-<p>Supply expands when real demand grows.<br />
-Supply contracts when usage falls.</p>
-<p>Think of it like a thermostat adjusting heat based on temperature —
-not a committee voting on comfort.</p>
-<p>This is not algorithmic stablecoins revisited.<br />
-There is no peg to defend.<br />
-No promise to break.</p>
-<p>Just rule-bound response to observable activity.</p>
-<p>“The purpose of a system is what it does.”<br />
-— <em>W. Edwards Deming</em></p>
-<h2 id="lotus-v1-a-working-prototype-and-why-it-failed">Lotus v1: A
-Working Prototype — and Why It Failed</h2>
-<p>Lotus was my first attempt to implement these constraints.</p>
-<p>Built on a forked Bitcoin Cash codebase, it combined:</p>
-<ul>
-<li><p>adaptive issuance driven by Proof-of-Work economics</p></li>
-<li><p>token burns tied to native utility</p></li>
-<li><p>a genuine closed loop between use and supply</p></li>
-</ul>
-<p>It worked — technically.</p>
-<p>What failed was bootstrapping.</p>
-<p>We were under-resourced. We avoided token sales to reduce SEC and
-FinCEN risk. Communication overhead consumed development time. The
-update schedule was too tight and added friction. Utility was
-fragmented, making network effects difficult to achieve. User retention
-suffered due to lack of notifications in the software. External shocks —
-pandemic money printing, tightening cycles, mass layoffs, and natural
-disasters — compressed runway.</p>
-<p>These were not design failures.</p>
-<p>They were execution lessons.</p>
-<p>The core mechanisms behaved as expected under real usage; what failed
-was our ability to sustain momentum long enough for network effects to
-compound.</p>
-<p>“Plans are worthless, but planning is everything.”<br />
-— <em>Dwight D. Eisenhower</em></p>
-<h2 id="what-changes-in-lotus-v2">What Changes in Lotus v2</h2>
-<p>The constraints remain the same. The execution changes.</p>
-<p>Lotus v2 retains:</p>
-<ul>
-<li><p>adaptive issuance</p></li>
-<li><p>utility-based burns</p></li>
-<li><p>closed-loop economics</p></li>
-</ul>
-<p>But improves on v1 by:</p>
-<ul>
-<li><p>front-loaded, Bitcoin-style distribution while leaving
-adaptive <a
-href="https://petertodd.org/2022/surprisingly-tail-emission-is-not-inflationary">tail
-emissions</a></p></li>
-<li><p>adding necessary features for user retention</p></li>
-<li><p>no permanent developer tax</p></li>
-<li><p>no insider allocations</p></li>
-<li><p>community-driven funding and governance</p></li>
-<li><p>dramatically lower development and coordination costs enabled by
-modern tooling and AI</p></li>
-</ul>
-<p>The initial utility focus is narrow and disciplined:<br />
-<strong>uncensorable messaging and coordination</strong>, with burns for
-attention, priority, and reach.</p>
-<p>Once established, the system should require minimal ongoing
-intervention.</p>
-<p>This is not a promise of moon prices.</p>
-<p>It is a proposal for a monetary and coordination system that is
-boring, stable, and hard to kill.</p>
-<p>“Perfection is achieved, not when there is nothing more to add,<br />
-but when there is nothing left to take away.”<br />
-— <em>Antoine de Saint-Exupéry</em></p>
-<h2 id="what-success-looks-like">What Success Looks Like</h2>
-<p>Not revolution.<br />
-Not mass adoption overnight.</p>
-<p>Success is a system that:</p>
-<ul>
-<li><p>holds purchasing power across time</p></li>
-<li><p>enables coordination without permission</p></li>
-<li><p>cannot be selectively shut down</p></li>
-<li><p>competes peacefully by working better</p></li>
-</ul>
-<p>If it works, it will not need persuasion.<br />
-People will use it because it solves real problems.</p>
-<hr />
-<h2 id="how-you-can-help">How You Can Help</h2>
-<p>This work is not venture-scale, and it is not speculative.</p>
-<p>It is independent systems research and engineering aimed at solving
-problems most institutions are structurally unable to touch. To do it
-properly, I need the freedom to work full-time without bending
-incentives toward hype, token sales, or ideological conformity.</p>
-<p>What that requires is not millions of users.</p>
-<p>It requires support.</p>
-<p>To continue this work full-time, I need roughly <strong>$150k–$200k
-per year</strong> in funding. That can come from a small number of
-patrons, a broader base of modest supporters, or some combination of
-both.</p>
-<p>If you are someone who:</p>
-<ul>
-<li><p>funds long-horizon technical or civilizational work,</p></li>
-<li><p>believes monetary and coordination systems shape society
-downstream,</p></li>
-<li><p>or understands the value of backing people rather than
-platforms,</p></li>
-</ul>
-<p>Your support would make a direct and material difference. For
-example, a single patron covering six months of runway meaningfully
-reduces coordination overhead and allows uninterrupted work on protocol
-design, implementation, and testing.</p>
-<p>There is no token pre-sale.<br />
-No venture capital.<br />
-No insider allocation.<br />
-No promise of returns.</p>
-<p>This is not an investment pitch.</p>
-<p>It is an invitation to help sustain independent work on a problem
-that will not be solved by markets, committees, or slogans — but may be
-solved by careful design, iteration, and time.</p>
-<p>If you are interested in supporting this work at a <strong>patron
-level</strong>, or know someone who might be, I would be grateful for a
-private introduction or message.</p>
-<p>For everyone else, paid subscriptions help provide stability and
-signal that this work is worth continuing — even if you never donate
-more than a few dollars.</p>
-<p>Both forms of support matter. They simply serve different roles.</p>
-<p>“The future is already here — it’s just not evenly
-distributed.”<br />
-— <em>William Gibson</em></p>
-<h2 id="why-sharing-this-matters">Why Sharing This Matters</h2>
-<p>Ideas like this do not spread through advertising or virality.<br />
-They spread through <strong>trusted networks</strong>.</p>
-<p>Most people who can meaningfully support long-horizon work are not
-browsing crypto feeds or chasing trends. They are reading quietly,
-thinking carefully, and relying on recommendations from people they
-respect.</p>
-<p>If this essay resonated with you, sharing it is not about
-amplification — it is about <strong>routing</strong>.</p>
-<p>It only needs to reach a small number of people who:</p>
-<ul>
-<li><p>think seriously about systems and incentives,</p></li>
-<li><p>understand that stability and coordination are design
-problems,</p></li>
-<li><p>and are willing to support work that competes peacefully rather
-than disrupts loudly.</p></li>
-</ul>
-<p>History is shaped less by mass movements than by small groups of
-people who recognize problems early and choose to act before failure
-becomes unavoidable.</p>
-<p>If you know someone who fits that description, please share this with
-them.</p>
-<p>Awareness is the first step.<br />
-Coordination is the second.</p>
-<p>The rest follows from design.</p>
-<p>“Small groups of thoughtful, committed citizens can change the
-world.<br />
-Indeed, it’s the only thing that ever has.”<br />
-— <em>Margaret Mead</em></p>
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    <div class="meta">2026-01-18 · Shammah Chancellor</div>
+    <div class="subtitle">Inflation corrodes time horizons and social
+trust.</div>
+    <div class="substack-link">Also on <a href="https://shablag.substack.com/p/what-comes-after-bitcoin-3-of-3">Substack</a></div>
+
+    <p><img
+    src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_03.png" /></p>
+    <p>](images/2026-01-18-what-comes-after-bitcoin-3-of-3_06.png)</p>
+    <h3
+    id="fixing-bitcoin-properly-without-recreating-the-system-it-tried-to-escape">Fixing
+    Bitcoin Properly — Without Recreating the System It Tried to
+    Escape</h3>
+    <p><a
+    href="https://shablag.substack.com/p/the-quiet-engine-of-social-breakdown">Parts
+    1</a> and <a
+    href="https://shablag.substack.com/p/bitcoins-real-breakthrough-and-why">Part
+    2</a> established the problem, and the attempt at fixing it.</p>
+    <p>Inflation corrodes time horizons and social trust.</p>
+    <p>“There is no subtler, no surer means of overturning the existing
+    basis of society<br />
+    than to debauch the currency.”<br />
+    — <em>John Maynard Keynes</em></p>
+    <p>Bitcoin proved that monetary rules could be enforced without
+    institutions — but failed to function as usable money.<br />
+    Stablecoins restored usability by reintroducing trust, censorship,
+    and inflation through the back door.</p>
+    <p><img
+    src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_02.png" /></p>
+    <p>An illustration of “currency” using water</p>
+    <p>What remains is the unfinished work.</p>
+    <p>If we want a system that actually lowers time preference — one
+    that people can <em>use</em>, not merely hold — we need to be
+    precise about what such a system must do, and what it must never
+    do.</p>
+    <p>This is not about ideology.<br />
+    It is about design constraints.</p>
+    <p><img
+    src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_01.png" /></p>
+    <p>Value over time of various currency regimes</p>
+    <p>“You can’t solve a problem on the same level that it was
+    created.”<br />
+    — <em>Albert Einstein</em></p>
+    <h2 id="what-a-post-bitcoin-monetary-system-must-do">What a
+    Post-Bitcoin Monetary System Must Do</h2>
+    <p>Any serious attempt to improve on Bitcoin must
+    satisfy <strong>all</strong> of the following constraints
+    simultaneously. Failing any one of them reintroduces the same
+    failures under a different name.</p>
+    <h3 id="stability-without-pegs-or-discretion">1. Stability Without
+    Pegs or Discretion</h3>
+    <p>Most attempts to stabilize crypto anchor value to something
+    external:</p>
+    <p>fiat pegs<br />
+    price oracles<br />
+    reserve baskets<br />
+    committees</p>
+    <p>Each of these recreates centralized trust. When the anchor fails,
+    the system fails with it. When discretion enters, political pressure
+    inevitably follows.</p>
+    <p>A viable system must stabilize purchasing
+    power <strong>endogenously</strong> — through rule-bound feedback
+    tied to actual network use.</p>
+    <p>Not “what should this be worth?”<br />
+    But “what is being used, right now?”</p>
+    <p>Stability must emerge from behavior, not belief.</p>
+    <p>“In the absence of the gold standard, there is no way to protect
+    savings from confiscation through inflation.”<br />
+    — <em>Alan Greenspan (1966)</em></p>
+    <h3 id="incentives-that-favor-circulation-not-hoarding">2.
+    Incentives That Favor Circulation, Not Hoarding</h3>
+    <p>Bitcoin’s fixed supply makes it an excellent speculative asset —
+    and a poor currency.</p>
+    <p>When money is expected to appreciate simply by existing, rational
+    actors delay spending. Economic activity shifts from coordination to
+    hoarding. Volatility becomes structural. Unit-of-account failure is
+    inevitable.</p>
+    <p>A functional currency must reward <strong>use</strong>, not mere
+    possession.</p>
+    <p>If money does not move, it does not create coordination.</p>
+    <p><img
+    src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_07.png" /></p>
+    <p>Table comparing token economics of Bitcoin and a potential
+    successor</p>
+    <p>“Show me the incentive and I’ll show you the
+    outcome.”— <em>Charlie Munger</em></p>
+    <h3 id="a-native-redemption-loop">3. A Native Redemption Loop</h3>
+    <p>Bitcoin has no internal mechanism that ties issuance and
+    destruction to real economic activity. Value enters through
+    exchanges, not utility. As a result, Bitcoin never escapes being
+    priced in fiat. All attempts at creating Bitcoin-native economies
+    have ultimately failed.</p>
+    <p>A post-Bitcoin system requires a <strong>closed
+    loop</strong>:</p>
+    <ul>
+    <li><p>issuance responds to demand</p></li>
+    <li><p>circulation enables coordination</p></li>
+    <li><p>value exits the system through native use</p></li>
+    <li><p>use cases that can be prices in the native token
+    itself</p></li>
+    </ul>
+    <p>Without a redemption loop, stability is impossible. With one,
+    speculation becomes secondary to function.</p>
+    <p>In other words, value must primarily enter and exit the system
+    through native use, not external speculation.</p>
+    <p>“There are no solutions. There are only trade-offs.”<br />
+    — <em>Thomas Sowell</em></p>
+    <h3 id="utility-that-cannot-be-selectively-shut-down">4. Utility
+    That Cannot Be Selectively Shut Down</h3>
+    <p>Stability alone is insufficient.</p>
+    <p>A currency that depends on utility which can be denied by banks,
+    platforms, or regulators has not escaped institutional control — it
+    has merely delayed it.</p>
+    <p>We have already seen how this plays out:</p>
+    <p>payment processors terminating lawful businesses<br />
+    banks closing accounts based on associations or speech<br />
+    platforms erasing livelihoods overnight</p>
+    <p>“The power to tax is the power to destroy.”<br />
+    — <em>John Marshall</em></p>
+    <p>Control does not require devaluing money if you can prevent
+    people from using it.</p>
+    <p>Therefore, the utility anchoring the currency must
+    have <strong>no off-switch</strong>.</p>
+    <p>It must be:</p>
+    <ul>
+    <li><p>essential enough that demand persists under pressure</p></li>
+    <li><p>decentralized enough that no administrator can be
+    coerced</p></li>
+    <li><p>integrated deeply enough that attacking it means attacking
+    critical internet infrastructure</p></li>
+    </ul>
+    <p>Only one category of utility reliably meets these
+    constraints.</p>
+    <hr />
+    <h2 id="why-the-use-case-must-be-uncensorable-communication">Why the
+    Use Case Must Be Uncensorable Communication</h2>
+    <p>Communication and coordination are not optional features of
+    society. They are prerequisites for everything else.</p>
+    <p>People must speak.<br />
+    They must organize.<br />
+    They must transact.</p>
+    <p>“Whoever controls the means of communication controls the
+    society.”<br />
+    — <em>Attributed to Marshall McLuhan</em></p>
+    <p>When communication is mediated through centralized platforms,
+    censorship is easy. When money is mediated through centralized
+    rails, exclusion is trivial.</p>
+    <p>But when <strong>money and communication are
+    intertwined</strong> — when transactions enable speech, and speech
+    requires transactions — enforcement costs rise dramatically.</p>
+    <p><img
+    src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_04.png" /></p>
+    <p>Traditional communication stack vs Proposed</p>
+    <p>Not impossible to attack.<br />
+    But impossible to finish attacking.</p>
+    <p>This is not about evading the law. It is about designing systems
+    where power is constrained by architecture rather than selectively
+    applied discretion. It is about building systems where enforcement
+    requires dismantling the system itself — where power is constrained
+    by architecture rather than promises.</p>
+    <p>“Code is law.”<br />
+    — <em>Lawrence Lessig</em></p>
+    <p>That demand already exists. It is structural, not ideological.
+    And it is growing as financial and speech controls become baseline
+    compliance rather than exceptional measures.</p>
+    <p>Finally, speech has value — but no marginal cost, and no supply
+    chain. This enables pricing it in native units rather than
+    government currency.</p>
+    <h2 id="adaptive-issuance-fixing-bitcoins-core-failure">Adaptive
+    Issuance: Fixing Bitcoin’s Core Failure</h2>
+    <p>Bitcoin proved that monetary rules could be enforced by code.
+    What it failed to solve was <strong>feedback</strong>.</p>
+    <p>A post-Bitcoin system must adjust supply based on <em>actual
+    use</em>, not external price signals.</p>
+    <p><img
+    src="images/2026-01-18-what-comes-after-bitcoin-3-of-3_05.png" /></p>
+    <p>Discretionary control vs Automatic feedback</p>
+    <p>Adaptive issuance does exactly this.</p>
+    <p>Supply expands when real demand grows.<br />
+    Supply contracts when usage falls.</p>
+    <p>Think of it like a thermostat adjusting heat based on temperature
+    — not a committee voting on comfort.</p>
+    <p>This is not algorithmic stablecoins revisited.<br />
+    There is no peg to defend.<br />
+    No promise to break.</p>
+    <p>Just rule-bound response to observable activity.</p>
+    <p>“The purpose of a system is what it does.”<br />
+    — <em>W. Edwards Deming</em></p>
+    <h2 id="lotus-v1-a-working-prototype-and-why-it-failed">Lotus v1: A
+    Working Prototype — and Why It Failed</h2>
+    <p>Lotus was my first attempt to implement these constraints.</p>
+    <p>Built on a forked Bitcoin Cash codebase, it combined:</p>
+    <ul>
+    <li><p>adaptive issuance driven by Proof-of-Work economics</p></li>
+    <li><p>token burns tied to native utility</p></li>
+    <li><p>a genuine closed loop between use and supply</p></li>
+    </ul>
+    <p>It worked — technically.</p>
+    <p>What failed was bootstrapping.</p>
+    <p>We were under-resourced. We avoided token sales to reduce SEC and
+    FinCEN risk. Communication overhead consumed development time. The
+    update schedule was too tight and added friction. Utility was
+    fragmented, making network effects difficult to achieve. User
+    retention suffered due to lack of notifications in the software.
+    External shocks — pandemic money printing, tightening cycles, mass
+    layoffs, and natural disasters — compressed runway.</p>
+    <p>These were not design failures.</p>
+    <p>They were execution lessons.</p>
+    <p>The core mechanisms behaved as expected under real usage; what
+    failed was our ability to sustain momentum long enough for network
+    effects to compound.</p>
+    <p>“Plans are worthless, but planning is everything.”<br />
+    — <em>Dwight D. Eisenhower</em></p>
+    <h2 id="what-changes-in-lotus-v2">What Changes in Lotus v2</h2>
+    <p>The constraints remain the same. The execution changes.</p>
+    <p>Lotus v2 retains:</p>
+    <ul>
+    <li><p>adaptive issuance</p></li>
+    <li><p>utility-based burns</p></li>
+    <li><p>closed-loop economics</p></li>
+    </ul>
+    <p>But improves on v1 by:</p>
+    <ul>
+    <li><p>front-loaded, Bitcoin-style distribution while leaving
+    adaptive <a
+    href="https://petertodd.org/2022/surprisingly-tail-emission-is-not-inflationary">tail
+    emissions</a></p></li>
+    <li><p>adding necessary features for user retention</p></li>
+    <li><p>no permanent developer tax</p></li>
+    <li><p>no insider allocations</p></li>
+    <li><p>community-driven funding and governance</p></li>
+    <li><p>dramatically lower development and coordination costs enabled
+    by modern tooling and AI</p></li>
+    </ul>
+    <p>The initial utility focus is narrow and disciplined:<br />
+    <strong>uncensorable messaging and coordination</strong>, with burns
+    for attention, priority, and reach.</p>
+    <p>Once established, the system should require minimal ongoing
+    intervention.</p>
+    <p>This is not a promise of moon prices.</p>
+    <p>It is a proposal for a monetary and coordination system that is
+    boring, stable, and hard to kill.</p>
+    <p>“Perfection is achieved, not when there is nothing more to
+    add,<br />
+    but when there is nothing left to take away.”<br />
+    — <em>Antoine de Saint-Exupéry</em></p>
+    <h2 id="what-success-looks-like">What Success Looks Like</h2>
+    <p>Not revolution.<br />
+    Not mass adoption overnight.</p>
+    <p>Success is a system that:</p>
+    <ul>
+    <li><p>holds purchasing power across time</p></li>
+    <li><p>enables coordination without permission</p></li>
+    <li><p>cannot be selectively shut down</p></li>
+    <li><p>competes peacefully by working better</p></li>
+    </ul>
+    <p>If it works, it will not need persuasion.<br />
+    People will use it because it solves real problems.</p>
+    <hr />
+    <h2 id="how-you-can-help">How You Can Help</h2>
+    <p>This work is not venture-scale, and it is not speculative.</p>
+    <p>It is independent systems research and engineering aimed at
+    solving problems most institutions are structurally unable to touch.
+    To do it properly, I need the freedom to work full-time without
+    bending incentives toward hype, token sales, or ideological
+    conformity.</p>
+    <p>What that requires is not millions of users.</p>
+    <p>It requires support.</p>
+    <p>To continue this work full-time, I need
+    roughly <strong>$150k–$200k per year</strong> in funding. That can
+    come from a small number of patrons, a broader base of modest
+    supporters, or some combination of both.</p>
+    <p>If you are someone who:</p>
+    <ul>
+    <li><p>funds long-horizon technical or civilizational work,</p></li>
+    <li><p>believes monetary and coordination systems shape society
+    downstream,</p></li>
+    <li><p>or understands the value of backing people rather than
+    platforms,</p></li>
+    </ul>
+    <p>Your support would make a direct and material difference. For
+    example, a single patron covering six months of runway meaningfully
+    reduces coordination overhead and allows uninterrupted work on
+    protocol design, implementation, and testing.</p>
+    <p>There is no token pre-sale.<br />
+    No venture capital.<br />
+    No insider allocation.<br />
+    No promise of returns.</p>
+    <p>This is not an investment pitch.</p>
+    <p>It is an invitation to help sustain independent work on a problem
+    that will not be solved by markets, committees, or slogans — but may
+    be solved by careful design, iteration, and time.</p>
+    <p>If you are interested in supporting this work at a <strong>patron
+    level</strong>, or know someone who might be, I would be grateful
+    for a private introduction or message.</p>
+    <p>For everyone else, paid subscriptions help provide stability and
+    signal that this work is worth continuing — even if you never donate
+    more than a few dollars.</p>
+    <p>Both forms of support matter. They simply serve different
+    roles.</p>
+    <p>“The future is already here — it’s just not evenly
+    distributed.”<br />
+    — <em>William Gibson</em></p>
+    <h2 id="why-sharing-this-matters">Why Sharing This Matters</h2>
+    <p>Ideas like this do not spread through advertising or
+    virality.<br />
+    They spread through <strong>trusted networks</strong>.</p>
+    <p>Most people who can meaningfully support long-horizon work are
+    not browsing crypto feeds or chasing trends. They are reading
+    quietly, thinking carefully, and relying on recommendations from
+    people they respect.</p>
+    <p>If this essay resonated with you, sharing it is not about
+    amplification — it is about <strong>routing</strong>.</p>
+    <p>It only needs to reach a small number of people who:</p>
+    <ul>
+    <li><p>think seriously about systems and incentives,</p></li>
+    <li><p>understand that stability and coordination are design
+    problems,</p></li>
+    <li><p>and are willing to support work that competes peacefully
+    rather than disrupts loudly.</p></li>
+    </ul>
+    <p>History is shaped less by mass movements than by small groups of
+    people who recognize problems early and choose to act before failure
+    becomes unavoidable.</p>
+    <p>If you know someone who fits that description, please share this
+    with them.</p>
+    <p>Awareness is the first step.<br />
+    Coordination is the second.</p>
+    <p>The rest follows from design.</p>
+    <p>“Small groups of thoughtful, committed citizens can change the
+    world.<br />
+    Indeed, it’s the only thing that ever has.”<br />
+    — <em>Margaret Mead</em></p>
+
+    <hr>
+    <p style="font-size:0.9rem;color:#555">Read and subscribe on <a href="https://shablag.substack.com/p/what-comes-after-bitcoin-3-of-3">Substack</a></p>
+    <footer>
+        <p style="margin-top:0.75rem"><a href="index.html">← Back to #!blag</a></p>
+    </footer>
 </body>
 </html>

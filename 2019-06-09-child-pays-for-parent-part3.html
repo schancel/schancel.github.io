@@ -1,135 +1,78 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>2019-06-09-child-pays-for-parent-part3</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {   }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { color: #008000; } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { color: #008000; font-weight: bold; } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; }
+    </style>
 </head>
 <body>
-<h1 id="child-pays-for-parent-part-3">Child Pays for Parent: Part 3</h1>
-<p><strong>Publication Date:</strong> June 9, 2019
-<strong>Source:</strong> #!blag <strong>Categories:</strong> Bitcoin
-Cash, Technical Analysis, Software Engineering, Performance Optimization
-<strong>Archive URL:</strong>
-https://web.archive.org/web/20240518024616/https://shablag.com/article/child-pays-for-parent-part-3/</p>
-<h2
-id="eliminating-on²-processing-for-unconfirmed-transaction-chains-and-permitting-longer-chains">Eliminating
-O(n²) processing for unconfirmed transaction chains and permitting
-longer chains</h2>
-<h3 id="background">Background</h3>
-<p><a href="https://shablag.com/article/child-pays-for-parent/">Two</a>
-<a
-href="https://shablag.com/article/child-pays-for-parent-part-2/">previous</a>
-essays were written on this topic, but ultimately the ideas and
-methodology were abandoned due to problems and edges cases discovered
-while attempting to implement those methods. The first section, of the
-first essay is republished here for background.</p>
-<p>Bitcoin ABC inherited a feature from Bitcoin Core called “Child Pays
-For Parent” (CPFP). The purpose of this feature is to allow transactions
-which spend outputs from other transactions, which are currently in the
-mempool, to pay fees on behalf of the ancestor (e.g. parent)
-transactions. This is useful in the case where the parent would not be
-included in the next block, and someone desires to spend it’s output
-immediately. From a mining perspective, it would be more profitable to
-include the pair of transactions, receiving both their fees, than
-include some entirely different transaction.</p>
-<p>While this seems like a useful feature, it causes several scaling
-issues. When constructing a new block, the software needs to know which
-transactions to include in the block – but it is no longer based solely
-on individual transaction fees, but instead on transaction fees of each
-chain of transactions (herein called a package).</p>
-<p>As new transactions in a package come in, we must look up all their
-parents, and update the ancestors. This means, for a package of size N,
-we must do this ~N² Times:</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> CTxMemPool<span class="op">::</span>addUnchecked<span class="op">(...)</span> <span class="op">{</span></span>
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    
+    
+    
+
+    <h1 id="child-pays-for-parent-part-3">Child Pays for Parent: Part
+    3</h1>
+    <p><strong>Publication Date:</strong> June 9, 2019
+    <strong>Source:</strong> #!blag <strong>Categories:</strong> Bitcoin
+    Cash, Technical Analysis, Software Engineering, Performance
+    Optimization <strong>Archive URL:</strong>
+    https://web.archive.org/web/20240518024616/https://shablag.com/article/child-pays-for-parent-part-3/</p>
+    <h2
+    id="eliminating-on²-processing-for-unconfirmed-transaction-chains-and-permitting-longer-chains">Eliminating
+    O(n²) processing for unconfirmed transaction chains and permitting
+    longer chains</h2>
+    <h3 id="background">Background</h3>
+    <p><a
+    href="https://shablag.com/article/child-pays-for-parent/">Two</a> <a
+    href="https://shablag.com/article/child-pays-for-parent-part-2/">previous</a>
+    essays were written on this topic, but ultimately the ideas and
+    methodology were abandoned due to problems and edges cases
+    discovered while attempting to implement those methods. The first
+    section, of the first essay is republished here for background.</p>
+    <p>Bitcoin ABC inherited a feature from Bitcoin Core called “Child
+    Pays For Parent” (CPFP). The purpose of this feature is to allow
+    transactions which spend outputs from other transactions, which are
+    currently in the mempool, to pay fees on behalf of the ancestor
+    (e.g. parent) transactions. This is useful in the case where the
+    parent would not be included in the next block, and someone desires
+    to spend it’s output immediately. From a mining perspective, it
+    would be more profitable to include the pair of transactions,
+    receiving both their fees, than include some entirely different
+    transaction.</p>
+    <p>While this seems like a useful feature, it causes several scaling
+    issues. When constructing a new block, the software needs to know
+    which transactions to include in the block – but it is no longer
+    based solely on individual transaction fees, but instead on
+    transaction fees of each chain of transactions (herein called a
+    package).</p>
+    <p>As new transactions in a package come in, we must look up all
+    their parents, and update the ancestors. This means, for a package
+    of size N, we must do this ~N² Times:</p>
+    <div class="sourceCode" id="cb1"><pre
+    class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> CTxMemPool<span class="op">::</span>addUnchecked<span class="op">(...)</span> <span class="op">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">const</span> CTransaction <span class="op">&amp;</span>tx <span class="op">=</span> newit<span class="op">-&gt;</span>GetTx<span class="op">();</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>set<span class="op">&lt;</span>uint256<span class="op">&gt;</span> setParentTransactions<span class="op">;</span></span>
@@ -149,19 +92,19 @@ class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#c
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    UpdateEntryForAncestors<span class="op">(</span>newit<span class="op">,</span> setAncestors<span class="op">);</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Additionally, when a new block is found, its transactions must be
-removed from the mempool. In this case, this extra accounting must be
-updated again. In order to ensure that chains are not broken up while
-updating the accounting, this needs to be done in topological order.
-Since the introduction of CTOR, blocks are no longer in topological
-order, so they must be first sorted. <a
-href="https://en.wikipedia.org/wiki/Topological_sorting">Topological
-sorting</a> is linear time in the number of nodes and
-edges(approximately linear in terms of block size). Once we have
-topologically ordered them, we must then update each descendant’s
-accounting. This is again N² Time:</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> CTxMemPool<span class="op">::</span>removeForBlock<span class="op">(...)</span> <span class="op">{</span></span>
+    <p>Additionally, when a new block is found, its transactions must be
+    removed from the mempool. In this case, this extra accounting must
+    be updated again. In order to ensure that chains are not broken up
+    while updating the accounting, this needs to be done in topological
+    order. Since the introduction of CTOR, blocks are no longer in
+    topological order, so they must be first sorted. <a
+    href="https://en.wikipedia.org/wiki/Topological_sorting">Topological
+    sorting</a> is linear time in the number of nodes and
+    edges(approximately linear in terms of block size). Once we have
+    topologically ordered them, we must then update each descendant’s
+    accounting. This is again N² Time:</p>
+    <div class="sourceCode" id="cb2"><pre
+    class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> CTxMemPool<span class="op">::</span>removeForBlock<span class="op">(...)</span> <span class="op">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="at">const</span> CTransactionRef <span class="op">&amp;</span>tx <span class="op">:</span> reverse_iterate<span class="op">(</span>disconnectpool<span class="op">.</span>GetQueuedTx<span class="op">().</span>get<span class="op">&lt;</span>insertion_order<span class="op">&gt;()))</span> <span class="op">{</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span></span>
@@ -175,12 +118,12 @@ class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#c
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Since the algorithms require O(n²) computation, it is vulnerable to
-DoS attacks. Therefore, a limit was added in order to prevent chains of
-lengths greater than 25 (by default) from being accepted by the node.
-The following code was added to enforce this rule:</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="at">static</span> <span class="dt">bool</span> AcceptToMemoryPoolWorker<span class="op">(...)</span> <span class="op">{</span></span>
+    <p>Since the algorithms require O(n²) computation, it is vulnerable
+    to DoS attacks. Therefore, a limit was added in order to prevent
+    chains of lengths greater than 25 (by default) from being accepted
+    by the node. The following code was added to enforce this rule:</p>
+    <div class="sourceCode" id="cb3"><pre
+    class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="at">static</span> <span class="dt">bool</span> AcceptToMemoryPoolWorker<span class="op">(...)</span> <span class="op">{</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>pool<span class="op">.</span>CalculateMemPoolAncestors<span class="op">(</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            entry<span class="op">,</span> setAncestors<span class="op">,</span> nLimitAncestors<span class="op">,</span> nLimitAncestorSize<span class="op">,</span></span>
@@ -190,278 +133,297 @@ class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#c
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>While this feature appears useful, it creates a couple of
-problems:</p>
-<ol type="1">
-<li>It adds n² complexity to accepting new chained transactions.</li>
-<li>It adds n² complexity to processing (not validating) a new
-block.</li>
-<li>It prevents long chains of zero-conf transactions in order to
-prevent DoS attacks.</li>
-</ol>
-<figure>
-<img
-src="https://web.archive.org/web/20240518024616im_/https://shablag.com/cpfp3/fig1.png"
-title="Performance Impacts of Raising the Ancestor and Descendant Transaction Limit for Bitcoin Cash"
-alt="Effect of Raising Chained Tx Limit" />
-<figcaption aria-hidden="true">Effect of Raising Chained Tx
-Limit</figcaption>
-</figure>
-<p>(Fig 1) Taken from <a
-href="https://shablag.com/20180331-ChainedTx.pdf">Raising the Ancestor
-and Descendant Transaction Limit for Bitcoin Cash</a></p>
-<p>Despite the time complexity of this feature, child pays for parent is
-useful in several circumstances:</p>
-<ol type="1">
-<li>Sustained usage which exceeds demand for blockspace.</li>
-<li>Attempts to DDoS Bitcoin by sending lots of transactions with small
-fees, and a legitimate user would like to prioritize a transaction.</li>
-<li>A transaction sent has a fee which is relayable, but falls below
-miners configured threshold.</li>
-</ol>
-<p>The first case is avoided in Bitcoin Cash due to user experience
-considerations.</p>
-<p>For the second case, we have not observed that this occurs for any
-significant length of time. It is actually quite costly to carry out
-such an attack, and gains the perpetrator nearly nothing. At most, we
-need to ensure that we have some quality of service mechanism in
-place.</p>
-<p>In the final case, where the minimum relay fee is less than the
-minimum block fee, a receiving user may want to spend out of the mempool
-and ensure that both transactions will be confirmed.</p>
-<h2 id="requirements">Requirements:</h2>
-<ul>
-<li>Enable removing the restriction of 25 transactions to a chain</li>
-<li>~ Ensure processing chained transactions is &lt;O(nlogn) for N in
-the chain length.</li>
-</ul>
-<h2 id="high-level-solution">High Level Solution</h2>
-<p>The proposed solution to this problem is a multistage process:</p>
-<ol type="1">
-<li>Separate block template transaction selection criteria from the
-mempool entirely.</li>
-<li>Use a fast heuristic to calculate package fees and support the
-majority of CPFP use cases, ensuring that the majority of existing tests
-pass.</li>
-<li>Remove the package fee calculation from the mempool acceptance
-procedure.</li>
-<li>Remove the 25-tx chain limit.</li>
-</ol>
-<h2 id="package-fee-algorithm">Package Fee Algorithm</h2>
-<p>For Code See: <a
-href="https://reviews.bitcoinabc.org/D2866">https://reviews.bitcoinabc.org/D2866</a></p>
-<p>In order to remove these computational expenses, we switch to a
-simple model. During block candidate construction each transaction is
-assigned a height equal to the number of levels of transactions (See Fig
-2) that will need to go into a block before it would be a valid
-inclusion (due to ancestors). Additionally, the height of a transaction
-which have higher package fee-rates than the maximum of their parent
-maximum packageFees parents are reset to height=0.</p>
-<p>Each transaction is processed in sort order, where the sort is based
-on the “height”, and within the height based on its packageFeeRate (if
-it is height zero) or its feerate if it is non-zero. The result is that
-the complexity is O(nlogn) for the sort, and O(n+m) calculating the
-package information (where M is the number of edges in the transaction
-graph for). This is significantly lower complexity than the existing
-algorithm while allowing some rudimentary CPFP functionality.</p>
-<p>Examples:</p>
-<figure>
-<img
-src="https://web.archive.org/web/20240518024616im_/https://shablag.com/cpfp3/fig2.png"
-title="Example Transaction Chain" alt="Fig 2" />
-<figcaption aria-hidden="true">Fig 2</figcaption>
-</figure>
-<p>Example Transaction Chain</p>
-<p>Without any package having package fees greater than a parent, the
-above set of heights for transactions would be produced.</p>
-<p>From the fee information, for each transaction, Tx4 is given a height
-of 0. When sorting the resulting list of transactions by height, and
-then by PkgFeeRate, the following total order will arise: Tx1, Tx3, Tx4,
-Tx2, Tx5. In upgrading Tx4 to height 0, we know we will not be doing
-worse by including it before Tx2. It may be the case that some of its
-ancestors sort before it, but that is okay. What is important, is that
-when we get to Tx4, we also include Tx2 while ensuring we are not doing
-significantly worse than including some other transaction. This property
-is guaranteed by this topology.</p>
-<figure>
-<img
-src="https://web.archive.org/web/20240518024616im_/https://shablag.com/cpfp3/fig3.png"
-title="Example Transaction Chain with values from Algorithm"
-alt="Fig 3" />
-<figcaption aria-hidden="true">Fig 3</figcaption>
-</figure>
-<p>Example Transaction Chain with values from Algorithm</p>
-<h2 id="rationale">Rationale</h2>
-<p>As long as the mempool calculations are intertwined with logic for
-producing block templates, any change to the mempool code must include
-changes to the block template generation code. It is better, and less
-error prone, to make changes to one piece of a larger refactor at a
-time. For a progressive change, there are two possible options:</p>
-<p>Add additional calculations to the mempool which are faster than the
-existing algorithm, and then change the mining code to use them.</p>
-<p>Change the mining code not to depend on the mempool, and then remove
-the existing calculations from the mempool completely.</p>
-<p>However, the mempool fee calculations are complex, and each value
-requires updating when: new transactions are received, new blocks are
-received, transactions are dropped from the mempool, and when
-transactions are manually reprioritized. For the case when a new block
-is received, this must happen before a block validation can complete so
-that the mempool is in a consistent state for new transactions and
-mining. However, the block receipt operation degenerates into a bulk
-operation which is different code from iterative updates. This requires
-the same calculations to be made two different ways; leading to the
-potential for bugs if these calculations need to be changed in the
-future.</p>
-<p>Due to the complexity, and computational expense, of maintaining
-mempool consistency during transaction acceptance, going with option 2
-is proposed. There are some tradeoffs with moving package handling to
-the block template creation process.</p>
-<p>GetNewBlock is called on a duty cycle by mining pool software. As
-long as it does take the cs_main, and mempool, locks for an extended
-period of time, moving the calculation to GetNewBlock does not hurt
-mempool acceptance in a significant way. Additionally, if GetNewBlock
-takes some additional time to work, this impacts mining performance
-immediately after receipt of a new chain tip. Additionally, some
-transactions may not confirm as quickly as they otherwise would had the
-template been updated sooner.</p>
-<p>These tradeoffs are acceptable if we can reduce the total time spent
-in GetNewBlock with an improved package selection algorithm. The current
-version of addPackageTxns also recomputes package fees progressively as
-groups of transactions are added to the potential block. Since our
-proposed algorithm algorithm does not need to update fees progressively,
-we are able to realize significant time savings here. The proposed
-algorithm is O(|N|+|M|) where N and M are the number of transactions and
-edges in the mempool. Each transaction, and transaction dependency
-(edge), requires blockspace in a roughly linear fashion, ensuring the
-calculations scale roughly linearly with fees.</p>
-<p>Additionally, decoupling the mempool from the mining code allows for
-the number of invariants the mempool has to enforce to be reduced.
-Instead of requiring that all package information must be consistent at
-the mempool boundaries, we now only require that the mempool not include
-any orphan transactions. With a single responsibility, large amounts of
-code can be removed from the mempool.</p>
-<p>Studies in software defects show us that the ratio of bugs per line
-of code is <a
-href="https://www.mayerdan.com/ruby/2012/11/11/bugs-per-line-of-code-ratio">roughly
-20 bugs per KLOC</a>. Given that Bitcoin ABC is mission critical
-software, choosing solutions which simply the overall codebase is wise.
-The total addition caused by these changes to miner.cpp is ~300 lines,
-while ~400 lines are able to be deleted. Additionally, one index and
-another 25 lines of code are able to be deleted from txmempool.cpp.
-Another 121 lines of unit tests may deleted in txmempool_tests.cpp. Step
-3 of the proposed solution will likely remove approximately 500 more
-lines from the mempool.</p>
-<h3 id="benchmarks">Benchmarks</h3>
-<figure>
-<img
-src="https://web.archive.org/web/20240518024616im_/https://shablag.com/cpfp3/fig4.png"
-title="Benchmarks of altered vs unaltered code for transaction chains"
-alt="Fig 4" />
-<figcaption aria-hidden="true">Fig 4</figcaption>
-</figure>
-<p>Benchmarks of altered vs unaltered code for transaction chains</p>
-<p>Figure (4) was generated using a modified test <a
-href="https://github.com/jcramer/bitcoin-abc/commit/583004b6f3342f21f8b22e6c73a51d9f6c84201d#diff-67c92bdf9fb448d0f68e40d1ed1b469a">from
-David Froderick</a>. Additional <a
-href="https://github.com/schancel/bitcoin-abc/commits/benchmarks">modifications
-were made</a> to allow the chain length to be configured by command
-line, and so that the test would append a JSON entry to an output file.
-This was then run in a loop via a shell script for the above chain
-lengths. This was done for both a binary generated from <a
-href="https://reviews.bitcoinabc.org/D2866">D2866</a> and one from
-Bitcoin ABC master commit f5873a89b69437985a10fa997214ebf4adbb1fa0. As
-is clearly visible, the new getblocktemplate code scales very well with
-chain length. Additionally, the implementation is extremely naive with
-lots of room for optimization by removing hash table lookups, and
-improving locality for better cache hit rates.</p>
-<p>Additionally, benchmarks were conducted vs the unmodified mining code
-for blocks of various sizes and for transactions with no descendants.
-The data is visualized in Fig(3). The x axis is the number of
-transactions. These were either 1 Input 2 output, or 1 input 1 output
-transactions of ~200 bytes on average. The overall performance is
-roughly linear for both algorithms. The difference between the
-algorithms is negligible.</p>
-<figure>
-<img
-src="https://web.archive.org/web/20240518024616im_/https://shablag.com/cpfp3/fig5.png"
-title="Benchmarks of altered vs unaltered code for normal use"
-alt="Fig 5" />
-<figcaption aria-hidden="true">Fig 5</figcaption>
-</figure>
-<p>Benchmarks of altered vs unaltered code for normal use</p>
-<h3 id="path-forward">Path Forward</h3>
-<p>The next step after include of <a
-href="https://reviews.bitcoinabc.org/D2866">D2866</a>, is to remove and
-optimize package tracking code in the mempool. This is primarily
-deleting code which no longer has any dependencies.</p>
-<p>After code removal is completed, if more progressive algorithms are
-still required, another component can be introduced which maintains
-block templates. It can run in a background thread, and maintain a block
-template based on messages passed to it from the mempool. For example,
-these events could be:</p>
-<ol type="1">
-<li>Transaction added: Update the block template with this transaction,
-and reorder where needed, or drop the transaction from inclusion
-entirely.</li>
-<li>Transaction removed: Remove the transaction, and its descendants,
-from the template if found, and removal is desired.</li>
-<li>New block received:
-<ol type="1">
-<li>Clear the existing block template</li>
-<li>Bulk copy the remnants of the mempool</li>
-<li>Recalculate inclusions</li>
-</ol></li>
-</ol>
-<p>Having such a component is also desirable in the future, as it can
-maintain transactions sets associated with WorkIds as per the <a
-href="https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki">BIP22</a>
-specification. Support for WorkIds will become necessary as block sizes
-grow. Passing around entire transaction sets to and from the node will
-become infeasible as block sizes grow.</p>
-<h3 id="other-possible-solutions">Other Possible Solutions</h3>
-<h4
-id="do-fee-calculation-when-entering-the-mempool-then-take-a-snapshot-of-the-mempool-when-producing-a-block-template">Do
-fee calculation when entering the mempool then take a snapshot of the
-mempool when producing a block template</h4>
-<p>One option that was considered was to, as is currently done,
-calculate the fees for a transaction as they enter the mempool, and
-simply snapshot the transactions when creating a block template.
-However, the node must support producing blocks during times of
-sustained high use where the mempool size can be greater than the
-current block size. Therefore, this solution has some drawbacks:</p>
-<ol type="1">
-<li>Fee calculation is limited to streamable algorithms.</li>
-<li>Block validation requires updating any transactions which are not
-cleared from the mempool before more blocks can be mined.</li>
-</ol>
-<p>With respect to the first, calculating transaction fees upon
-admission to the mempool, the solution to fee calculation must be
-streamable. This means that other, possibly more efficient, solutions
-that only operate on completed sets are off-limits.</p>
-<p>The second problem also poses more of a problem during conditions
-where sustained high use is occuring. If the block size is greater than
-the mempool size, receipt of a new block should clear the mempool.
-However, in situations where this is not the case, the remaining
-transactions must have their information updated. This must happen
-before a block has completed validating, and degenerates into bulk
-operation which is different from the iterative updates that are made
-for single transaction admittance. This requires the same calculations
-to be made two different ways; leading to the potential for bugs if
-these calculations need to be updated.</p>
-<p>Additionally, tying the fee calculation logic to the mempool means
-that non-mining nodes must also perform these calculations wasting
-resources.</p>
-<h3 id="conclusion">Conclusion</h3>
-<p>By decoupling the mempool from block creation we enabled a
-significant reduction in code complexity both of mining, and of the
-mempool. Mining pool operators are more easily able to customize block
-template production in the future. The chained transaction limit can be
-lifted or extended significantly, allowing for new use cases, and
-simplifying UTXO management for wallets driving complex Bitcoin Cash
-applications. Finally, with malleability fixes coming in November,
-chained transactions will not be vulnerable to malleability attacks.
-These two factors combined open up the possibility for applications
-which need to generate transactions at a high frequency without
-complicated UTXO management.</p>
+    <p>While this feature appears useful, it creates a couple of
+    problems:</p>
+    <ol type="1">
+    <li>It adds n² complexity to accepting new chained
+    transactions.</li>
+    <li>It adds n² complexity to processing (not validating) a new
+    block.</li>
+    <li>It prevents long chains of zero-conf transactions in order to
+    prevent DoS attacks.</li>
+    </ol>
+    <figure>
+    <img
+    src="https://web.archive.org/web/20240518024616im_/https://shablag.com/cpfp3/fig1.png"
+    title="Performance Impacts of Raising the Ancestor and Descendant Transaction Limit for Bitcoin Cash"
+    alt="Effect of Raising Chained Tx Limit" />
+    <figcaption aria-hidden="true">Effect of Raising Chained Tx
+    Limit</figcaption>
+    </figure>
+    <p>(Fig 1) Taken from <a
+    href="https://shablag.com/20180331-ChainedTx.pdf">Raising the
+    Ancestor and Descendant Transaction Limit for Bitcoin Cash</a></p>
+    <p>Despite the time complexity of this feature, child pays for
+    parent is useful in several circumstances:</p>
+    <ol type="1">
+    <li>Sustained usage which exceeds demand for blockspace.</li>
+    <li>Attempts to DDoS Bitcoin by sending lots of transactions with
+    small fees, and a legitimate user would like to prioritize a
+    transaction.</li>
+    <li>A transaction sent has a fee which is relayable, but falls below
+    miners configured threshold.</li>
+    </ol>
+    <p>The first case is avoided in Bitcoin Cash due to user experience
+    considerations.</p>
+    <p>For the second case, we have not observed that this occurs for
+    any significant length of time. It is actually quite costly to carry
+    out such an attack, and gains the perpetrator nearly nothing. At
+    most, we need to ensure that we have some quality of service
+    mechanism in place.</p>
+    <p>In the final case, where the minimum relay fee is less than the
+    minimum block fee, a receiving user may want to spend out of the
+    mempool and ensure that both transactions will be confirmed.</p>
+    <h2 id="requirements">Requirements:</h2>
+    <ul>
+    <li>Enable removing the restriction of 25 transactions to a
+    chain</li>
+    <li>~ Ensure processing chained transactions is &lt;O(nlogn) for N
+    in the chain length.</li>
+    </ul>
+    <h2 id="high-level-solution">High Level Solution</h2>
+    <p>The proposed solution to this problem is a multistage
+    process:</p>
+    <ol type="1">
+    <li>Separate block template transaction selection criteria from the
+    mempool entirely.</li>
+    <li>Use a fast heuristic to calculate package fees and support the
+    majority of CPFP use cases, ensuring that the majority of existing
+    tests pass.</li>
+    <li>Remove the package fee calculation from the mempool acceptance
+    procedure.</li>
+    <li>Remove the 25-tx chain limit.</li>
+    </ol>
+    <h2 id="package-fee-algorithm">Package Fee Algorithm</h2>
+    <p>For Code See: <a
+    href="https://reviews.bitcoinabc.org/D2866">https://reviews.bitcoinabc.org/D2866</a></p>
+    <p>In order to remove these computational expenses, we switch to a
+    simple model. During block candidate construction each transaction
+    is assigned a height equal to the number of levels of transactions
+    (See Fig 2) that will need to go into a block before it would be a
+    valid inclusion (due to ancestors). Additionally, the height of a
+    transaction which have higher package fee-rates than the maximum of
+    their parent maximum packageFees parents are reset to height=0.</p>
+    <p>Each transaction is processed in sort order, where the sort is
+    based on the “height”, and within the height based on its
+    packageFeeRate (if it is height zero) or its feerate if it is
+    non-zero. The result is that the complexity is O(nlogn) for the
+    sort, and O(n+m) calculating the package information (where M is the
+    number of edges in the transaction graph for). This is significantly
+    lower complexity than the existing algorithm while allowing some
+    rudimentary CPFP functionality.</p>
+    <p>Examples:</p>
+    <figure>
+    <img
+    src="https://web.archive.org/web/20240518024616im_/https://shablag.com/cpfp3/fig2.png"
+    title="Example Transaction Chain" alt="Fig 2" />
+    <figcaption aria-hidden="true">Fig 2</figcaption>
+    </figure>
+    <p>Example Transaction Chain</p>
+    <p>Without any package having package fees greater than a parent,
+    the above set of heights for transactions would be produced.</p>
+    <p>From the fee information, for each transaction, Tx4 is given a
+    height of 0. When sorting the resulting list of transactions by
+    height, and then by PkgFeeRate, the following total order will
+    arise: Tx1, Tx3, Tx4, Tx2, Tx5. In upgrading Tx4 to height 0, we
+    know we will not be doing worse by including it before Tx2. It may
+    be the case that some of its ancestors sort before it, but that is
+    okay. What is important, is that when we get to Tx4, we also include
+    Tx2 while ensuring we are not doing significantly worse than
+    including some other transaction. This property is guaranteed by
+    this topology.</p>
+    <figure>
+    <img
+    src="https://web.archive.org/web/20240518024616im_/https://shablag.com/cpfp3/fig3.png"
+    title="Example Transaction Chain with values from Algorithm"
+    alt="Fig 3" />
+    <figcaption aria-hidden="true">Fig 3</figcaption>
+    </figure>
+    <p>Example Transaction Chain with values from Algorithm</p>
+    <h2 id="rationale">Rationale</h2>
+    <p>As long as the mempool calculations are intertwined with logic
+    for producing block templates, any change to the mempool code must
+    include changes to the block template generation code. It is better,
+    and less error prone, to make changes to one piece of a larger
+    refactor at a time. For a progressive change, there are two possible
+    options:</p>
+    <p>Add additional calculations to the mempool which are faster than
+    the existing algorithm, and then change the mining code to use
+    them.</p>
+    <p>Change the mining code not to depend on the mempool, and then
+    remove the existing calculations from the mempool completely.</p>
+    <p>However, the mempool fee calculations are complex, and each value
+    requires updating when: new transactions are received, new blocks
+    are received, transactions are dropped from the mempool, and when
+    transactions are manually reprioritized. For the case when a new
+    block is received, this must happen before a block validation can
+    complete so that the mempool is in a consistent state for new
+    transactions and mining. However, the block receipt operation
+    degenerates into a bulk operation which is different code from
+    iterative updates. This requires the same calculations to be made
+    two different ways; leading to the potential for bugs if these
+    calculations need to be changed in the future.</p>
+    <p>Due to the complexity, and computational expense, of maintaining
+    mempool consistency during transaction acceptance, going with option
+    2 is proposed. There are some tradeoffs with moving package handling
+    to the block template creation process.</p>
+    <p>GetNewBlock is called on a duty cycle by mining pool software. As
+    long as it does take the cs_main, and mempool, locks for an extended
+    period of time, moving the calculation to GetNewBlock does not hurt
+    mempool acceptance in a significant way. Additionally, if
+    GetNewBlock takes some additional time to work, this impacts mining
+    performance immediately after receipt of a new chain tip.
+    Additionally, some transactions may not confirm as quickly as they
+    otherwise would had the template been updated sooner.</p>
+    <p>These tradeoffs are acceptable if we can reduce the total time
+    spent in GetNewBlock with an improved package selection algorithm.
+    The current version of addPackageTxns also recomputes package fees
+    progressively as groups of transactions are added to the potential
+    block. Since our proposed algorithm algorithm does not need to
+    update fees progressively, we are able to realize significant time
+    savings here. The proposed algorithm is O(|N|+|M|) where N and M are
+    the number of transactions and edges in the mempool. Each
+    transaction, and transaction dependency (edge), requires blockspace
+    in a roughly linear fashion, ensuring the calculations scale roughly
+    linearly with fees.</p>
+    <p>Additionally, decoupling the mempool from the mining code allows
+    for the number of invariants the mempool has to enforce to be
+    reduced. Instead of requiring that all package information must be
+    consistent at the mempool boundaries, we now only require that the
+    mempool not include any orphan transactions. With a single
+    responsibility, large amounts of code can be removed from the
+    mempool.</p>
+    <p>Studies in software defects show us that the ratio of bugs per
+    line of code is <a
+    href="https://www.mayerdan.com/ruby/2012/11/11/bugs-per-line-of-code-ratio">roughly
+    20 bugs per KLOC</a>. Given that Bitcoin ABC is mission critical
+    software, choosing solutions which simply the overall codebase is
+    wise. The total addition caused by these changes to miner.cpp is
+    ~300 lines, while ~400 lines are able to be deleted. Additionally,
+    one index and another 25 lines of code are able to be deleted from
+    txmempool.cpp. Another 121 lines of unit tests may deleted in
+    txmempool_tests.cpp. Step 3 of the proposed solution will likely
+    remove approximately 500 more lines from the mempool.</p>
+    <h3 id="benchmarks">Benchmarks</h3>
+    <figure>
+    <img
+    src="https://web.archive.org/web/20240518024616im_/https://shablag.com/cpfp3/fig4.png"
+    title="Benchmarks of altered vs unaltered code for transaction chains"
+    alt="Fig 4" />
+    <figcaption aria-hidden="true">Fig 4</figcaption>
+    </figure>
+    <p>Benchmarks of altered vs unaltered code for transaction
+    chains</p>
+    <p>Figure (4) was generated using a modified test <a
+    href="https://github.com/jcramer/bitcoin-abc/commit/583004b6f3342f21f8b22e6c73a51d9f6c84201d#diff-67c92bdf9fb448d0f68e40d1ed1b469a">from
+    David Froderick</a>. Additional <a
+    href="https://github.com/schancel/bitcoin-abc/commits/benchmarks">modifications
+    were made</a> to allow the chain length to be configured by command
+    line, and so that the test would append a JSON entry to an output
+    file. This was then run in a loop via a shell script for the above
+    chain lengths. This was done for both a binary generated from <a
+    href="https://reviews.bitcoinabc.org/D2866">D2866</a> and one from
+    Bitcoin ABC master commit f5873a89b69437985a10fa997214ebf4adbb1fa0.
+    As is clearly visible, the new getblocktemplate code scales very
+    well with chain length. Additionally, the implementation is
+    extremely naive with lots of room for optimization by removing hash
+    table lookups, and improving locality for better cache hit
+    rates.</p>
+    <p>Additionally, benchmarks were conducted vs the unmodified mining
+    code for blocks of various sizes and for transactions with no
+    descendants. The data is visualized in Fig(3). The x axis is the
+    number of transactions. These were either 1 Input 2 output, or 1
+    input 1 output transactions of ~200 bytes on average. The overall
+    performance is roughly linear for both algorithms. The difference
+    between the algorithms is negligible.</p>
+    <figure>
+    <img
+    src="https://web.archive.org/web/20240518024616im_/https://shablag.com/cpfp3/fig5.png"
+    title="Benchmarks of altered vs unaltered code for normal use"
+    alt="Fig 5" />
+    <figcaption aria-hidden="true">Fig 5</figcaption>
+    </figure>
+    <p>Benchmarks of altered vs unaltered code for normal use</p>
+    <h3 id="path-forward">Path Forward</h3>
+    <p>The next step after include of <a
+    href="https://reviews.bitcoinabc.org/D2866">D2866</a>, is to remove
+    and optimize package tracking code in the mempool. This is primarily
+    deleting code which no longer has any dependencies.</p>
+    <p>After code removal is completed, if more progressive algorithms
+    are still required, another component can be introduced which
+    maintains block templates. It can run in a background thread, and
+    maintain a block template based on messages passed to it from the
+    mempool. For example, these events could be:</p>
+    <ol type="1">
+    <li>Transaction added: Update the block template with this
+    transaction, and reorder where needed, or drop the transaction from
+    inclusion entirely.</li>
+    <li>Transaction removed: Remove the transaction, and its
+    descendants, from the template if found, and removal is
+    desired.</li>
+    <li>New block received:
+    <ol type="1">
+    <li>Clear the existing block template</li>
+    <li>Bulk copy the remnants of the mempool</li>
+    <li>Recalculate inclusions</li>
+    </ol></li>
+    </ol>
+    <p>Having such a component is also desirable in the future, as it
+    can maintain transactions sets associated with WorkIds as per the <a
+    href="https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki">BIP22</a>
+    specification. Support for WorkIds will become necessary as block
+    sizes grow. Passing around entire transaction sets to and from the
+    node will become infeasible as block sizes grow.</p>
+    <h3 id="other-possible-solutions">Other Possible Solutions</h3>
+    <h4
+    id="do-fee-calculation-when-entering-the-mempool-then-take-a-snapshot-of-the-mempool-when-producing-a-block-template">Do
+    fee calculation when entering the mempool then take a snapshot of
+    the mempool when producing a block template</h4>
+    <p>One option that was considered was to, as is currently done,
+    calculate the fees for a transaction as they enter the mempool, and
+    simply snapshot the transactions when creating a block template.
+    However, the node must support producing blocks during times of
+    sustained high use where the mempool size can be greater than the
+    current block size. Therefore, this solution has some drawbacks:</p>
+    <ol type="1">
+    <li>Fee calculation is limited to streamable algorithms.</li>
+    <li>Block validation requires updating any transactions which are
+    not cleared from the mempool before more blocks can be mined.</li>
+    </ol>
+    <p>With respect to the first, calculating transaction fees upon
+    admission to the mempool, the solution to fee calculation must be
+    streamable. This means that other, possibly more efficient,
+    solutions that only operate on completed sets are off-limits.</p>
+    <p>The second problem also poses more of a problem during conditions
+    where sustained high use is occuring. If the block size is greater
+    than the mempool size, receipt of a new block should clear the
+    mempool. However, in situations where this is not the case, the
+    remaining transactions must have their information updated. This
+    must happen before a block has completed validating, and degenerates
+    into bulk operation which is different from the iterative updates
+    that are made for single transaction admittance. This requires the
+    same calculations to be made two different ways; leading to the
+    potential for bugs if these calculations need to be updated.</p>
+    <p>Additionally, tying the fee calculation logic to the mempool
+    means that non-mining nodes must also perform these calculations
+    wasting resources.</p>
+    <h3 id="conclusion">Conclusion</h3>
+    <p>By decoupling the mempool from block creation we enabled a
+    significant reduction in code complexity both of mining, and of the
+    mempool. Mining pool operators are more easily able to customize
+    block template production in the future. The chained transaction
+    limit can be lifted or extended significantly, allowing for new use
+    cases, and simplifying UTXO management for wallets driving complex
+    Bitcoin Cash applications. Finally, with malleability fixes coming
+    in November, chained transactions will not be vulnerable to
+    malleability attacks. These two factors combined open up the
+    possibility for applications which need to generate transactions at
+    a high frequency without complicated UTXO management.</p>
+
+    <hr>
+    
+    <footer>
+        <p style="margin-top:0.75rem"><a href="index.html">← Back to #!blag</a></p>
+    </footer>
 </body>
 </html>

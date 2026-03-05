@@ -1,160 +1,170 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Shammah Chancellor" />
-  <meta name="dcterms.date" content="2020-02-09" />
-  <title>Bitcoin Cash Development Funding</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Cash Development Funding — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; }
+    </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Bitcoin Cash Development Funding</h1>
-<p class="author">Shammah Chancellor</p>
-<p class="date">2020-02-09</p>
-</header>
-<h1 id="bitcoin-cash-development-funding">Bitcoin Cash Development
-Funding</h1>
-<p>There have been many different conversations about how Bitcoin Cash
-<em>node</em> development should be funded. Some of these have been:</p>
-<ol type="1">
-<li>That developers could sell some service</li>
-<li>That developers could sell a product</li>
-<li>That some percentage of the block reward could go to
-developers.</li>
-</ol>
-<p>The first two of these ideas amount to saying that developers should
-work on the node software in addition to doing some other work. This
-doesn’t really solve the key issue at hand, and it misaligns the
-incentives of developers. They end up forming companies to build things
-like the Liquid network which have harmed Bitcoin in a not insignificant
-way.</p>
-<p>The third option is to explicitly charge a mining fee to produce
-blocks for the Bitcoin Cash network. There is a lot of contention that
-this is a bad idea for a variety of reasons. The two main reasons are
-the argument that it is (1) coercive, and (2) produces a centralized
-organization controlling BCH.</p>
-<p>Setting aside the point of coercion briefly, it is economically sound
-in that it aligns the incentives of developers with that of the network.
-However, this does not mean that it is a good idea. The point of
-centralization still stands. Whichever centralized authority controls
-these funds would have a significant amount of power over the Bitcoin
-Cash network and its future. This problem can be addressed by invoking a
-distributed consensus mechanism to decide who gets funds. Nakamoto
-consensus can work very well for this purpose.</p>
-<p>Now, the original proposal, which was a soft fork, had a large cartel
-of mining pools refuse blocks which did not include payment to a
-development fund. However, this created a situation where these miners
-risk ending up in a minority fork and unable to sell their block
-rewards. This risk has caused the proposal to be amended to be a
-hardfork, with all nodes validating that the mining fee exists.</p>
-<p>In the proposal becoming a hardfork, distributed consensus was
-removed, and developer consensus was emplaced. This is not a good idea
-where it can be avoided. This alone would make the proposal a bad idea
-that should not be implemented. With the issue of this proposal being a
-bad idea now settled, the question as to if the proposal is coercive
-remains.</p>
-<p>Currently, the software pays only miners to run it. However,
-individual miners and pools are economically disincentivized to fund
-developers. Any additional overhead takes away from their ability to
-re-invest in their own mining farms and continue to compete with other
-miners on level footing. As such, miners have not been funding
-development at a level required to maintain software as complex as
-Bitcoind. The only way in which funding development makes economic sense
-for miners would be if they all had to fund it together. This situation
-is equivalent to the <a
-href="https://en.wikipedia.org/wiki/Public_goods_game">public good
-game</a>.</p>
-<p>Yet, by making developers also profit, from the node software, their
-incentives become aligned with miners. An explicit incentive is created
-for developers to build what businesses need and what will bring value
-into the Bitcoin Cash network. No such incentive exists, except for the
-price increase in whatever coins they may have purchased themselves.</p>
-<p>Yes, sending some of the block reward back to developers comes at the
-expense of some security. It will lower the total security that is being
-demanded of the entire SHA256 pool. As such, it comes at the expense of
-every SHA256 mining group. It makes sense for most miners to oppose such
-a change as it cuts into their profit margins. Most miners have no
-inherent loyalty to Bitcoin Cash – they mine what is profitable.</p>
-<p>However, labeling this proposal as “coercive”, or a “tax”, is far
-from true. Miners are entitled to run whatever software they want, but
-they do so knowing what that software does – and that may be a different
-reward structure than they would like. The fact that the node software
-will no longer demand as much SHA256 hashing is far from coercive.
-Actually, the opposite is true – demanding that the developers of
-Bitcoin Cash write software that continues to buy, the same amount of
-SHA256 security, is coercive.</p>
-<p>This is visible when considering what is actually required of each
-ideological party in this disagreement. Opposing the mining fee involves
-demanding that developers NOT do something. Whereas, if developers new
-version of the software that refuses to validate blocks that don’t pay
-them it is completely up to miners to choose to run that new software or
-not. There is only a demand being made of one group of people:
-developers.</p>
-<p>In fact, this proposal was originally discussed in Hong Kong in June
-of 2018. A meeting was held with some of the largest miners that were
-participating in the development of Bitcoin Cash. At that meeting, the
-only miner which in opposition was nChain/Coingeek – a company which was
-concurrently trying to deprive ABC of funding, and become the sole
-source of funding, so that it could control the future direction of
-Bitcoin Cash.</p>
-<p>Now, the voluntary nature of the mining fee does not return this
-proposal to good standing. In creating centralized governance, it would
-create a single point of failure for the Bitcoin Cash network. No one
-development group should be making decisions about what is funded. It is
-incredibly important that choosing where funds are allocated does not
-require centralized coordination.</p>
-<p>Therefore, I am proposing the following change to the proposal to add
-a development fee as such:</p>
-<ol type="1">
-<li>Initially, the node software will be seeded with a whitelist of
-acceptable donation addresses for Bitcoin Cash node
-implementations.</li>
-<li>The software will then validate that the coinbase includes UTXOs
-that pay a total of 12.5% to a combination of this whitelist.</li>
-<li>If any additional address appears within some threshold of recent
-blocks (e.g. 90% of the last 2016 blocks) that address will be added to
-the whitelist by the node software.</li>
-</ol>
-<p>In this way, miners who want to redirect funds to a different
-development group can do so by donating a small amount – above and
-beyond the 12.5% – to a new organization over the course of two weeks.
-After that time, the address would be counted within the total 12.5% and
-the miners who wish to donate to that address could return to their
-normal profitability.</p>
-<p>Additionally, this provides a mechanism whereby a supermajority of
-miners can turn these consensus rules off by adding their own addresses
-to the whitelist. As such, these consensus rule changes do not need to
-be temporary for the purpose of trying them out. Miners can, if they so
-agree with each other, turn them off at any point.</p>
-<p>If the proposal is amended in this way, I would be very happy to see
-it implemented and give Bitcoin Cash a fighting chance with continued
-development and improvement. Bitcoin Cash is the most important project,
-for human freedom, in the world. Supplying proper funding for
-maintenance, and improvements, are of critical importance. Establishing
-funding, in this way, is aligned with the belief that increasing human
-freedom increases human prosperity.</p>
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    
+    
+    <div class="substack-link">Also on <a href="https://shablag.com/article/bitcoin-cash-development-funding/">Substack</a></div>
+
+    <h1 id="bitcoin-cash-development-funding">Bitcoin Cash Development
+    Funding</h1>
+    <p>There have been many different conversations about how Bitcoin
+    Cash <em>node</em> development should be funded. Some of these have
+    been:</p>
+    <ol type="1">
+    <li>That developers could sell some service</li>
+    <li>That developers could sell a product</li>
+    <li>That some percentage of the block reward could go to
+    developers.</li>
+    </ol>
+    <p>The first two of these ideas amount to saying that developers
+    should work on the node software in addition to doing some other
+    work. This doesn’t really solve the key issue at hand, and it
+    misaligns the incentives of developers. They end up forming
+    companies to build things like the Liquid network which have harmed
+    Bitcoin in a not insignificant way.</p>
+    <p>The third option is to explicitly charge a mining fee to produce
+    blocks for the Bitcoin Cash network. There is a lot of contention
+    that this is a bad idea for a variety of reasons. The two main
+    reasons are the argument that it is (1) coercive, and (2) produces a
+    centralized organization controlling BCH.</p>
+    <p>Setting aside the point of coercion briefly, it is economically
+    sound in that it aligns the incentives of developers with that of
+    the network. However, this does not mean that it is a good idea. The
+    point of centralization still stands. Whichever centralized
+    authority controls these funds would have a significant amount of
+    power over the Bitcoin Cash network and its future. This problem can
+    be addressed by invoking a distributed consensus mechanism to decide
+    who gets funds. Nakamoto consensus can work very well for this
+    purpose.</p>
+    <p>Now, the original proposal, which was a soft fork, had a large
+    cartel of mining pools refuse blocks which did not include payment
+    to a development fund. However, this created a situation where these
+    miners risk ending up in a minority fork and unable to sell their
+    block rewards. This risk has caused the proposal to be amended to be
+    a hardfork, with all nodes validating that the mining fee
+    exists.</p>
+    <p>In the proposal becoming a hardfork, distributed consensus was
+    removed, and developer consensus was emplaced. This is not a good
+    idea where it can be avoided. This alone would make the proposal a
+    bad idea that should not be implemented. With the issue of this
+    proposal being a bad idea now settled, the question as to if the
+    proposal is coercive remains.</p>
+    <p>Currently, the software pays only miners to run it. However,
+    individual miners and pools are economically disincentivized to fund
+    developers. Any additional overhead takes away from their ability to
+    re-invest in their own mining farms and continue to compete with
+    other miners on level footing. As such, miners have not been funding
+    development at a level required to maintain software as complex as
+    Bitcoind. The only way in which funding development makes economic
+    sense for miners would be if they all had to fund it together. This
+    situation is equivalent to the <a
+    href="https://en.wikipedia.org/wiki/Public_goods_game">public good
+    game</a>.</p>
+    <p>Yet, by making developers also profit, from the node software,
+    their incentives become aligned with miners. An explicit incentive
+    is created for developers to build what businesses need and what
+    will bring value into the Bitcoin Cash network. No such incentive
+    exists, except for the price increase in whatever coins they may
+    have purchased themselves.</p>
+    <p>Yes, sending some of the block reward back to developers comes at
+    the expense of some security. It will lower the total security that
+    is being demanded of the entire SHA256 pool. As such, it comes at
+    the expense of every SHA256 mining group. It makes sense for most
+    miners to oppose such a change as it cuts into their profit margins.
+    Most miners have no inherent loyalty to Bitcoin Cash – they mine
+    what is profitable.</p>
+    <p>However, labeling this proposal as “coercive”, or a “tax”, is far
+    from true. Miners are entitled to run whatever software they want,
+    but they do so knowing what that software does – and that may be a
+    different reward structure than they would like. The fact that the
+    node software will no longer demand as much SHA256 hashing is far
+    from coercive. Actually, the opposite is true – demanding that the
+    developers of Bitcoin Cash write software that continues to buy, the
+    same amount of SHA256 security, is coercive.</p>
+    <p>This is visible when considering what is actually required of
+    each ideological party in this disagreement. Opposing the mining fee
+    involves demanding that developers NOT do something. Whereas, if
+    developers new version of the software that refuses to validate
+    blocks that don’t pay them it is completely up to miners to choose
+    to run that new software or not. There is only a demand being made
+    of one group of people: developers.</p>
+    <p>In fact, this proposal was originally discussed in Hong Kong in
+    June of 2018. A meeting was held with some of the largest miners
+    that were participating in the development of Bitcoin Cash. At that
+    meeting, the only miner which in opposition was nChain/Coingeek – a
+    company which was concurrently trying to deprive ABC of funding, and
+    become the sole source of funding, so that it could control the
+    future direction of Bitcoin Cash.</p>
+    <p>Now, the voluntary nature of the mining fee does not return this
+    proposal to good standing. In creating centralized governance, it
+    would create a single point of failure for the Bitcoin Cash network.
+    No one development group should be making decisions about what is
+    funded. It is incredibly important that choosing where funds are
+    allocated does not require centralized coordination.</p>
+    <p>Therefore, I am proposing the following change to the proposal to
+    add a development fee as such:</p>
+    <ol type="1">
+    <li>Initially, the node software will be seeded with a whitelist of
+    acceptable donation addresses for Bitcoin Cash node
+    implementations.</li>
+    <li>The software will then validate that the coinbase includes UTXOs
+    that pay a total of 12.5% to a combination of this whitelist.</li>
+    <li>If any additional address appears within some threshold of
+    recent blocks (e.g. 90% of the last 2016 blocks) that address will
+    be added to the whitelist by the node software.</li>
+    </ol>
+    <p>In this way, miners who want to redirect funds to a different
+    development group can do so by donating a small amount – above and
+    beyond the 12.5% – to a new organization over the course of two
+    weeks. After that time, the address would be counted within the
+    total 12.5% and the miners who wish to donate to that address could
+    return to their normal profitability.</p>
+    <p>Additionally, this provides a mechanism whereby a supermajority
+    of miners can turn these consensus rules off by adding their own
+    addresses to the whitelist. As such, these consensus rule changes do
+    not need to be temporary for the purpose of trying them out. Miners
+    can, if they so agree with each other, turn them off at any
+    point.</p>
+    <p>If the proposal is amended in this way, I would be very happy to
+    see it implemented and give Bitcoin Cash a fighting chance with
+    continued development and improvement. Bitcoin Cash is the most
+    important project, for human freedom, in the world. Supplying proper
+    funding for maintenance, and improvements, are of critical
+    importance. Establishing funding, in this way, is aligned with the
+    belief that increasing human freedom increases human prosperity.</p>
+
+    <hr>
+    <p style="font-size:0.9rem;color:#555">Read and subscribe on <a href="https://shablag.com/article/bitcoin-cash-development-funding/">Substack</a></p>
+    <footer>
+        <p style="margin-top:0.75rem"><a href="index.html">← Back to #!blag</a></p>
+    </footer>
 </body>
 </html>

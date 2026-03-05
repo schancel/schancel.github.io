@@ -1,195 +1,209 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Shammah Chancellor" />
-  <meta name="dcterms.date" content="2019-04-08" />
-  <title>The Future of Bitcoin Cash</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of Bitcoin Cash — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; }
+    </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">The Future of Bitcoin Cash</h1>
-<p class="author">Shammah Chancellor</p>
-<p class="date">2019-04-08</p>
-</header>
-<h1 id="the-future-of-bitcoin-cash">The Future of Bitcoin Cash</h1>
-<p>The following is a letter which was sent to the developers of Bitcoin
-ABC, Bitcoin Unlimited, Bitcoin XT, Bitprim on March 15th of 2018. At
-the time, I was handling official releases for Bitcoin ABC; although I
-am no longer a maintainer. This letter is being published for the
-edification of people outside the Bitcoin Cash development community. It
-was written in response to what I perceived as a general disagreement
-about <em>how</em> we were trying to work together, what we were trying
-to accomplish, and specifically over the May 15th protocol upgrade. It
-is worth noting that it was an ongoing challenge to facilitate cohesion
-between developer groups. There were many uncooperative factions and
-individuals at every Bitcoin Cash protocol upgrade –- August 2017,
-November 2017, May 2018, and November 2018<a href="#fn1"
-class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.
-Even the addition of CashAddr to Bitcoin-ABC, which was a non-consensus
-change, has faced a significant backlash. Had Bitcoin Cash developers
-stopped working every time someone decided to dispute changes, for
-ideological reasons<a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>, none of the of the many things
-which have been accomplished over the last year and a half would have
-happened – including the birth of Bitcoin Cash.</p>
-<p>The letter is as follows:</p>
-<h2 id="the-future-of-bitcoin-cash-1">The Future of Bitcoin Cash</h2>
-<p>Bitcoin Cash exists due to a faulty development process existing for
-Bitcoin Core. We are currently a minority fork due to the way in which
-the development process was converted into a design committee and
-co-opted by individuals who were demonstrably not interested in ensuring
-the success of Bitcoin.</p>
-<p>The expense of generating the Bitcoin Cash fork to the ecosystem has
-not been insignificant; and Bitcoin Cash remains a minority fork to this
-date. However, I believe that if we continue to do our job, BTC will
-eventually fail completely, and ​we will be ready​. This will lead to BCH
-becoming the majority fork and currency.</p>
-<p>However, any open source project potentially has the same social
-vulnerabilities as Bitcoin Core. With the amount of money involved in
-this space, there are strong incentives to control the future of Bitcoin
-Cash. As such, it was my understanding that there was generally
-understood principles that were shared by the Bitcoin Cash developers at
-the time of launch. These ideals were shared to prevent a repeat of the
-events leading up to the Bitcoin Cash fork.</p>
-<p>However, no document has clearly articulated what these were.
-Therefore, I am attempting to articulate those ideals insomuch as I
-understand them. It is my agenda within the Bitcoin Cash community to
-ensure that these ideals are realized.</p>
-<p>It is my understanding that there were two shared ideals, both of
-which are necessary to support the other. These two ideals each have two
-critical ramifications.</p>
-<h3 id="multiple-implementations-are-necessary"><a
-href="https://www.youtube.com/watch?v=64hqihJyP9U">Multiple
-implementations are necessary</a></h3>
-<p>The first ramification of having multiple implementations is that
-exchanges and miners will be able to have modular redundancy. As the
-value of the Bitcoin Cash ecosystem grows, exchanges will ultimately
-need <a
-href="https://en.wikipedia.org/wiki/Triple_modular_redundancy">​triple
-modular redundancy​</a> via running three implementations at the same
-time. Double modular redundancy is already in place at some large
-exchanges. However, as the saying goes: “Never go to sea with two
-chronometers; take one or three.” The second ramification is that no
-single team will have control over the specification of the Bitcoin Cash
-protocol; a majority of implementations must agree on the details of the
-protocol at all times.</p>
-<h3 id="forced-routine-protocol-upgrades">Forced Routine Protocol
-Upgrades</h3>
-<p>Forced routine upgrades are also critically important to Bitcoin
-Cash. The first ramification of this is that that protocol upgrades can
-be done on routine intervals and that no team can stymie the further
-development of the protocol. This principle is a necessary protection to
-prevent a repeat of what happened with the 1MB block size limit. The
-second ramification is that exchanges will be aware well in advance when
-they need to prepare for software upgrades, and can make educated
-decisions about which software they will choose to run leading into each
-protocol upgrade along with which of their own patches they wish to
-apply.</p>
-<h3 id="how-do-we-meet-these-ideals">How do we meet these ideals</h3>
-<p>In order to meet this ideals as a group we are ​forced​ to work
-together collaboratively rather than combatively. We must have clients
-released well in advance of protocol upgrade dates so that exchanges may
-install multiple node implementations, and test them well in
-advance.</p>
-<p>This also means we ​must ​agree to collaborate and get review from our
-peers in a timely manner, and must work together to provide a
-specification for what we will be doing in the next upgrade ​well in
-advance. ​ Implementations which fail to do this will ultimately be left
-behind by the teams who do work together.</p>
-<p>This ensures that there are other lead implementation engineers who
-​can​ veto protocol decisions when they are poor. However, these leads
-must also work together to ensure that the above ideals are realized.
-Once they are truly established, they will be become entrenched and
-serve to protect the development process for the world currency.</p>
-<p>Any team which wishes to build this future with me must commit to a
-reasonable release schedule, providing binaries to exchanges in a timely
-manner, and a QA process that is suitable for a currency. Our benchmark
-for this degree of rigour should exceed what is required of banks and
-security organizations. Together we must define what this process is and
-how they will be continuously improved over time (static analysis,
-fuzzing, and other QA processes we do not currently have).</p>
-<p>I know many of the developers currently working on Bitcoin Cash wish
-to realize this goal with me; as I have spoken with you one on one. It
-has become clear that not everyone shares my vision for Bitcoin Cash,
-and attempting to work together without shared values is ultimately
-fruitless. Going forward, I will only be working with teams who want to
-realize this goal with me.</p>
-<p>I hope that we can work together to agree on a schedule that we can
-stick to, and which meets the requirements of our customers. As such, I
-have proposed a workflow, and the timeline was established in London<a
-href="#fn3" class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a> to be 6 months; with feature freezes
-3 months in advance. Please propose adjustments to ​agenda for the first
-QA meeting.</p>
-<p>Respectfully,</p>
-<p>Shammah Chancellor Release Manager, Bitcoin ABC</p>
-<hr />
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>The original birthing fork was contentious due to the
-block size. November 2017 was contentious due to changing the difficulty
-adjustment algorithm. Some wanted it to go back to the original, others
-didn’t want to change away from the EDA, and a few others claimed the
-newly written DAA would be catastrophic. Jan 2018, the non-consensus
-addition of CashAddr, had a astroturf campaign against it. May 2018 was
-highly contentious because there was “community support” for OP_GROUP
-and because some developers simply wouldn’t agree to any specification
-without BIP135. November 2018 was contentious for an unintelligible slew
-of reasons, which are still being debated on the Bitco.in forum, and
-also because one lead developer still wanted BIP135. Ultimately, Bitcoin
-Cash protocol development is <em>NOT</em> a political game. Changes to
-the underlying protocol must be made using sound technical judgement,
-and for the explicit purpose of enabling global p2p cash.<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>The vast majority of contention has always been around
-deviating somehow from the “original vision” of what makes something
-Bitcoin. Starting with the 1MB block size cap, miner voting, address
-formats, and the like. No disagreements over technicals were ever swept
-aside without consideration. Ultimately, changes require broad support
-from developers, users, and miners to activate – Bitcoin ABC can not
-dictate that people run their software. We saw with Nov 2018, when a
-minority of users who do not agree with changes did fork away. While
-this fork was unfortunate, it was also inevitable. The propaganda being
-distributed against CTOR and CHECKDATASIG to try to prevent the fork has
-now been shown to be false. This propaganda was shown to be false by the
-simple fact that CTOR and CHECKDATASIG are now ACTIVE ON THE NETWORK.
-The fact that so many different lies were spread should be indicative
-that CTOR and CHECKDATASIG were <em>not</em> the real reason that BSV
-was forked. Developers are incentivized to do the most desirable thing
-if they want people to continue to use their software. There are too
-many other cryptocurrency options to do otherwise.<a href="#fnref2"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>The first meeting of the Bitcoin Cash developers was
-held in London in late 2017. The purpose was to establish a shared
-roadmap and goals.<a href="#fnref3" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    
+    
+    <div class="substack-link">Also on <a href="https://shablag.com/article/the-future-of-bitcoin-cash/">Substack</a></div>
+
+    <h1 id="the-future-of-bitcoin-cash">The Future of Bitcoin Cash</h1>
+    <p>The following is a letter which was sent to the developers of
+    Bitcoin ABC, Bitcoin Unlimited, Bitcoin XT, Bitprim on March 15th of
+    2018. At the time, I was handling official releases for Bitcoin ABC;
+    although I am no longer a maintainer. This letter is being published
+    for the edification of people outside the Bitcoin Cash development
+    community. It was written in response to what I perceived as a
+    general disagreement about <em>how</em> we were trying to work
+    together, what we were trying to accomplish, and specifically over
+    the May 15th protocol upgrade. It is worth noting that it was an
+    ongoing challenge to facilitate cohesion between developer groups.
+    There were many uncooperative factions and individuals at every
+    Bitcoin Cash protocol upgrade –- August 2017, November 2017, May
+    2018, and November 2018<a href="#fn1" class="footnote-ref"
+    id="fnref1" role="doc-noteref"><sup>1</sup></a>. Even the addition
+    of CashAddr to Bitcoin-ABC, which was a non-consensus change, has
+    faced a significant backlash. Had Bitcoin Cash developers stopped
+    working every time someone decided to dispute changes, for
+    ideological reasons<a href="#fn2" class="footnote-ref" id="fnref2"
+    role="doc-noteref"><sup>2</sup></a>, none of the of the many things
+    which have been accomplished over the last year and a half would
+    have happened – including the birth of Bitcoin Cash.</p>
+    <p>The letter is as follows:</p>
+    <h2 id="the-future-of-bitcoin-cash-1">The Future of Bitcoin
+    Cash</h2>
+    <p>Bitcoin Cash exists due to a faulty development process existing
+    for Bitcoin Core. We are currently a minority fork due to the way in
+    which the development process was converted into a design committee
+    and co-opted by individuals who were demonstrably not interested in
+    ensuring the success of Bitcoin.</p>
+    <p>The expense of generating the Bitcoin Cash fork to the ecosystem
+    has not been insignificant; and Bitcoin Cash remains a minority fork
+    to this date. However, I believe that if we continue to do our job,
+    BTC will eventually fail completely, and ​we will be ready​. This will
+    lead to BCH becoming the majority fork and currency.</p>
+    <p>However, any open source project potentially has the same social
+    vulnerabilities as Bitcoin Core. With the amount of money involved
+    in this space, there are strong incentives to control the future of
+    Bitcoin Cash. As such, it was my understanding that there was
+    generally understood principles that were shared by the Bitcoin Cash
+    developers at the time of launch. These ideals were shared to
+    prevent a repeat of the events leading up to the Bitcoin Cash
+    fork.</p>
+    <p>However, no document has clearly articulated what these were.
+    Therefore, I am attempting to articulate those ideals insomuch as I
+    understand them. It is my agenda within the Bitcoin Cash community
+    to ensure that these ideals are realized.</p>
+    <p>It is my understanding that there were two shared ideals, both of
+    which are necessary to support the other. These two ideals each have
+    two critical ramifications.</p>
+    <h3 id="multiple-implementations-are-necessary"><a
+    href="https://www.youtube.com/watch?v=64hqihJyP9U">Multiple
+    implementations are necessary</a></h3>
+    <p>The first ramification of having multiple implementations is that
+    exchanges and miners will be able to have modular redundancy. As the
+    value of the Bitcoin Cash ecosystem grows, exchanges will ultimately
+    need <a
+    href="https://en.wikipedia.org/wiki/Triple_modular_redundancy">​triple
+    modular redundancy​</a> via running three implementations at the same
+    time. Double modular redundancy is already in place at some large
+    exchanges. However, as the saying goes: “Never go to sea with two
+    chronometers; take one or three.” The second ramification is that no
+    single team will have control over the specification of the Bitcoin
+    Cash protocol; a majority of implementations must agree on the
+    details of the protocol at all times.</p>
+    <h3 id="forced-routine-protocol-upgrades">Forced Routine Protocol
+    Upgrades</h3>
+    <p>Forced routine upgrades are also critically important to Bitcoin
+    Cash. The first ramification of this is that that protocol upgrades
+    can be done on routine intervals and that no team can stymie the
+    further development of the protocol. This principle is a necessary
+    protection to prevent a repeat of what happened with the 1MB block
+    size limit. The second ramification is that exchanges will be aware
+    well in advance when they need to prepare for software upgrades, and
+    can make educated decisions about which software they will choose to
+    run leading into each protocol upgrade along with which of their own
+    patches they wish to apply.</p>
+    <h3 id="how-do-we-meet-these-ideals">How do we meet these
+    ideals</h3>
+    <p>In order to meet this ideals as a group we are ​forced​ to work
+    together collaboratively rather than combatively. We must have
+    clients released well in advance of protocol upgrade dates so that
+    exchanges may install multiple node implementations, and test them
+    well in advance.</p>
+    <p>This also means we ​must ​agree to collaborate and get review from
+    our peers in a timely manner, and must work together to provide a
+    specification for what we will be doing in the next upgrade ​well in
+    advance. ​ Implementations which fail to do this will ultimately be
+    left behind by the teams who do work together.</p>
+    <p>This ensures that there are other lead implementation engineers
+    who ​can​ veto protocol decisions when they are poor. However, these
+    leads must also work together to ensure that the above ideals are
+    realized. Once they are truly established, they will be become
+    entrenched and serve to protect the development process for the
+    world currency.</p>
+    <p>Any team which wishes to build this future with me must commit to
+    a reasonable release schedule, providing binaries to exchanges in a
+    timely manner, and a QA process that is suitable for a currency. Our
+    benchmark for this degree of rigour should exceed what is required
+    of banks and security organizations. Together we must define what
+    this process is and how they will be continuously improved over time
+    (static analysis, fuzzing, and other QA processes we do not
+    currently have).</p>
+    <p>I know many of the developers currently working on Bitcoin Cash
+    wish to realize this goal with me; as I have spoken with you one on
+    one. It has become clear that not everyone shares my vision for
+    Bitcoin Cash, and attempting to work together without shared values
+    is ultimately fruitless. Going forward, I will only be working with
+    teams who want to realize this goal with me.</p>
+    <p>I hope that we can work together to agree on a schedule that we
+    can stick to, and which meets the requirements of our customers. As
+    such, I have proposed a workflow, and the timeline was established
+    in London<a href="#fn3" class="footnote-ref" id="fnref3"
+    role="doc-noteref"><sup>3</sup></a> to be 6 months; with feature
+    freezes 3 months in advance. Please propose adjustments to ​agenda
+    for the first QA meeting.</p>
+    <p>Respectfully,</p>
+    <p>Shammah Chancellor Release Manager, Bitcoin ABC</p>
+    <hr />
+    <section id="footnotes" class="footnotes footnotes-end-of-document"
+    role="doc-endnotes">
+    <hr />
+    <ol>
+    <li id="fn1"><p>The original birthing fork was contentious due to
+    the block size. November 2017 was contentious due to changing the
+    difficulty adjustment algorithm. Some wanted it to go back to the
+    original, others didn’t want to change away from the EDA, and a few
+    others claimed the newly written DAA would be catastrophic. Jan
+    2018, the non-consensus addition of CashAddr, had a astroturf
+    campaign against it. May 2018 was highly contentious because there
+    was “community support” for OP_GROUP and because some developers
+    simply wouldn’t agree to any specification without BIP135. November
+    2018 was contentious for an unintelligible slew of reasons, which
+    are still being debated on the Bitco.in forum, and also because one
+    lead developer still wanted BIP135. Ultimately, Bitcoin Cash
+    protocol development is <em>NOT</em> a political game. Changes to
+    the underlying protocol must be made using sound technical
+    judgement, and for the explicit purpose of enabling global p2p
+    cash.<a href="#fnref1" class="footnote-back"
+    role="doc-backlink">↩︎</a></p></li>
+    <li id="fn2"><p>The vast majority of contention has always been
+    around deviating somehow from the “original vision” of what makes
+    something Bitcoin. Starting with the 1MB block size cap, miner
+    voting, address formats, and the like. No disagreements over
+    technicals were ever swept aside without consideration. Ultimately,
+    changes require broad support from developers, users, and miners to
+    activate – Bitcoin ABC can not dictate that people run their
+    software. We saw with Nov 2018, when a minority of users who do not
+    agree with changes did fork away. While this fork was unfortunate,
+    it was also inevitable. The propaganda being distributed against
+    CTOR and CHECKDATASIG to try to prevent the fork has now been shown
+    to be false. This propaganda was shown to be false by the simple
+    fact that CTOR and CHECKDATASIG are now ACTIVE ON THE NETWORK. The
+    fact that so many different lies were spread should be indicative
+    that CTOR and CHECKDATASIG were <em>not</em> the real reason that
+    BSV was forked. Developers are incentivized to do the most desirable
+    thing if they want people to continue to use their software. There
+    are too many other cryptocurrency options to do otherwise.<a
+    href="#fnref2" class="footnote-back"
+    role="doc-backlink">↩︎</a></p></li>
+    <li id="fn3"><p>The first meeting of the Bitcoin Cash developers was
+    held in London in late 2017. The purpose was to establish a shared
+    roadmap and goals.<a href="#fnref3" class="footnote-back"
+    role="doc-backlink">↩︎</a></p></li>
+    </ol>
+    </section>
+
+    <hr>
+    <p style="font-size:0.9rem;color:#555">Read and subscribe on <a href="https://shablag.com/article/the-future-of-bitcoin-cash/">Substack</a></p>
+    <footer>
+        <p style="margin-top:0.75rem"><a href="index.html">← Back to #!blag</a></p>
+    </footer>
 </body>
 </html>

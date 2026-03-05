@@ -1,135 +1,143 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="description" content="Defining site reliability engineering through the lens of team organization, Conway’s law, and creating autonomous, accountable teams that produce reliable software." />
-  <title>What is Reliability Engineering?</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Reliability Engineering? — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; }
+    </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">What is Reliability Engineering?</h1>
-</header>
-<h1 id="what-is-reliability-engineering">What is Reliability
-Engineering?</h1>
-<p>Site Reliability engineers engineer site reliability reliability –
-obviously. In order to understand what it means to engineer reliability
-we should first understand what it means to be reliable. Google says
-that reliability is “the quality of being trustworthy or of performing
-consistently well.” and also “the degree to which the result of a
-measurement, calculation, or specification can be depended on to be
-accurate.”</p>
-<p>To put another way, something that is reliable performs in a way that
-is unsurprising and meets expectations. With regards to a particular
-computer service, when we think of reliability we think that it has
-these characteristics:</p>
-<ol type="1">
-<li>Does the same thing each time (consistent behavior)</li>
-<li>Takes the same amount of time (low response variance, consistent
-latency)</li>
-<li>Does it autonomously (does not require intervention, trustworthy to
-complete)</li>
-</ol>
-<p>However, since site reliability engineers are not typically
-responsible for writing, or maintaining services, how do they engineer
-reliability into them? Conway’s observation tells us that:</p>
-<p>the software interface structure of a system will reflect the social
-boundaries of the organization(s) that produced it, across which
-communication is more difficult</p>
-<p>Now, the sources of unreliability typically manifest in the software
-interface structures. As such, if we want to engineer reliability, we
-should actually start with teams of people, not software. In order to
-ensure we’re producing reliable software we want to ensure each team
-is:</p>
-<ol type="1">
-<li>Able to respond consistently to outside demands</li>
-<li>Have low variance in their response times.</li>
-<li>Are autonomous and can stay focused on the mission.</li>
-</ol>
-<p>Teams operate most efficiently and reliably when they are autonomous
-within their area of competency. Therefore, it is the job of SREs to
-ensure that teams are able to operate autonomously. This means an SRE
-ensures the team is:</p>
-<ol type="1">
-<li>Ensures their team knows what they are expected to be responsible
-for, and that other teams know what they are responsible for as
-well.</li>
-<li>Ensure they are autonomous</li>
-<li>Ensure their team has the ability to make decisions within the scope
-of their duties</li>
-<li>That they are held accountable for the decisions they make which
-affect their services.</li>
-<li>Create cross-cutting standards and tools for repeat problems so
-teams can keep a mission-focused mindset, rather than worrying about
-reinventing the wheel. (PFE vs NIH)</li>
-<li>Holding your team accountable for having proper monitoring,
-alerting, and incident response procedures</li>
-<li>Ensure that individuals who are on call understand the need for:
-<ol type="1">
-<li>Integrity</li>
-<li>Formality</li>
-<li>Procedural Compliance</li>
-<li>Level of Knowledge</li>
-<li>Questioning Attitude</li>
-<li>Forceful Backup</li>
-</ol></li>
-</ol>
-<p>By ensuring the above things for the team which they are embedded on,
-the team will produce more reliable services. As such, you will find
-SREs doing a variety of tasks for the team they are embedded on in order
-to meet the above goals. While the specific tasks an SRE will be doing
-will depend on what they see as the most urgent area, you can find
-them:</p>
-<ol type="1">
-<li>Demonstrating best practices for logging, monitoring, and
-alerting.</li>
-<li>Teaching best practices for deploying and managing software
-services</li>
-<li>Ensuring that data about services is being surfaced to the correct
-people. (e.g. downstream consumers)</li>
-<li>That the whole company is able to tell who is responsible for what
-services.</li>
-<li>Teaching appropriate formality when dealing with incident
-response.</li>
-<li>Be a resource for advice on best practices, architecture decisions,
-and code reviews</li>
-<li>Holding your team accountable for proper monitoring and
-alerting.</li>
-<li>Create cross-cutting standards and tools for repeat problems to
-enable individual teams can keep a mission-focused mindset, rather than
-worrying about reinventing the wheel. (PFE vs NIH)</li>
-</ol>
-<h2 id="things-sre-is-not-responsible-for">Things SRE is NOT responsible
-for:</h2>
-<ol type="1">
-<li>Instrumenting services with logging, monitoring, and alerting –
-although they can help where necessary.</li>
-<li>Being on call for services they did not write – unless they are
-helping train with the process.</li>
-<li>Telling people what to do – software engineers own their code, and
-the responsibility for their bugs.</li>
-</ol>
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    <div class="meta">June 21, 2019</div>
+    
+    <div class="substack-link">Also on <a href="https://shablag.com/article/what-is-reliability-engineering/">Substack</a></div>
+
+    <h1 id="what-is-reliability-engineering">What is Reliability
+    Engineering?</h1>
+    <p>Site Reliability engineers engineer site reliability reliability
+    – obviously. In order to understand what it means to engineer
+    reliability we should first understand what it means to be reliable.
+    Google says that reliability is “the quality of being trustworthy or
+    of performing consistently well.” and also “the degree to which the
+    result of a measurement, calculation, or specification can be
+    depended on to be accurate.”</p>
+    <p>To put another way, something that is reliable performs in a way
+    that is unsurprising and meets expectations. With regards to a
+    particular computer service, when we think of reliability we think
+    that it has these characteristics:</p>
+    <ol type="1">
+    <li>Does the same thing each time (consistent behavior)</li>
+    <li>Takes the same amount of time (low response variance, consistent
+    latency)</li>
+    <li>Does it autonomously (does not require intervention, trustworthy
+    to complete)</li>
+    </ol>
+    <p>However, since site reliability engineers are not typically
+    responsible for writing, or maintaining services, how do they
+    engineer reliability into them? Conway’s observation tells us
+    that:</p>
+    <p>the software interface structure of a system will reflect the
+    social boundaries of the organization(s) that produced it, across
+    which communication is more difficult</p>
+    <p>Now, the sources of unreliability typically manifest in the
+    software interface structures. As such, if we want to engineer
+    reliability, we should actually start with teams of people, not
+    software. In order to ensure we’re producing reliable software we
+    want to ensure each team is:</p>
+    <ol type="1">
+    <li>Able to respond consistently to outside demands</li>
+    <li>Have low variance in their response times.</li>
+    <li>Are autonomous and can stay focused on the mission.</li>
+    </ol>
+    <p>Teams operate most efficiently and reliably when they are
+    autonomous within their area of competency. Therefore, it is the job
+    of SREs to ensure that teams are able to operate autonomously. This
+    means an SRE ensures the team is:</p>
+    <ol type="1">
+    <li>Ensures their team knows what they are expected to be
+    responsible for, and that other teams know what they are responsible
+    for as well.</li>
+    <li>Ensure they are autonomous</li>
+    <li>Ensure their team has the ability to make decisions within the
+    scope of their duties</li>
+    <li>That they are held accountable for the decisions they make which
+    affect their services.</li>
+    <li>Create cross-cutting standards and tools for repeat problems so
+    teams can keep a mission-focused mindset, rather than worrying about
+    reinventing the wheel. (PFE vs NIH)</li>
+    <li>Holding your team accountable for having proper monitoring,
+    alerting, and incident response procedures</li>
+    <li>Ensure that individuals who are on call understand the need for:
+    <ol type="1">
+    <li>Integrity</li>
+    <li>Formality</li>
+    <li>Procedural Compliance</li>
+    <li>Level of Knowledge</li>
+    <li>Questioning Attitude</li>
+    <li>Forceful Backup</li>
+    </ol></li>
+    </ol>
+    <p>By ensuring the above things for the team which they are embedded
+    on, the team will produce more reliable services. As such, you will
+    find SREs doing a variety of tasks for the team they are embedded on
+    in order to meet the above goals. While the specific tasks an SRE
+    will be doing will depend on what they see as the most urgent area,
+    you can find them:</p>
+    <ol type="1">
+    <li>Demonstrating best practices for logging, monitoring, and
+    alerting.</li>
+    <li>Teaching best practices for deploying and managing software
+    services</li>
+    <li>Ensuring that data about services is being surfaced to the
+    correct people. (e.g. downstream consumers)</li>
+    <li>That the whole company is able to tell who is responsible for
+    what services.</li>
+    <li>Teaching appropriate formality when dealing with incident
+    response.</li>
+    <li>Be a resource for advice on best practices, architecture
+    decisions, and code reviews</li>
+    <li>Holding your team accountable for proper monitoring and
+    alerting.</li>
+    <li>Create cross-cutting standards and tools for repeat problems to
+    enable individual teams can keep a mission-focused mindset, rather
+    than worrying about reinventing the wheel. (PFE vs NIH)</li>
+    </ol>
+    <h2 id="things-sre-is-not-responsible-for">Things SRE is NOT
+    responsible for:</h2>
+    <ol type="1">
+    <li>Instrumenting services with logging, monitoring, and alerting –
+    although they can help where necessary.</li>
+    <li>Being on call for services they did not write – unless they are
+    helping train with the process.</li>
+    <li>Telling people what to do – software engineers own their code,
+    and the responsibility for their bugs.</li>
+    </ol>
+
+    <hr>
+    <p style="font-size:0.9rem;color:#555">Read and subscribe on <a href="https://shablag.com/article/what-is-reliability-engineering/">Substack</a></p>
+    <footer>
+        <p style="margin-top:0.75rem"><a href="index.html">← Back to #!blag</a></p>
+    </footer>
 </body>
 </html>

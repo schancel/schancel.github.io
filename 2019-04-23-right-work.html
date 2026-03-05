@@ -1,332 +1,345 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Shammah Chancellor" />
-  <meta name="dcterms.date" content="2019-04-23" />
-  <meta name="description" content="Understanding the importance of ‘right work’ in open source projects and how it enables future innovation" />
-  <title>Right Work</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right Work — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; }
+    </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Right Work</h1>
-<p class="author">Shammah Chancellor</p>
-<p class="date">2019-04-23</p>
-</header>
-<h1 id="right-work">Right Work</h1>
-<p>This post is for anyone who wishes they could contribute to
-Bitcoin-ABC but doesn’t really know where to start. If that’s you, then
-you should start with what Andre Alexandrescu calls “<a
-href="https://forum.dlang.org/post/q7u6g1$94p$1@digitalmars.com">right
-work</a>.” The linked post was recently <a
-href="https://reviews.bitcoinabc.org/D2780">added to the Bitcoin-ABC
-Contributing Guide</a>.</p>
-<p>The gist was that there are several important classifications of open
-source contributions:</p>
-<ol type="1">
-<li><strong>Great work</strong> – It solves a problem elegantly and
-simply. The solution does not add a disproportionate amount of
-complexity to the codebase.</li>
-<li><strong>Good work</strong><a href="#fn1" class="footnote-ref"
-id="fnref1" role="doc-noteref"><sup>1</sup></a> – This type of work
-should be avoided; it is often deceptively bad. Although it may add some
-useful feature, it often is:
-<ul>
-<li>Large and complicated for the benefit it brings which potentially
-introduces bugs.</li>
-<li>Time needs to be spent convincing people the change is a good
-idea.</li>
-<li>The quality needs to be improved, so careful review and multiple
-cycles of review are required.</li>
-<li>Drains resources away from the maintainers who must deal with the
-above.</li>
-</ul></li>
-<li><strong>Bad work</strong> – Easy to identify as wrong, and reject.
-This doesn’t take much time from the maintainers, but is often
-frustrating to the person trying to contribute</li>
-<li><strong>Right work</strong> – Here Dr. Alexandrescu uses a lot of
-examples specifically relating to the D programming language and its
-standard library and compiler frontend. The changes are easy and fast to
-review. Also, the more right work is done, the more likely Great Work
-can be done easily in the future.</li>
-</ol>
-<p>There is a huge and undersupplied demand for Right Work in the world
-of software engineering, and especially open source. The reason for this
-is that right work does not result in any directly visible impact to the
-user<a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a> – no bug is fixed, nor feature
-added. The only discernible impact is that future work on the codebase
-is easier. Unfortunately, other engineers are often the least likely to
-give praise, even for this type of work.</p>
-<p>But what <em>exactly</em> is “right work”? Right work, simply put, is
-cleaning up small messes. Now, you may think that if every new patch
-that went into a project was perfect, that the project as a whole would
-never need any “right work”. However, <code>bitcoind</code> is a
-relatively old codebase that has had lots of contributors. Often with
-open source projects, authors come in and add some functionality and
-then leave. They might have done a great job, but then later another
-person will come and remove or alter the functionality. Possibly because
-it is no longer useful, or maybe they generalize it. Unfortunately, it
-is easy to leave unnecessary code behind which incurs a maintenance cost
-– although it may provide no function to the software.</p>
-<p>Another common occurrence in open source is that someone, needing to
-add functionality, does so with the minimum amount of effort. They add
-some global in one part of the code, an additional <code>if</code>
-statement somewhere else, and call it good. Over time, this results in
-an explosion of complexity from too much “<a
-href="https://en.wikipedia.org/wiki/Action_at_a_distance_(computer_programming)">action
-at a distance</a>” in the code. This makes it very hard to reason about
-the code, and to make sure that it is thread safe.</p>
-<p>Often, code is moved or changed, but “comment blindness” causes <a
-href="https://github.com/bitcoin/bitcoin/commit/eb837199a06293ea541171bdc4652591c6506921">comments
-to not be updated</a>, resulting in confusion down the road.</p>
-<p>There are many other phenomena that happen from code churn in open
-source projects. The disorder that slowly grows in a codebase makes it
-progressively more challenging to reason about, and difficult to
-reliably change. Slowly, the code ossifies – especially in the case of
-Bitcoin where bugs are catastrophic. Most engineers contributing to open
-source do so only to fix a bug, or add a feature, that is directly
-impacting them. Very few contributors want to take on the role of <a
-href="https://en.wikipedia.org/wiki/Maxwell%27s_demon">Maxwell’s
-Daemon</a> and start tidying up a code base<a href="#fn3"
-class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>.</p>
-<p>Rarely are examples of “right work” highlighted over “great work” or
-“good work”. This is unfortunate, because it sets the wrong precedent
-for what work people should strive toward. “Right work” is a great
-exercise for learning the codebase, and also provides a lot of value to
-software engineers who come after. The best thing about right work is
-that almost anyone can do it.</p>
-<p>So, here’s some major classes of types of “right work” I’ve seen in
-Bitcoin-ABC, and examples thereof:</p>
-<h2 id="maintaining-build-and-test-infrastructure">Maintaining build and
-test infrastructure</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D626">Switch to GCC 7 on
-Travis, disable currently non-functional ARM + Windows builds</a></li>
-</ul>
-<h2 id="fix-major-usability-bugs">Fix major usability bugs</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D623">Support for encoding
-addresses using cashaddr</a> - Dagur Valberg Johannsson</li>
-</ul>
-<h2 id="remove-unnecessary-dependencies">Remove unnecessary
-dependencies</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D382">Replace
-boost::unordered_map and boost::unordered_set with std:: variant</a> -
-Awemany</li>
-<li><a href="https://reviews.bitcoinabc.org/D465">Removed all usages of
-boost::assign::list_of in favor of C++11 initializer lists</a> - Calin
-Culianu</li>
-</ul>
-<h2 id="delete-unused-code">Delete unused code</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D1446">Get rid of
-SCRIPT_VERIFY_DISCOURAGE_UPGRADABLE_WITNESS_PROGRAM</a> – Andrea
-Suisani</li>
-<li><a href="https://reviews.bitcoinabc.org/D2179">Fix undefined
-behaviour errors due to long int overflow in Amount</a> - Fabien</li>
-<li><a href="https://reviews.bitcoinabc.org/D2172">Delete block policy
-estimator</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D2783">Remove much of the
-remaining BIP9 code</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D2784">Removed unused
-parameter from validFeeEstimates</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D2127">Remove unused
-parameter from AcceptBlock</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D2853">Remove extraneous
-parameter from PrioritizeTransaction</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D1387">Remove unused
-fAllowFree variable from coincontrolwallet.cpp</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D1030">Remove
-IsPayToWitnessScriptHash</a> – Andrea Suisani</li>
-<li><a href="https://reviews.bitcoinabc.org/D1174">Remove incremental
-relay fee</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D2255">Cleanup configure.ac
-to remove old boost versions workarounds</a> - Fabien</li>
-<li><a href="https://reviews.bitcoinabc.org/D2728">Remove unused
-seeder/compat.h</a> - Fabien</li>
-</ul>
-<h2 id="delete-duplicate-code">Delete duplicate code</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D581">Remove duplicated code
-which can be obtained by linking crypto lib</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D733">Remove a ton of code
-from seeder’s util</a> - Amaury Séchet</li>
-</ul>
-<h2 id="fix-warnings">Fix warnings</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D1427">Fix a bunch of clang
-warnings</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D2491">Fix a Clang -Wshadow
-warning in rcu.h</a> - Fabien</li>
-<li><a href="https://reviews.bitcoinabc.org/D2220">Fix clang
-warnings</a> - Fabien</li>
-<li><a href="https://reviews.bitcoinabc.org/D729">Fix some compiler
-warnings regarding override</a></li>
-</ul>
-<h2 id="update-code-to-latest-standards">Update code to latest
-standards</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D2765">Use static_cast
-instead of C-style casts for non-fundamental types</a> - Nico
-Guiton</li>
-</ul>
-<h2 id="fix-flaky-tests">Fix flaky tests</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D621">Fix sporadic
-policyestimator_tests failure due to unspecified operand evaluation
-order</a> – Freetrader</li>
-<li><a href="https://reviews.bitcoinabc.org/D2189">Remove redundant
-connect_nodes call in abc-parkedchain.py</a> – Jason Cox</li>
-</ul>
-<h2 id="remove-deprecated-functionality">Remove deprecated
-functionality</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D1355">Remove deprecated
-estimateSmartPriority function</a></li>
-</ul>
-<h2 id="refactor-for-dependency-injection">Refactor for dependency
-injection</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D708">Make Config more
-available in Qt</a> - Dagur Johannsson</li>
-<li><a href="https://reviews.bitcoinabc.org/D2048">Accept Mempool as a
-parameter to CBlockAssembler</a></li>
-</ul>
-<h2 id="remove-global-variables">Remove global variables</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D1800">Remove minTxFee from
-wallet</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D2018">De-globalize
-blocksize related parameters</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D2017">De-globalize rpc
-configuration variables</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D1361">Move minimum relay
-fee</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D1936">Move handling for
-<code>-maxtxfee</code> to the config object</a></li>
-</ul>
-<h2 id="make-code-more-legible">Make code more legible</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D381">Removed using
-namespace std and replaced with std:: throughout file</a> - gbrown</li>
-<li><a href="https://reviews.bitcoinabc.org/D391">Use std for make_pair
-in walletdb.cpp</a> – Freetrader</li>
-<li><a href="https://reviews.bitcoinabc.org/D1591">Remove blockFinished
-from BlockAssembler</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D1590">Clean up
-addPriorityTxns</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D1383">Typedef for
-TXmodifiers</a></li>
-</ul>
-<h2 id="make-the-code-type-safe">Make the code type safe</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D529">Add Amount class and
-use it for CENT and COIN</a></li>
-</ul>
-<h2 id="read-and-fixadd-comments">Read and fix/add comments</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D635">Comment, cast and
-assert cleanup in pow.cpp</a> - Freetrader</li>
-<li><a href="https://reviews.bitcoinabc.org/D2785">Fix comment in
-CheckInputs to match changed code</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D1532">Make comments in
-abandonconflict legible</a></li>
-</ul>
-<h2 id="add-testsfix-tests">Add tests/Fix Tests</h2>
-<ul>
-<li><a href="https://reviews.bitcoinabc.org/D1925">Add ATMP test for
-undersize transaction</a> - Dagur Johannsson</li>
-<li><a href="https://reviews.bitcoinabc.org/D2374">Fix tx padding</a> –
-Dagur Johannsson</li>
-<li><a href="https://reviews.bitcoinabc.org/D1907">Fix p2p-fullblocktest
-to pad transactions properly</a> - Jason Cox</li>
-<li><a href="https://reviews.bitcoinabc.org/D1892">Add a test case to
-ensure mempool accounting is correct</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D2552">Check that key length
-is correct when deserializing CExtKey</a> - Amaury Séchet – Add test for
-extPubkey</li>
-<li><a
-href="https://github.com/bitcoin/bitcoin/commit/b7e144bb731857106cae7c7d2d49d2ccc03b7ef1">Add
-test cases to test new bitcoin-tx functionality</a> - John Newberry</li>
-<li><a
-href="https://github.com/bitcoin/bitcoin/commit/240189b2c14244c3058e80b40bd4dacbd200c4c7">add
-testcases for getrawtransaction</a> - John Newberry</li>
-<li>Lots of other great work from John Newberry</li>
-</ul>
-<h2 id="organize-source-files">Organize source files</h2>
-<ul>
-<li><a
-href="https://github.com/bitcoin/bitcoin/commit/999a2ab41ec96311c145d74822c246a3b92a9b33">Move
-block undo out of core</a> – Jorge Timón</li>
-<li><a
-href="https://github.com/bitcoin/bitcoin/commit/e736772c56a883e2649cc8534dd7857a0718ec56">Move
-network processing code out of main.cpp</a> – Matt Corallo</li>
-<li><a href="https://reviews.bitcoinabc.org/D1673">Move CFeeRate into
-its own source files</a></li>
-<li><a href="https://reviews.bitcoinabc.org/D1719">Removed CBlockStatus
-class from chain.h and placed into its own .h file</a> - Nico
-Guitan</li>
-</ul>
-<h2 id="update-packaging">Update packaging</h2>
-<ul>
-<li><a
-href="https://launchpad.net/~bitcoin-abc/+archive/ubuntu/ppa">Ubuntu PPA
-Maintenance</a> by Andrea Suisani</li>
-<li><a href="https://github.com/zquestz/docker-bitcoin">Dockerfiles</a>
-by Josh Ellithorpe</li>
-<li><a href="https://reviews.bitcoinabc.org/D347">Update various debian
-packaging files</a> – Freetrader</li>
-<li><a href="https://reviews.bitcoinabc.org/D510">OSX: Change app bundle
-name and executable name to BitcoinABC-Qt.app and change related
-OSX-specific handlers and Info.plist stuff to match.</a> – Calin
-Culianu</li>
-</ul>
-<hr />
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>An example of what I could consider “good work” is
-actually something I am working on, which is <a
-href="https://reviews.bitcoinabc.org/D2866">new package selection
-code</a>. Unfortunately, it seems to be necessary and no better solution
-has presented itself. Hopefully this will lead to potential for right
-work in other areas of the code.<a href="#fnref1" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Especially when their livelihoods do not depend on the
-codebase being tidy; or worse their livelihoods depend on the codebase
-NOT being tidy…<a href="#fnref2" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Who might be a software engineer being inconvenienced
-enough to contribute.<a href="#fnref3" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    
+    
+    <div class="substack-link">Also on <a href="https://shablag.com/article/right-work/">Substack</a></div>
+
+    <h1 id="right-work">Right Work</h1>
+    <p>This post is for anyone who wishes they could contribute to
+    Bitcoin-ABC but doesn’t really know where to start. If that’s you,
+    then you should start with what Andre Alexandrescu calls “<a
+    href="https://forum.dlang.org/post/q7u6g1$94p$1@digitalmars.com">right
+    work</a>.” The linked post was recently <a
+    href="https://reviews.bitcoinabc.org/D2780">added to the Bitcoin-ABC
+    Contributing Guide</a>.</p>
+    <p>The gist was that there are several important classifications of
+    open source contributions:</p>
+    <ol type="1">
+    <li><strong>Great work</strong> – It solves a problem elegantly and
+    simply. The solution does not add a disproportionate amount of
+    complexity to the codebase.</li>
+    <li><strong>Good work</strong><a href="#fn1" class="footnote-ref"
+    id="fnref1" role="doc-noteref"><sup>1</sup></a> – This type of work
+    should be avoided; it is often deceptively bad. Although it may add
+    some useful feature, it often is:
+    <ul>
+    <li>Large and complicated for the benefit it brings which
+    potentially introduces bugs.</li>
+    <li>Time needs to be spent convincing people the change is a good
+    idea.</li>
+    <li>The quality needs to be improved, so careful review and multiple
+    cycles of review are required.</li>
+    <li>Drains resources away from the maintainers who must deal with
+    the above.</li>
+    </ul></li>
+    <li><strong>Bad work</strong> – Easy to identify as wrong, and
+    reject. This doesn’t take much time from the maintainers, but is
+    often frustrating to the person trying to contribute</li>
+    <li><strong>Right work</strong> – Here Dr. Alexandrescu uses a lot
+    of examples specifically relating to the D programming language and
+    its standard library and compiler frontend. The changes are easy and
+    fast to review. Also, the more right work is done, the more likely
+    Great Work can be done easily in the future.</li>
+    </ol>
+    <p>There is a huge and undersupplied demand for Right Work in the
+    world of software engineering, and especially open source. The
+    reason for this is that right work does not result in any directly
+    visible impact to the user<a href="#fn2" class="footnote-ref"
+    id="fnref2" role="doc-noteref"><sup>2</sup></a> – no bug is fixed,
+    nor feature added. The only discernible impact is that future work
+    on the codebase is easier. Unfortunately, other engineers are often
+    the least likely to give praise, even for this type of work.</p>
+    <p>But what <em>exactly</em> is “right work”? Right work, simply
+    put, is cleaning up small messes. Now, you may think that if every
+    new patch that went into a project was perfect, that the project as
+    a whole would never need any “right work”. However,
+    <code>bitcoind</code> is a relatively old codebase that has had lots
+    of contributors. Often with open source projects, authors come in
+    and add some functionality and then leave. They might have done a
+    great job, but then later another person will come and remove or
+    alter the functionality. Possibly because it is no longer useful, or
+    maybe they generalize it. Unfortunately, it is easy to leave
+    unnecessary code behind which incurs a maintenance cost – although
+    it may provide no function to the software.</p>
+    <p>Another common occurrence in open source is that someone, needing
+    to add functionality, does so with the minimum amount of effort.
+    They add some global in one part of the code, an additional
+    <code>if</code> statement somewhere else, and call it good. Over
+    time, this results in an explosion of complexity from too much “<a
+    href="https://en.wikipedia.org/wiki/Action_at_a_distance_(computer_programming)">action
+    at a distance</a>” in the code. This makes it very hard to reason
+    about the code, and to make sure that it is thread safe.</p>
+    <p>Often, code is moved or changed, but “comment blindness” causes
+    <a
+    href="https://github.com/bitcoin/bitcoin/commit/eb837199a06293ea541171bdc4652591c6506921">comments
+    to not be updated</a>, resulting in confusion down the road.</p>
+    <p>There are many other phenomena that happen from code churn in
+    open source projects. The disorder that slowly grows in a codebase
+    makes it progressively more challenging to reason about, and
+    difficult to reliably change. Slowly, the code ossifies – especially
+    in the case of Bitcoin where bugs are catastrophic. Most engineers
+    contributing to open source do so only to fix a bug, or add a
+    feature, that is directly impacting them. Very few contributors want
+    to take on the role of <a
+    href="https://en.wikipedia.org/wiki/Maxwell%27s_demon">Maxwell’s
+    Daemon</a> and start tidying up a code base<a href="#fn3"
+    class="footnote-ref" id="fnref3"
+    role="doc-noteref"><sup>3</sup></a>.</p>
+    <p>Rarely are examples of “right work” highlighted over “great work”
+    or “good work”. This is unfortunate, because it sets the wrong
+    precedent for what work people should strive toward. “Right work” is
+    a great exercise for learning the codebase, and also provides a lot
+    of value to software engineers who come after. The best thing about
+    right work is that almost anyone can do it.</p>
+    <p>So, here’s some major classes of types of “right work” I’ve seen
+    in Bitcoin-ABC, and examples thereof:</p>
+    <h2 id="maintaining-build-and-test-infrastructure">Maintaining build
+    and test infrastructure</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D626">Switch to GCC 7 on
+    Travis, disable currently non-functional ARM + Windows
+    builds</a></li>
+    </ul>
+    <h2 id="fix-major-usability-bugs">Fix major usability bugs</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D623">Support for
+    encoding addresses using cashaddr</a> - Dagur Valberg
+    Johannsson</li>
+    </ul>
+    <h2 id="remove-unnecessary-dependencies">Remove unnecessary
+    dependencies</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D382">Replace
+    boost::unordered_map and boost::unordered_set with std:: variant</a>
+    - Awemany</li>
+    <li><a href="https://reviews.bitcoinabc.org/D465">Removed all usages
+    of boost::assign::list_of in favor of C++11 initializer lists</a> -
+    Calin Culianu</li>
+    </ul>
+    <h2 id="delete-unused-code">Delete unused code</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D1446">Get rid of
+    SCRIPT_VERIFY_DISCOURAGE_UPGRADABLE_WITNESS_PROGRAM</a> – Andrea
+    Suisani</li>
+    <li><a href="https://reviews.bitcoinabc.org/D2179">Fix undefined
+    behaviour errors due to long int overflow in Amount</a> -
+    Fabien</li>
+    <li><a href="https://reviews.bitcoinabc.org/D2172">Delete block
+    policy estimator</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D2783">Remove much of
+    the remaining BIP9 code</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D2784">Removed unused
+    parameter from validFeeEstimates</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D2127">Remove unused
+    parameter from AcceptBlock</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D2853">Remove extraneous
+    parameter from PrioritizeTransaction</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D1387">Remove unused
+    fAllowFree variable from coincontrolwallet.cpp</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D1030">Remove
+    IsPayToWitnessScriptHash</a> – Andrea Suisani</li>
+    <li><a href="https://reviews.bitcoinabc.org/D1174">Remove
+    incremental relay fee</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D2255">Cleanup
+    configure.ac to remove old boost versions workarounds</a> -
+    Fabien</li>
+    <li><a href="https://reviews.bitcoinabc.org/D2728">Remove unused
+    seeder/compat.h</a> - Fabien</li>
+    </ul>
+    <h2 id="delete-duplicate-code">Delete duplicate code</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D581">Remove duplicated
+    code which can be obtained by linking crypto lib</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D733">Remove a ton of
+    code from seeder’s util</a> - Amaury Séchet</li>
+    </ul>
+    <h2 id="fix-warnings">Fix warnings</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D1427">Fix a bunch of
+    clang warnings</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D2491">Fix a Clang
+    -Wshadow warning in rcu.h</a> - Fabien</li>
+    <li><a href="https://reviews.bitcoinabc.org/D2220">Fix clang
+    warnings</a> - Fabien</li>
+    <li><a href="https://reviews.bitcoinabc.org/D729">Fix some compiler
+    warnings regarding override</a></li>
+    </ul>
+    <h2 id="update-code-to-latest-standards">Update code to latest
+    standards</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D2765">Use static_cast
+    instead of C-style casts for non-fundamental types</a> - Nico
+    Guiton</li>
+    </ul>
+    <h2 id="fix-flaky-tests">Fix flaky tests</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D621">Fix sporadic
+    policyestimator_tests failure due to unspecified operand evaluation
+    order</a> – Freetrader</li>
+    <li><a href="https://reviews.bitcoinabc.org/D2189">Remove redundant
+    connect_nodes call in abc-parkedchain.py</a> – Jason Cox</li>
+    </ul>
+    <h2 id="remove-deprecated-functionality">Remove deprecated
+    functionality</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D1355">Remove deprecated
+    estimateSmartPriority function</a></li>
+    </ul>
+    <h2 id="refactor-for-dependency-injection">Refactor for dependency
+    injection</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D708">Make Config more
+    available in Qt</a> - Dagur Johannsson</li>
+    <li><a href="https://reviews.bitcoinabc.org/D2048">Accept Mempool as
+    a parameter to CBlockAssembler</a></li>
+    </ul>
+    <h2 id="remove-global-variables">Remove global variables</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D1800">Remove minTxFee
+    from wallet</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D2018">De-globalize
+    blocksize related parameters</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D2017">De-globalize rpc
+    configuration variables</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D1361">Move minimum
+    relay fee</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D1936">Move handling for
+    <code>-maxtxfee</code> to the config object</a></li>
+    </ul>
+    <h2 id="make-code-more-legible">Make code more legible</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D381">Removed using
+    namespace std and replaced with std:: throughout file</a> -
+    gbrown</li>
+    <li><a href="https://reviews.bitcoinabc.org/D391">Use std for
+    make_pair in walletdb.cpp</a> – Freetrader</li>
+    <li><a href="https://reviews.bitcoinabc.org/D1591">Remove
+    blockFinished from BlockAssembler</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D1590">Clean up
+    addPriorityTxns</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D1383">Typedef for
+    TXmodifiers</a></li>
+    </ul>
+    <h2 id="make-the-code-type-safe">Make the code type safe</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D529">Add Amount class
+    and use it for CENT and COIN</a></li>
+    </ul>
+    <h2 id="read-and-fixadd-comments">Read and fix/add comments</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D635">Comment, cast and
+    assert cleanup in pow.cpp</a> - Freetrader</li>
+    <li><a href="https://reviews.bitcoinabc.org/D2785">Fix comment in
+    CheckInputs to match changed code</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D1532">Make comments in
+    abandonconflict legible</a></li>
+    </ul>
+    <h2 id="add-testsfix-tests">Add tests/Fix Tests</h2>
+    <ul>
+    <li><a href="https://reviews.bitcoinabc.org/D1925">Add ATMP test for
+    undersize transaction</a> - Dagur Johannsson</li>
+    <li><a href="https://reviews.bitcoinabc.org/D2374">Fix tx
+    padding</a> – Dagur Johannsson</li>
+    <li><a href="https://reviews.bitcoinabc.org/D1907">Fix
+    p2p-fullblocktest to pad transactions properly</a> - Jason Cox</li>
+    <li><a href="https://reviews.bitcoinabc.org/D1892">Add a test case
+    to ensure mempool accounting is correct</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D2552">Check that key
+    length is correct when deserializing CExtKey</a> - Amaury Séchet –
+    Add test for extPubkey</li>
+    <li><a
+    href="https://github.com/bitcoin/bitcoin/commit/b7e144bb731857106cae7c7d2d49d2ccc03b7ef1">Add
+    test cases to test new bitcoin-tx functionality</a> - John
+    Newberry</li>
+    <li><a
+    href="https://github.com/bitcoin/bitcoin/commit/240189b2c14244c3058e80b40bd4dacbd200c4c7">add
+    testcases for getrawtransaction</a> - John Newberry</li>
+    <li>Lots of other great work from John Newberry</li>
+    </ul>
+    <h2 id="organize-source-files">Organize source files</h2>
+    <ul>
+    <li><a
+    href="https://github.com/bitcoin/bitcoin/commit/999a2ab41ec96311c145d74822c246a3b92a9b33">Move
+    block undo out of core</a> – Jorge Timón</li>
+    <li><a
+    href="https://github.com/bitcoin/bitcoin/commit/e736772c56a883e2649cc8534dd7857a0718ec56">Move
+    network processing code out of main.cpp</a> – Matt Corallo</li>
+    <li><a href="https://reviews.bitcoinabc.org/D1673">Move CFeeRate
+    into its own source files</a></li>
+    <li><a href="https://reviews.bitcoinabc.org/D1719">Removed
+    CBlockStatus class from chain.h and placed into its own .h file</a>
+    - Nico Guitan</li>
+    </ul>
+    <h2 id="update-packaging">Update packaging</h2>
+    <ul>
+    <li><a
+    href="https://launchpad.net/~bitcoin-abc/+archive/ubuntu/ppa">Ubuntu
+    PPA Maintenance</a> by Andrea Suisani</li>
+    <li><a
+    href="https://github.com/zquestz/docker-bitcoin">Dockerfiles</a> by
+    Josh Ellithorpe</li>
+    <li><a href="https://reviews.bitcoinabc.org/D347">Update various
+    debian packaging files</a> – Freetrader</li>
+    <li><a href="https://reviews.bitcoinabc.org/D510">OSX: Change app
+    bundle name and executable name to BitcoinABC-Qt.app and change
+    related OSX-specific handlers and Info.plist stuff to match.</a> –
+    Calin Culianu</li>
+    </ul>
+    <hr />
+    <section id="footnotes" class="footnotes footnotes-end-of-document"
+    role="doc-endnotes">
+    <hr />
+    <ol>
+    <li id="fn1"><p>An example of what I could consider “good work” is
+    actually something I am working on, which is <a
+    href="https://reviews.bitcoinabc.org/D2866">new package selection
+    code</a>. Unfortunately, it seems to be necessary and no better
+    solution has presented itself. Hopefully this will lead to potential
+    for right work in other areas of the code.<a href="#fnref1"
+    class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+    <li id="fn2"><p>Especially when their livelihoods do not depend on
+    the codebase being tidy; or worse their livelihoods depend on the
+    codebase NOT being tidy…<a href="#fnref2" class="footnote-back"
+    role="doc-backlink">↩︎</a></p></li>
+    <li id="fn3"><p>Who might be a software engineer being
+    inconvenienced enough to contribute.<a href="#fnref3"
+    class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+    </ol>
+    </section>
+
+    <hr>
+    <p style="font-size:0.9rem;color:#555">Read and subscribe on <a href="https://shablag.com/article/right-work/">Substack</a></p>
+    <footer>
+        <p style="margin-top:0.75rem"><a href="index.html">← Back to #!blag</a></p>
+    </footer>
 </body>
 </html>

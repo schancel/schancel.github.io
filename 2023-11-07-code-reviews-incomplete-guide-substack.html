@@ -1,146 +1,156 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Shammah Chancellor" />
-  <title>Code Reviews: An Incomplete Guide</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Reviews: An Incomplete Guide — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; }
+    </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Code Reviews: An Incomplete Guide</h1>
-<p class="author">Shammah Chancellor</p>
-</header>
-<h1 id="code-reviews-an-incomplete-guide">Code Reviews: An Incomplete
-Guide</h1>
-<p><strong>Note:</strong> This is a republication on Substack of the
-original 2019 post.</p>
-<hr />
-<p>Chancellor explores code reviews as fundamental to software
-engineering teamwork. He argues that as projects grow in complexity,
-individual programmers must evolve into collaborative engineers, with
-code reviews serving as the essential unit of collaborative work.</p>
-<h2 id="goals-of-code-review">Goals of Code Review</h2>
-<p>Code reviews function as collaborative editing opportunities, similar
-to an editor preparing a manuscript for publication. Rather than acting
-as gatekeepers preventing “bad code,” reviewers should approach the
-process constructively. Chancellor emphasizes that experience level
-doesn’t determine review value: “if you don’t understand what is being
-done in a pull request, probably other people won’t either: ask
-questions!”</p>
-<h2 id="initiating-pull-requests">Initiating Pull Requests</h2>
-<p>Before coding, engineers should discuss proposed changes with
-teammates. Work-in-progress pull requests help when difficulties arise.
-Upon completion, developers should squash commits and write
-comprehensive commit messages explaining the “why” rather than merely
-restating code changes.</p>
-<h2 id="commit-message-structure">Commit Message Structure</h2>
-<p>Effective commit messages include:</p>
-<ul>
-<li>Previous code behavior</li>
-<li>Reason for changes</li>
-<li>New behavior outcome</li>
-<li>Associated tickets/issues</li>
-</ul>
-<p>Messages should be under 80 characters for the summary line and
-include dedicated Summary and Test Plan sections.</p>
-<h2 id="code-review-conduct">Code Review Conduct</h2>
-<p>Reviewers must recognize that submitting code represents
-vulnerability. Constructive feedback requires clear communication
-acknowledging that no engineer produces perfect code initially.
-Reviewees should separate personal identity from their code
-contributions.</p>
-<h2 id="merging-process">Merging Process</h2>
-<p>In pull request workflows, repository owners typically merge approved
-code, signifying shared responsibility for the changes entering the main
-branch.</p>
-<h2 id="why-code-reviews-matter">Why Code Reviews Matter</h2>
-<p>The essay emphasizes that code reviews serve multiple essential
-functions:</p>
-<ol type="1">
-<li><strong>Quality Assurance</strong>: Multiple perspectives catch bugs
-and design issues</li>
-<li><strong>Knowledge Sharing</strong>: Team members learn from each
-other’s approaches</li>
-<li><strong>Code Consistency</strong>: Ensures codebase maintains
-coherent style and patterns</li>
-<li><strong>Documentation</strong>: Review discussions provide context
-for future maintainers</li>
-<li><strong>Team Building</strong>: Collaborative improvement builds
-trust and shared ownership</li>
-</ol>
-<h2 id="cultural-aspects">Cultural Aspects</h2>
-<p>Chancellor notes that effective code review requires deliberate
-cultural cultivation:</p>
-<ul>
-<li><strong>Psychological Safety</strong>: Team members must feel safe
-submitting imperfect code</li>
-<li><strong>Constructive Criticism</strong>: Feedback focuses on
-improvement, not judgment</li>
-<li><strong>Mutual Respect</strong>: All team members’ perspectives
-receive consideration</li>
-<li><strong>Continuous Learning</strong>: Reviews as learning
-opportunities for everyone involved</li>
-<li><strong>Shared Ownership</strong>: The team collectively owns the
-codebase</li>
-</ul>
-<h2 id="common-pitfalls">Common Pitfalls</h2>
-<p>The essay identifies several common code review failures:</p>
-<ul>
-<li><strong>Rubber Stamping</strong>: Approving without genuine review
-to avoid conflict</li>
-<li><strong>Nitpicking</strong>: Focusing on trivial style issues while
-missing substantial problems</li>
-<li><strong>Ego Defense</strong>: Reviewees taking criticism personally
-rather than professionally</li>
-<li><strong>Power Dynamics</strong>: Senior engineers dismissing junior
-perspectives inappropriately</li>
-<li><strong>Poor Communication</strong>: Vague or harsh feedback that
-doesn’t guide improvement</li>
-</ul>
-<h2 id="best-practices-summary">Best Practices Summary</h2>
-<p>Chancellor summarizes key practices for effective code reviews:</p>
-<p><strong>For Reviewees:</strong> - Discuss changes before implementing
-- Break large changes into reviewable chunks - Write clear commit
-messages - Respond professionally to feedback - Ask clarifying
-questions</p>
-<p><strong>For Reviewers:</strong> - Approach reviews as collaborative
-editing - Provide specific, actionable feedback - Acknowledge good
-practices observed - Ask questions to understand intent - Suggest
-alternatives with reasoning</p>
-<p><strong>For Teams:</strong> - Establish clear review expectations -
-Allocate time for thorough reviews - Cultivate psychological safety -
-Document common patterns - Continuously improve the process</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>The essay concludes that mastering code reviews represents a crucial
-transition from individual programming to team software engineering. As
-projects grow in complexity beyond what individuals can comprehend,
-effective collaboration through code reviews becomes the primary
-mechanism for maintaining quality and shared understanding.</p>
-<p>Teams that invest in developing strong code review practices build
-better software, grow stronger engineers, and create more resilient
-organizations.</p>
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    <div class="meta">2023-11-07 · Shammah Chancellor</div>
+    
+    <div class="substack-link">Also on <a href="https://shablag.substack.com/p/code-reviews-an-incomplete-guide">Substack</a></div>
+
+    <h1 id="code-reviews-an-incomplete-guide">Code Reviews: An
+    Incomplete Guide</h1>
+    <p><strong>Note:</strong> This is a republication on Substack of the
+    original 2019 post.</p>
+    <hr />
+    <p>Chancellor explores code reviews as fundamental to software
+    engineering teamwork. He argues that as projects grow in complexity,
+    individual programmers must evolve into collaborative engineers,
+    with code reviews serving as the essential unit of collaborative
+    work.</p>
+    <h2 id="goals-of-code-review">Goals of Code Review</h2>
+    <p>Code reviews function as collaborative editing opportunities,
+    similar to an editor preparing a manuscript for publication. Rather
+    than acting as gatekeepers preventing “bad code,” reviewers should
+    approach the process constructively. Chancellor emphasizes that
+    experience level doesn’t determine review value: “if you don’t
+    understand what is being done in a pull request, probably other
+    people won’t either: ask questions!”</p>
+    <h2 id="initiating-pull-requests">Initiating Pull Requests</h2>
+    <p>Before coding, engineers should discuss proposed changes with
+    teammates. Work-in-progress pull requests help when difficulties
+    arise. Upon completion, developers should squash commits and write
+    comprehensive commit messages explaining the “why” rather than
+    merely restating code changes.</p>
+    <h2 id="commit-message-structure">Commit Message Structure</h2>
+    <p>Effective commit messages include:</p>
+    <ul>
+    <li>Previous code behavior</li>
+    <li>Reason for changes</li>
+    <li>New behavior outcome</li>
+    <li>Associated tickets/issues</li>
+    </ul>
+    <p>Messages should be under 80 characters for the summary line and
+    include dedicated Summary and Test Plan sections.</p>
+    <h2 id="code-review-conduct">Code Review Conduct</h2>
+    <p>Reviewers must recognize that submitting code represents
+    vulnerability. Constructive feedback requires clear communication
+    acknowledging that no engineer produces perfect code initially.
+    Reviewees should separate personal identity from their code
+    contributions.</p>
+    <h2 id="merging-process">Merging Process</h2>
+    <p>In pull request workflows, repository owners typically merge
+    approved code, signifying shared responsibility for the changes
+    entering the main branch.</p>
+    <h2 id="why-code-reviews-matter">Why Code Reviews Matter</h2>
+    <p>The essay emphasizes that code reviews serve multiple essential
+    functions:</p>
+    <ol type="1">
+    <li><strong>Quality Assurance</strong>: Multiple perspectives catch
+    bugs and design issues</li>
+    <li><strong>Knowledge Sharing</strong>: Team members learn from each
+    other’s approaches</li>
+    <li><strong>Code Consistency</strong>: Ensures codebase maintains
+    coherent style and patterns</li>
+    <li><strong>Documentation</strong>: Review discussions provide
+    context for future maintainers</li>
+    <li><strong>Team Building</strong>: Collaborative improvement builds
+    trust and shared ownership</li>
+    </ol>
+    <h2 id="cultural-aspects">Cultural Aspects</h2>
+    <p>Chancellor notes that effective code review requires deliberate
+    cultural cultivation:</p>
+    <ul>
+    <li><strong>Psychological Safety</strong>: Team members must feel
+    safe submitting imperfect code</li>
+    <li><strong>Constructive Criticism</strong>: Feedback focuses on
+    improvement, not judgment</li>
+    <li><strong>Mutual Respect</strong>: All team members’ perspectives
+    receive consideration</li>
+    <li><strong>Continuous Learning</strong>: Reviews as learning
+    opportunities for everyone involved</li>
+    <li><strong>Shared Ownership</strong>: The team collectively owns
+    the codebase</li>
+    </ul>
+    <h2 id="common-pitfalls">Common Pitfalls</h2>
+    <p>The essay identifies several common code review failures:</p>
+    <ul>
+    <li><strong>Rubber Stamping</strong>: Approving without genuine
+    review to avoid conflict</li>
+    <li><strong>Nitpicking</strong>: Focusing on trivial style issues
+    while missing substantial problems</li>
+    <li><strong>Ego Defense</strong>: Reviewees taking criticism
+    personally rather than professionally</li>
+    <li><strong>Power Dynamics</strong>: Senior engineers dismissing
+    junior perspectives inappropriately</li>
+    <li><strong>Poor Communication</strong>: Vague or harsh feedback
+    that doesn’t guide improvement</li>
+    </ul>
+    <h2 id="best-practices-summary">Best Practices Summary</h2>
+    <p>Chancellor summarizes key practices for effective code
+    reviews:</p>
+    <p><strong>For Reviewees:</strong> - Discuss changes before
+    implementing - Break large changes into reviewable chunks - Write
+    clear commit messages - Respond professionally to feedback - Ask
+    clarifying questions</p>
+    <p><strong>For Reviewers:</strong> - Approach reviews as
+    collaborative editing - Provide specific, actionable feedback -
+    Acknowledge good practices observed - Ask questions to understand
+    intent - Suggest alternatives with reasoning</p>
+    <p><strong>For Teams:</strong> - Establish clear review expectations
+    - Allocate time for thorough reviews - Cultivate psychological
+    safety - Document common patterns - Continuously improve the
+    process</p>
+    <h2 id="conclusion">Conclusion</h2>
+    <p>The essay concludes that mastering code reviews represents a
+    crucial transition from individual programming to team software
+    engineering. As projects grow in complexity beyond what individuals
+    can comprehend, effective collaboration through code reviews becomes
+    the primary mechanism for maintaining quality and shared
+    understanding.</p>
+    <p>Teams that invest in developing strong code review practices
+    build better software, grow stronger engineers, and create more
+    resilient organizations.</p>
+
+    <hr>
+    <p style="font-size:0.9rem;color:#555">Read and subscribe on <a href="https://shablag.substack.com/p/code-reviews-an-incomplete-guide">Substack</a></p>
+    <footer>
+        <p style="margin-top:0.75rem"><a href="index.html">← Back to #!blag</a></p>
+    </footer>
 </body>
 </html>
