@@ -6,262 +6,385 @@
     <title>#!blag — Shammah Chancellor</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.6; }
-        header { margin-bottom: 3rem; border-bottom: 2px solid #1a1a1a; padding-bottom: 1rem; }
-        header h1 { font-size: 2.2rem; letter-spacing: -0.5px; }
-        header p { color: #555; margin-top: 0.25rem; }
-        h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: #555; margin: 3rem 0 1rem 0; }
-        .post { padding: 1rem 0; border-bottom: 1px solid #eee; }
-        .post a { font-size: 1.05rem; color: #1a1a1a; text-decoration: none; }
-        .post a:hover { text-decoration: underline; }
-        .post .subtitle { color: #666; font-size: 0.9rem; margin-top: 0.2rem; font-style: italic; }
-        .post .date { color: #999; font-size: 0.8rem; margin-top: 0.2rem; }
-        .paper { padding: 1rem 0; border-bottom: 1px solid #eee; }
-        .paper .title { font-size: 1rem; font-weight: bold; color: #1a1a1a; }
-        .paper .desc { color: #666; font-size: 0.9rem; margin-top: 0.2rem; }
-        .links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.5rem; }
-        .links a { display: inline-block; padding: 0.4rem 0.9rem; background: #1a1a1a; color: #fff; text-decoration: none; font-family: monospace; font-size: 0.85rem; border-radius: 2px; }
-        .links a:hover { background: #444; }
-        footer { margin-top: 4rem; color: #999; font-size: 0.85rem; }
-        footer a { color: #999; }
+        body { font-family: Georgia, serif; color: #1a1a1a; line-height: 1.6; }
+
+        /* ── Header ── */
+        .site-header { background: #1a1a1a; color: #fff; padding: 3rem 1.5rem 2.5rem; }
+        .site-header-inner { max-width: 720px; margin: 0 auto; }
+        .site-header h1 { font-size: 3.5rem; font-weight: normal; letter-spacing: -3px; line-height: 1; }
+        .site-header h1 .bang { color: #666; }
+        .site-header .verse { color: #888; margin-top: 1rem; font-style: italic; font-size: 0.95rem; line-height: 1.5; max-width: 520px; }
+        .header-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+        .header-links a { display: inline-block; padding: 0.3rem 0.75rem; border: 1px solid #444; color: #bbb; text-decoration: none; font-family: monospace; font-size: 0.78rem; letter-spacing: 0.3px; transition: border-color 0.15s, color 0.15s; }
+        .header-links a:hover { border-color: #fff; color: #fff; }
+
+        /* ── Main ── */
+        main { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 5rem; }
+
+        /* ── Section labels ── */
+        .sec { font-family: monospace; font-size: 0.68rem; letter-spacing: 2.5px; text-transform: uppercase; color: #bbb; margin: 3.5rem 0 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid #eee; }
+
+        /* ── Posts ── */
+        .year-marker { font-family: monospace; font-size: 0.68rem; letter-spacing: 2px; color: #ddd; margin: 1.75rem 0 0.25rem; }
+        .year-marker:first-child { margin-top: 0; }
+        .post-row { display: flex; align-items: baseline; gap: 1.1rem; padding: 0.5rem 0; border-bottom: 1px solid #f5f5f5; }
+        .post-row:hover .post-title { text-decoration: underline; }
+        .post-date { flex-shrink: 0; font-family: monospace; font-size: 0.72rem; color: #ccc; width: 3.5rem; text-align: right; }
+        .post-info { flex: 1; min-width: 0; }
+        .post-title { font-size: 0.97rem; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; }
+        .post-sub { font-size: 0.82rem; color: #999; font-style: italic; margin-top: 0.1rem; }
+
+        /* ── Papers ── */
+        .paper-card { border: 1px solid #eee; padding: 1rem 1.1rem; margin-bottom: 0.6rem; transition: border-color 0.15s; }
+        .paper-card:hover { border-color: #bbb; }
+        .paper-card a { font-size: 0.93rem; color: #1a1a1a; text-decoration: none; font-weight: bold; }
+        .paper-card a:hover { text-decoration: underline; }
+        .paper-card .desc { font-size: 0.83rem; color: #777; margin-top: 0.35rem; font-style: italic; line-height: 1.5; }
+
+        /* ── Footer ── */
+        footer { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 3rem; color: #ccc; font-family: monospace; font-size: 0.75rem; }
+        footer a { color: #ccc; text-decoration: none; }
+        footer a:hover { color: #555; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>#!blag</h1>
-        <p class="byline">&ldquo;And we know that for those who love God all things work together for good.&rdquo; &mdash; Romans 8:28</p>
-    </header>
-
-    <h2>Writing</h2>
-    <div class="post">
-        <div><a href="2026-03-04-amazon-fresh-sucks.html">Amazon Has a Broken Thing</a></div>
-        <div class="subtitle">Their org chart is your checkout flow.</div>
-        <div class="date">2026-03-04</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-02-28-proximity.html">Proximity</a></div>
-        <div class="subtitle">If you're not in the Bay Area, skip this one.</div>
-        <div class="date">2026-02-28</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-02-19-vote-to-kill-jason-loomis.html">Vote to Kill Jason Loomis</a></div>
-        <div class="subtitle">I'm voting no. Let me explain.</div>
-        <div class="date">2026-02-19</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-02-12-god-process-02-computational-foundations.html">Divine Love Within Logical Constraints: Why the Cross Was Computationally Necessary</a></div>
-        <div class="date">2026-02-12</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-02-10-the-cult-of-all-truth.html">The Cult of All Truth</a></div>
-        <div class="subtitle">Why Every Ideology Is Right and Why That's the Problem</div>
-        <div class="date">2026-02-10</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-02-10-naming-the-egregore.html">Legion, Go Into the Swine: Naming the Egregore Operating in Modern Relationships</a></div>
-        <div class="subtitle">When insecure attachment is becoming the majority, it's not individual failure—it's system collapse</div>
-        <div class="date">2026-02-10</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-02-10-god-process-01-cosmological-bootstrap.html">The Cosmological Bootstrap: Why God is Logically Inevitable</a></div>
-        <div class="date">2026-02-10</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-02-07-discrete-time-minimal-proof.html">No Timeless Shortcut: Why Completed Block Time Cannot Contain Irreducible Computation</a></div>
-        <div class="date">2026-02-07</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-02-05-unnamed-ai-phenomena.html">The 25 Things Everyone Using AI Experiences (But Can't Name)</a></div>
-        <div class="date">2026-02-05</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-02-01-money-allegiance-and-the-kingdom.html">Money, Allegiance, and the Kingdom of Heaven</a></div>
-        <div class="subtitle">Most Christians rightly rejected Bitcoin—it makes early adopters wealthy at others' expense, rewards hoarding, and violates 'the first shall be last.' But what if different cryptocurrency design could embody Kingdom values?</div>
-        <div class="date">2026-02-01</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-30-can-ai-learn-its-own-rules.html">Can AI Learn Its Own Rules? We Tested It.</a></div>
-        <div class="subtitle">The surprising result of letting Claude iterate on its own constitutional guidance</div>
-        <div class="date">2026-01-30</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-29-the-gradient-problem.html">The Gradient Problem</a></div>
-        <div class="subtitle">Across much of the developed world, immigration has become the central political fault line.</div>
-        <div class="date">2026-01-29</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-29-open-letter-to-anthropic.html">An Open Letter to Anthropic and AI Safety Researchers</a></div>
-        <div class="subtitle">Here’s the problem: I am systematically miscalibrated in exactly this way.</div>
-        <div class="date">2026-01-29</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-28-the-rules-beneath-the-economy.html">The Rules Beneath the Economy</a></div>
-        <div class="subtitle">Everyone uses money. Everyone depends on it. Yet almost no one is taught how it actually works.</div>
-        <div class="date">2026-01-28</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-27-why-smart-engineers-value-startup.html">Why Smart Engineers Value Startup Equity at $0</a></div>
-        <div class="subtitle">Information asymmetry, liquidity constraints, and incentive shifts in startups</div>
-        <div class="date">2026-01-27</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-26-the-algorithmically-invisible-man.html">The Algorithmically Invisible Man</a></div>
-        <div class="subtitle">Many people are talking about the symptoms. Very few are naming the root cause.</div>
-        <div class="date">2026-01-26</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-25-the-rage-loop.html">The Rage Loop: Why Everything Feels Urgent — and Nothing Changes</a></div>
-        <div class="subtitle">Most days start or end the same way.</div>
-        <div class="date">2026-01-25</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-24-the-grift-and-the-table.html">The Grift and the Table</a></div>
-        <div class="subtitle">We wake up at 6 AM or earlier. Not because we’re inspired—because the alarm goes off and the day doesn’t wait.</div>
-        <div class="date">2026-01-24</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-22-the-gospel-is-a-practice.html">The Gospel Is a Practice, Not a Belief</a></div>
-        <div class="subtitle">Most people—Christians and non-Christians alike—think they understand what Christianity is about.</div>
-        <div class="date">2026-01-22</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-18-what-comes-after-bitcoin-3-of-3.html">What Comes After Bitcoin (3 of 3)</a></div>
-        <div class="subtitle">Inflation corrodes time horizons and social trust.</div>
-        <div class="date">2026-01-18</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-17-bitcoins-real-breakthrough.html">Bitcoin's Real Breakthrough — And Why It Stalled (2 of 3)</a></div>
-        <div class="subtitle">Bitcoin did not emerge in a vacuum.</div>
-        <div class="date">2026-01-17</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-16-the-quiet-engine-of-social-breakdown.html">The Quiet Engine of Social Breakdown (1 of 3)</a></div>
-        <div class="subtitle">Most of us wake up every day knowing, at some level, that the money we've earned is quietly evaporating.</div>
-        <div class="date">2026-01-16</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-12-open-letter-president-trump.html">An Open Letter to the President of the United States and the American People</a></div>
-        <div class="subtitle">To the President of the United States, and to the Citizens of the United States:</div>
-        <div class="date">2026-01-12</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-11-the-exodus-of-a-progressive.html">The Exodus of a Progressive</a></div>
-        <div class="subtitle">In 2016 during a work break, I was having a conversation with a coworker at a large tech company in the Bay Area. He asked me about my politics.</div>
-        <div class="date">2026-01-11</div>
-    </div>
-    <div class="post">
-        <div><a href="2026-01-08-when-identity-is-assigned.html">When Identity Is Assigned</a></div>
-        <div class="subtitle">Reading Time: ~1 hour.</div>
-        <div class="date">2026-01-08</div>
-    </div>
-    <div class="post">
-        <div><a href="2025-12-13-the-economic-endgame.html">The Economic Endgame</a></div>
-        <div class="subtitle">Why AI displacement is different, and what we must do before it's too late</div>
-        <div class="date">2025-12-13</div>
-    </div>
-    <div class="post">
-        <div><a href="2025-11-02-return-to-the-kingdom-of-heaven.html">Return to the Kingdom of Heaven</a></div>
-        <div class="date">2025-11-02</div>
-    </div>
-    <div class="post">
-        <div><a href="2025-06-03-the-bystander-failure-of-charity-and-the-10-percent-solution.html">The Bystander: Why Digital Rights Organizations Failed</a></div>
-        <div class="date">2025-06-03</div>
-    </div>
-    <div class="post">
-        <div><a href="2023-11-07-code-reviews-incomplete-guide-substack.html">Code Reviews: An Incomplete Guide</a></div>
-        <div class="date">2023-11-07</div>
-    </div>
-    <div class="post">
-        <div><a href="2022-11-23-the-truth-engine.html">The Truth Engine</a></div>
-        <div class="date">2022-11-23</div>
-    </div>
-    <div class="post">
-        <div><a href="2022-10-29-the-need-for-ethical-money.html">The need for ethical money</a></div>
-        <div class="date">2022-10-29</div>
-    </div>
-    <div class="post">
-        <div><a href="2020-02-09-taking-back-our-identities.html">Taking Back Our Identities</a></div>
-        <div class="date">February 9, 2020</div>
-    </div>
-    <div class="post">
-        <div><a href="2020-02-09-bitcoin-cash-development-funding.html">Bitcoin Cash Development Funding</a></div>
-        <div class="date">2020-02-09</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-07-14-software-and-magic-number-seven.html">Software and the Magic Number Seven</a></div>
-        <div class="date">July 14, 2019</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-07-14-code-reviews-incomplete-guide.html">Code Reviews: An incomplete guide</a></div>
-        <div class="date">July 14, 2019</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-06-21-what-is-reliability-engineering.html">What is Reliability Engineering?</a></div>
-        <div class="date">June 21, 2019</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-06-09-child-pays-for-parent-part3.html">Child Pays for Parent: Part 3</a></div>
-        <div class="date">2019-06-09</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-05-02-the-failure-of-fiat.html">The Failure of Fiat</a></div>
-        <div class="date">2019-05-02</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-05-02-money-economies-states-taxation-bitcoin.html">Money, Economies, States, Taxation and Bitcoin for Dummies</a></div>
-        <div class="date">2019-05-02</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-04-23-right-work.html">Right Work</a></div>
-        <div class="date">2019-04-23</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-04-08-the-future-of-bitcoin-cash.html">The Future of Bitcoin Cash</a></div>
-        <div class="date">2019-04-08</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-04-07-child-pays-for-parent-part2.html">Child Pays for Parent: Part 2</a></div>
-        <div class="date">2019-04-07</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-03-31-child-pays-for-parent.html">Child Pays for Parent</a></div>
-        <div class="date">2019-03-31</div>
-    </div>
-    <div class="post">
-        <div><a href="2019-03-28-every-new-beginning.html">Every New Beginning</a></div>
-        <div class="date">2019-03-28</div>
-    </div>
-    <div class="post">
-        <div><a href="2018-09-06-sharding-bitcoin-cash.html">Sharding Bitcoin Cash</a></div>
-        <div class="date">2018-09-06</div>
-    </div>
-    <div class="post">
-        <div><a href="2016-05-01-synchronicities.html">Synchronicities</a></div>
-        <div class="date">2016-05-01</div>
+    <div class="site-header">
+        <div class="site-header-inner">
+            <h1><span class="bang">#!</span>blag</h1>
+            <p class="verse">&ldquo;And we know that for those who love God all things work together for good.&rdquo; &mdash; Romans 8:28</p>
+            <div class="header-links">
+                <a href="https://shablag.substack.com" target="_blank" rel="noopener">Subscribe on Substack</a>
+                <a href="https://darwin-finch.github.io" target="_blank" rel="noopener">Finch — Local AI Coding Assistant</a>
+                <a href="https://givelotus.github.io" target="_blank" rel="noopener">Lotus Network Research</a>
+                <a href="https://github.com/schancel" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://t.me/TheLotusNetwork" target="_blank" rel="noopener">Telegram</a>
+            </div>
+        </div>
     </div>
 
-    <h2>Find Me</h2>
-    <div class="links">
-        <a href="https://shablag.substack.com">Subscribe on Substack</a>
-        <a href="https://darwin-finch.github.io">Finch — Local AI Coding Assistant</a>
-        <a href="https://givelotus.github.io">Lotus Network Research</a>
-        <a href="https://github.com/schancel">GitHub</a>
-        <a href="https://t.me/TheLotusNetwork">Telegram</a>
-    </div>
+    <main>
+        <div class="sec">Writing</div>
+        <div class="year-marker">2026</div>
+        <div class="post-row">
+            <span class="post-date">03.04</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-03-04-amazon-fresh-sucks.html">Amazon Has a Broken Thing</a>
+                <div class="post-sub">Their org chart is your checkout flow.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">02.28</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-02-28-proximity.html">Proximity</a>
+                <div class="post-sub">If you're not in the Bay Area, skip this one.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">02.19</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-02-19-vote-to-kill-jason-loomis.html">Vote to Kill Jason Loomis</a>
+                <div class="post-sub">I'm voting no. Let me explain.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">02.12</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-02-12-god-process-02-computational-foundations.html">Divine Love Within Logical Constraints: Why the Cross Was Computationally Necessary</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">02.10</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-02-10-the-cult-of-all-truth.html">The Cult of All Truth</a>
+                <div class="post-sub">Why Every Ideology Is Right and Why That's the Problem</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">02.10</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-02-10-naming-the-egregore.html">Legion, Go Into the Swine: Naming the Egregore Operating in Modern Relationships</a>
+                <div class="post-sub">When insecure attachment is becoming the majority, it's not individual failure—it's system collapse</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">02.10</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-02-10-god-process-01-cosmological-bootstrap.html">The Cosmological Bootstrap: Why God is Logically Inevitable</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">02.07</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-02-07-discrete-time-minimal-proof.html">No Timeless Shortcut: Why Completed Block Time Cannot Contain Irreducible Computation</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">02.05</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-02-05-unnamed-ai-phenomena.html">The 25 Things Everyone Using AI Experiences (But Can't Name)</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">02.01</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-02-01-money-allegiance-and-the-kingdom.html">Money, Allegiance, and the Kingdom of Heaven</a>
+                <div class="post-sub">Most Christians rightly rejected Bitcoin—it makes early adopters wealthy at others' expense, rewards hoarding, and violates 'the first shall be last.' But what if different cryptocurrency design could embody Kingdom values?</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.30</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-30-can-ai-learn-its-own-rules.html">Can AI Learn Its Own Rules? We Tested It.</a>
+                <div class="post-sub">The surprising result of letting Claude iterate on its own constitutional guidance</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.29</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-29-the-gradient-problem.html">The Gradient Problem</a>
+                <div class="post-sub">Across much of the developed world, immigration has become the central political fault line.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.29</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-29-open-letter-to-anthropic.html">An Open Letter to Anthropic and AI Safety Researchers</a>
+                <div class="post-sub">Here’s the problem: I am systematically miscalibrated in exactly this way.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.28</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-28-the-rules-beneath-the-economy.html">The Rules Beneath the Economy</a>
+                <div class="post-sub">Everyone uses money. Everyone depends on it. Yet almost no one is taught how it actually works.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.27</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-27-why-smart-engineers-value-startup.html">Why Smart Engineers Value Startup Equity at $0</a>
+                <div class="post-sub">Information asymmetry, liquidity constraints, and incentive shifts in startups</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.26</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-26-the-algorithmically-invisible-man.html">The Algorithmically Invisible Man</a>
+                <div class="post-sub">Many people are talking about the symptoms. Very few are naming the root cause.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.25</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-25-the-rage-loop.html">The Rage Loop: Why Everything Feels Urgent — and Nothing Changes</a>
+                <div class="post-sub">Most days start or end the same way.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.24</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-24-the-grift-and-the-table.html">The Grift and the Table</a>
+                <div class="post-sub">We wake up at 6 AM or earlier. Not because we’re inspired—because the alarm goes off and the day doesn’t wait.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.22</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-22-the-gospel-is-a-practice.html">The Gospel Is a Practice, Not a Belief</a>
+                <div class="post-sub">Most people—Christians and non-Christians alike—think they understand what Christianity is about.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.18</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-18-what-comes-after-bitcoin-3-of-3.html">What Comes After Bitcoin (3 of 3)</a>
+                <div class="post-sub">Inflation corrodes time horizons and social trust.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.17</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-17-bitcoins-real-breakthrough.html">Bitcoin's Real Breakthrough — And Why It Stalled (2 of 3)</a>
+                <div class="post-sub">Bitcoin did not emerge in a vacuum.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.16</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-16-the-quiet-engine-of-social-breakdown.html">The Quiet Engine of Social Breakdown (1 of 3)</a>
+                <div class="post-sub">Most of us wake up every day knowing, at some level, that the money we've earned is quietly evaporating.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.12</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-12-open-letter-president-trump.html">An Open Letter to the President of the United States and the American People</a>
+                <div class="post-sub">To the President of the United States, and to the Citizens of the United States:</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.11</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-11-the-exodus-of-a-progressive.html">The Exodus of a Progressive</a>
+                <div class="post-sub">In 2016 during a work break, I was having a conversation with a coworker at a large tech company in the Bay Area. He asked me about my politics.</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">01.08</span>
+            <div class="post-info">
+                <a class="post-title" href="2026-01-08-when-identity-is-assigned.html">When Identity Is Assigned</a>
+                <div class="post-sub">Reading Time: ~1 hour.</div>
+            </div>
+        </div>
+        <div class="year-marker">2025</div>
+        <div class="post-row">
+            <span class="post-date">12.13</span>
+            <div class="post-info">
+                <a class="post-title" href="2025-12-13-the-economic-endgame.html">The Economic Endgame</a>
+                <div class="post-sub">Why AI displacement is different, and what we must do before it's too late</div>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">11.02</span>
+            <div class="post-info">
+                <a class="post-title" href="2025-11-02-return-to-the-kingdom-of-heaven.html">Return to the Kingdom of Heaven</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">06.03</span>
+            <div class="post-info">
+                <a class="post-title" href="2025-06-03-the-bystander-failure-of-charity-and-the-10-percent-solution.html">The Bystander: Why Digital Rights Organizations Failed</a>
+            </div>
+        </div>
+        <div class="year-marker">2023</div>
+        <div class="post-row">
+            <span class="post-date">11.07</span>
+            <div class="post-info">
+                <a class="post-title" href="2023-11-07-code-reviews-incomplete-guide-substack.html">Code Reviews: An Incomplete Guide</a>
+            </div>
+        </div>
+        <div class="year-marker">2022</div>
+        <div class="post-row">
+            <span class="post-date">11.23</span>
+            <div class="post-info">
+                <a class="post-title" href="2022-11-23-the-truth-engine.html">The Truth Engine</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">10.29</span>
+            <div class="post-info">
+                <a class="post-title" href="2022-10-29-the-need-for-ethical-money.html">The need for ethical money</a>
+            </div>
+        </div>
+        <div class="year-marker">2020</div>
+        <div class="post-row">
+            <span class="post-date">02.09</span>
+            <div class="post-info">
+                <a class="post-title" href="2020-02-09-taking-back-our-identities.html">Taking Back Our Identities</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">02.09</span>
+            <div class="post-info">
+                <a class="post-title" href="2020-02-09-bitcoin-cash-development-funding.html">Bitcoin Cash Development Funding</a>
+            </div>
+        </div>
+        <div class="year-marker">2019</div>
+        <div class="post-row">
+            <span class="post-date">07.14</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-07-14-software-and-magic-number-seven.html">Software and the Magic Number Seven</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">07.14</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-07-14-code-reviews-incomplete-guide.html">Code Reviews: An incomplete guide</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">06.21</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-06-21-what-is-reliability-engineering.html">What is Reliability Engineering?</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">06.09</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-06-09-child-pays-for-parent-part3.html">Child Pays for Parent: Part 3</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">05.02</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-05-02-the-failure-of-fiat.html">The Failure of Fiat</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">05.02</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-05-02-money-economies-states-taxation-bitcoin.html">Money, Economies, States, Taxation and Bitcoin for Dummies</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">04.23</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-04-23-right-work.html">Right Work</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">04.08</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-04-08-the-future-of-bitcoin-cash.html">The Future of Bitcoin Cash</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">04.07</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-04-07-child-pays-for-parent-part2.html">Child Pays for Parent: Part 2</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">03.31</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-03-31-child-pays-for-parent.html">Child Pays for Parent</a>
+            </div>
+        </div>
+        <div class="post-row">
+            <span class="post-date">03.28</span>
+            <div class="post-info">
+                <a class="post-title" href="2019-03-28-every-new-beginning.html">Every New Beginning</a>
+            </div>
+        </div>
+        <div class="year-marker">2018</div>
+        <div class="post-row">
+            <span class="post-date">09.06</span>
+            <div class="post-info">
+                <a class="post-title" href="2018-09-06-sharding-bitcoin-cash.html">Sharding Bitcoin Cash</a>
+            </div>
+        </div>
+        <div class="year-marker">2016</div>
+        <div class="post-row">
+            <span class="post-date">05.01</span>
+            <div class="post-info">
+                <a class="post-title" href="2016-05-01-synchronicities.html">Synchronicities</a>
+            </div>
+        </div>
 
-    <h2>Papers</h2>
-    <div class="paper">
-        <div class="title"><a href="https://givelotus.github.io/pdfs/consensus-energy-en.pdf">Security Expenditure, Energy, and Issuance Legibility in Permissionless Consensus</a></div>
-        <div class="desc">Establishes PoW security expenditure as a legible, protocol-visible substrate for oracle-free monetary policy.</div>
-    </div>
-    <div class="paper">
-        <div class="title"><a href="https://givelotus.github.io/pdfs/adaptive-pow-en.pdf">Adaptive PoW Monetary Policy Without Oracles</a></div>
-        <div class="desc">Constructive mechanism for pseudo-stability via work-coupled tail emission and burn; no committees required.</div>
-    </div>
-    <div class="paper">
-        <div class="title"><a href="https://givelotus.github.io/pdfs/cashweb-en.pdf">CashWeb: Federated Messaging with Cryptocurrency-Based Economic Anti-Spam</a></div>
-        <div class="desc">Federated messaging protocol using proof-of-payment for Sybil-resistant, decentralized communication.</div>
-    </div>
+        <div class="sec">Papers</div>
+        <div class="paper-card">
+            <div><a href="https://givelotus.github.io/pdfs/consensus-energy-en.pdf" target="_blank" rel="noopener">Security Expenditure, Energy, and Issuance Legibility in Permissionless Consensus</a></div>
+            <div class="desc">Establishes PoW security expenditure as a legible, protocol-visible substrate for oracle-free monetary policy.</div>
+        </div>
+        <div class="paper-card">
+            <div><a href="https://givelotus.github.io/pdfs/adaptive-pow-en.pdf" target="_blank" rel="noopener">Adaptive PoW Monetary Policy Without Oracles</a></div>
+            <div class="desc">Constructive mechanism for pseudo-stability via work-coupled tail emission and burn; no committees required.</div>
+        </div>
+        <div class="paper-card">
+            <div><a href="https://givelotus.github.io/pdfs/cashweb-en.pdf" target="_blank" rel="noopener">CashWeb: Federated Messaging with Cryptocurrency-Based Economic Anti-Spam</a></div>
+            <div class="desc">Federated messaging protocol using proof-of-payment for Sybil-resistant, decentralized communication.</div>
+        </div>
+    </main>
 
     <footer>
         <p>Shammah Chancellor &mdash; <a href="https://shablag.substack.com">shablag.substack.com</a> &mdash; <a href="https://github.com/schancel">github.com/schancel</a></p>
