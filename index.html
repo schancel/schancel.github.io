@@ -8,11 +8,17 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: Georgia, serif; color: #1a1a1a; line-height: 1.6; }
 
+        /* ── Animations ── */
+        @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+        @keyframes blink  { 0%,100% { opacity:1; } 50% { opacity:0; } }
+
         /* ── Header ── */
         .site-header { background: #1a1a1a; color: #fff; padding: 3rem 1.5rem 2.5rem; }
         .site-header-inner { max-width: 720px; margin: 0 auto; }
         .site-header h1 { font-size: 3.5rem; font-weight: normal; letter-spacing: -3px; line-height: 1; }
         .site-header h1 .bang { color: #666; }
+        .cursor { display:inline-block; width:3px; height:0.75em; background:#666; margin-left:3px; vertical-align:middle; animation: blink 1s step-end infinite; }
+        .cursor.done { display:none; }
         .site-header .verse { color: #888; margin-top: 1rem; font-style: italic; font-size: 0.95rem; line-height: 1.5; max-width: 520px; }
         .header-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
         .header-links a { display: inline-block; padding: 0.3rem 0.75rem; border: 1px solid #444; color: #bbb; text-decoration: none; font-family: monospace; font-size: 0.78rem; letter-spacing: 0.3px; transition: border-color 0.15s, color 0.15s; }
@@ -27,7 +33,10 @@
         /* ── Posts ── */
         .year-marker { font-family: monospace; font-size: 0.68rem; letter-spacing: 2px; color: #ddd; margin: 1.75rem 0 0.25rem; }
         .year-marker:first-child { margin-top: 0; }
-        .post-row { display: flex; align-items: baseline; gap: 1.1rem; padding: 0.5rem 0; border-bottom: 1px solid #f5f5f5; }
+        .post-row { display: flex; align-items: baseline; gap: 1.1rem; padding: 0.5rem 0.5rem 0.5rem 0.75rem; border-bottom: 1px solid #f5f5f5; position: relative; transition: background 0.12s; opacity: 0; transform: translateY(8px); animation: fadeUp 0.35s ease forwards; }
+        .post-row::before { content:''; position:absolute; left:0; top:4px; bottom:4px; width:2px; background:#1a1a1a; transform:scaleY(0); transform-origin:center; transition:transform 0.15s ease; }
+        .post-row:hover { background: #f9f9f9; }
+        .post-row:hover::before { transform: scaleY(1); }
         .post-row:hover .post-title { text-decoration: underline; }
         .post-date { flex-shrink: 0; font-family: monospace; font-size: 0.72rem; color: #ccc; width: 3.5rem; text-align: right; }
         .post-info { flex: 1; min-width: 0; }
@@ -35,8 +44,8 @@
         .post-sub { font-size: 0.82rem; color: #999; font-style: italic; margin-top: 0.1rem; }
 
         /* ── Papers ── */
-        .paper-card { border: 1px solid #eee; padding: 1rem 1.1rem; margin-bottom: 0.6rem; transition: border-color 0.15s; }
-        .paper-card:hover { border-color: #bbb; }
+        .paper-card { border: 1px solid #eee; padding: 1rem 1.1rem; margin-bottom: 0.6rem; transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s; }
+        .paper-card:hover { border-color: #bbb; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
         .paper-card a { font-size: 0.93rem; color: #1a1a1a; text-decoration: none; font-weight: bold; }
         .paper-card a:hover { text-decoration: underline; }
         .paper-card .desc { font-size: 0.83rem; color: #777; margin-top: 0.35rem; font-style: italic; line-height: 1.5; }
@@ -50,7 +59,7 @@
 <body>
     <div class="site-header">
         <div class="site-header-inner">
-            <h1><span class="bang">#!</span>blag</h1>
+            <h1><span class="bang">#!</span><span id="logo-text"></span><span id="logo-cursor" class="cursor"></span></h1>
             <p class="verse">&ldquo;And we know that for those who love God all things work together for good.&rdquo; &mdash; Romans 8:28</p>
             <div class="header-links">
                 <a href="https://shablag.substack.com" target="_blank" rel="noopener">Subscribe on Substack</a>
@@ -401,5 +410,21 @@
     <footer>
         <p>Shammah Chancellor &mdash; <a href="https://shablag.substack.com">shablag.substack.com</a> &mdash; <a href="https://github.com/schancel">github.com/schancel</a></p>
     </footer>
+    <script>
+        (function() {
+            var el = document.getElementById('logo-text');
+            var cur = document.getElementById('logo-cursor');
+            var text = 'blag'; var i = 0;
+            function tick() {
+                el.textContent = text.slice(0, i++);
+                if (i <= text.length) setTimeout(tick, i === 1 ? 250 : 90);
+                else setTimeout(function(){ cur.classList.add('done'); }, 1400);
+            }
+            tick();
+        })();
+        document.querySelectorAll('.post-row').forEach(function(el, i) {
+            el.style.animationDelay = Math.min(i * 0.028, 0.6) + 's';
+        });
+    </script>
 </body>
 </html>
