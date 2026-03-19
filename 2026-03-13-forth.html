@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #eee; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; text-decoration: none; }
+        footer a:hover { color: #1a1a1a; text-decoration: underline; }
+        .footer-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-bottom: 0.75rem; }
+        .footer-byline { color: #bbb; font-size: 0.8rem; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    <h1></h1>
+    
+    
+    
+
+    <p>#! /usr/bin/env gforth 0 [IF] — title: “The Language That Fit in
+    Your Head” author: “Shammah Chancellor” subtitle: “Forth, Chuck
+    Moore, and being right exactly when it mattered” publication_date:
+    2026-03-13 status: published —</p>
+    <p>In 1968, a programmer named Chuck Moore was writing graphics
+    software on an IBM 1130 at a carpet company in Amsterdam, New York.
+    No committee. No research lab. No funding. He didn’t have enough
+    memory to do it the normal way, so he invented a new way. The IBM
+    1130 had 8 kilobytes of RAM. He built a tiny programming environment
+    that could live inside that constraint; a language that could extend
+    itself, that compiled immediately, that left no fat on the bone.</p>
+    <p>He did it himself.</p>
+    <p>He called it FORTH — because he thought of it as a
+    fourth-generation language — but the operating system only allowed
+    five characters for a filename, so it became FORTH, then Forth.</p>
+    <p>He didn’t know he’d just built the most honest programming
+    language ever written.</p>
+    <hr />
+    <h2 id="the-insight">The Insight</h2>
+    <p>Forth is built around one radical premise: <strong>software
+    should fit in your head.</strong></p>
+    <p>Not “software should be understandable in principle.” Not “with
+    the right tooling, you can navigate large codebases.” Literally:
+    every part of the running system should be something a single human
+    being can hold in working memory simultaneously.</p>
+    <p>Moore achieved this through two mechanisms. First, Forth programs
+    operate on a stack. You push values, call words (Forth’s name for
+    functions), and values come back out. No complex argument-passing
+    conventions, no hidden state; everything visible. Second, Forth is a
+    dictionary. You define new words in terms of existing ones, and the
+    dictionary grows. The language is its own compiler; you define your
+    problem domain in Forth itself, then solve the problem in that
+    domain.</p>
+    <p>The effect is strange and powerful. A Forth programmer working on
+    an embedded controller isn’t writing C and hoping the runtime fits.
+    They’re building a tiny language tuned to the exact problem at hand.
+    The system knows exactly what you put in it because you put
+    everything in it.</p>
+    <p>In 1971, Moore took this to the National Radio Astronomy
+    Observatory in Green Bank, West Virginia, then to Kitt Peak in
+    Arizona. He implemented Forth on a Nova minicomputer to control an
+    11-meter radio telescope. The implementation was complete; the
+    system controlled the telescope, processed data, and was extensible
+    by astronomers who weren’t programmers.</p>
+    <p>Word spread.</p>
+    <hr />
+    <h2 id="elizabeth-rather-and-the-first-software-company">Elizabeth
+    Rather and the First Software Company</h2>
+    <p>In 1970, Elizabeth Rather was a systems analyst at the University
+    of Arizona when she was brought in to provide support for NRAO’s
+    Forth installation. She learned Forth on the job. In 1973, she and
+    Moore co-founded FORTH, Inc. — one of the first commercial software
+    companies in America.</p>
+    <p>Rather became its president and ran it for over thirty years.</p>
+    <p>The timing was extraordinary. Personal computing was about to
+    explode, and Forth had properties nobody else had. It ran in
+    kilobytes. It was interactive — you could type a word and have it
+    execute immediately, years before LISP machines made this
+    fashionable. It was self-hosting; you could modify the language
+    itself while running it. It ran on bare metal, no operating system
+    required.</p>
+    <p>Forth spread into blood analyzers, satellite systems, scientific
+    instruments, point-of-sale terminals, industrial controllers. NASA
+    used it. The Galileo probe carried Forth. The Voyager program used
+    Forth-based systems. A whole generation of engineers who needed
+    computation in hostile environments with no spare cycles learned to
+    think in stacks.</p>
+    <p>In 1982, two British engineers built the Jupiter ACE — a home
+    computer designed around Forth rather than BASIC. It sold about
+    5,000 units; it was too strange for the mass market. But it was
+    right.</p>
+    <p>Rather chaired the ANSI technical committee that produced the
+    1994 standard for Forth. The standard was carefully designed; it
+    specified a portable core while leaving room for the customization
+    that Forth programmers depended on. It was a genuine achievement of
+    practical standardization.</p>
+    <p>Forth, Inc. is still operating. Elizabeth Rather is in her
+    mid-eighties.</p>
+    <hr />
+    <h2 id="leo-brodie-and-the-books-that-kept-forth-alive">Leo Brodie
+    and the Books That Kept Forth Alive</h2>
+    <p>In 1981, a programmer named Leo Brodie published <em>Starting
+    Forth</em>, a cheerful introduction illustrated with cartoon
+    characters learning stack manipulation. In 1984, he published
+    <em>Thinking Forth</em> — a different kind of book entirely.</p>
+    <p><em>Thinking Forth</em> isn’t really about Forth. It’s about how
+    to think about software problems before you write a line of code.
+    Brodie interviewed Moore and other Forth programmers extensively and
+    distilled a philosophy: decompose problems into small, named,
+    testable units; think about the problem domain before committing to
+    implementation; distrust complexity. The book uses Forth as its
+    medium but the ideas apply everywhere.</p>
+    <p>Decades after Forth faded from commercial significance,
+    <em>Thinking Forth</em> was still being passed around as something
+    important. Brodie released it under a Creative Commons license; it’s
+    still in print through his own small publisher. He went on to a
+    career in technical communication and instruction design, married,
+    raised children; a quieter life than Moore’s.</p>
+    <p>The books survived because they were teaching something real,
+    something that C and Java and Python and their descendants don’t
+    naturally teach: that the right size for software is <em>small</em>,
+    and that getting there requires thinking before typing.</p>
+    <hr />
+    <h2 id="chuck-moores-longer-road">Chuck Moore’s Longer Road</h2>
+    <p>Moore kept going.</p>
+    <p>Where the industry went toward abstraction and power — more
+    memory, faster processors, richer type systems, garbage collection —
+    Moore went the other direction. Every few years, he produced a more
+    minimal Forth, a leaner architecture, a smaller target.</p>
+    <p>In 2001, he created colorForth. Instead of using delimiter
+    characters to separate words, colorForth used color. Red words
+    compiled; green words executed immediately; yellow words were data.
+    The implementation fit in a few hundred bytes. Almost nobody adopted
+    it; it required a specific editor, specific fonts, a specific
+    display mode. It was Moore’s language spoken in Moore’s dialect,
+    optimized for Moore’s mind.</p>
+    <p>In 2009, he co-founded GreenArrays with his longtime collaborator
+    Jeff Fox. The product was the GA144: a chip containing 144
+    individual Forth processor cores, each with 64 words of RAM, each
+    running its own small program, coordinating through shared ports.
+    The architecture was elegant. Power consumption was extraordinary.
+    Each core used roughly 10 microwatts.</p>
+    <p>The GA144 attracted a small community of dedicated engineers who
+    saw what Moore was seeing: that parallelism solved through many
+    small coordinating agents was more efficient than single fast cores.
+    They were right. The mainstream, building on Intel’s roadmap and
+    NVIDIA’s CUDA models, built complexity instead.</p>
+    <p>GreenArrays still has a website. The chips are still available.
+    Chuck Moore is 87 years old and, as of late 2025, still alive.</p>
+    <hr />
+    <h2 id="what-actually-happened">What Actually Happened</h2>
+    <p>None of the Forth authors died in obscurity. None of them
+    recanted. Moore is still writing minimalist code at 87; Rather ran
+    her company for thirty years and standardized the language; Brodie’s
+    books are still teaching programmers how to think. By most measures,
+    lives well spent.</p>
+    <p>But Forth lost. Not because it was wrong; because it was
+    incompatible with how the industry actually scaled.</p>
+    <p>Forth’s greatest strength was that every implementation was
+    custom. You built the language to fit the problem. Moore’s
+    philosophy was explicit: don’t use other people’s words; write your
+    own. But custom implementations don’t compose. You can’t take a
+    Forth library from one domain and drop it into another. The
+    ecosystem never developed because the philosophy was actively
+    hostile to ecosystems.</p>
+    <p>C won by being portable and standardizable in a way that
+    preserved most of the performance advantages. Java won by being
+    portable across machines at the cost of performance. Python won by
+    being readable and composable at the cost of both. Each tradeoff
+    bought adoption; adoption bought libraries; libraries bought more
+    adoption. Forth’s tradeoff — maximum fit to the specific problem,
+    maximum efficiency, maximum programmer comprehension — bought none
+    of these things.</p>
+    <p>There’s also a memory issue; not in computers, in people. Forth
+    requires you to understand the stack at all times. The discipline of
+    visualizing stack state is learnable but never fully intuitive for
+    most programmers. As the pool of programmers expanded from a few
+    thousand specialists to tens of millions of varied backgrounds,
+    languages that were forgiving won over languages that were
+    honest.</p>
+    <p>The industry chose forgiveness over honesty. You can argue about
+    whether that was correct.</p>
+    <hr />
+    <h2 id="the-residue">The Residue</h2>
+    <p>Forth’s ideas are everywhere, mostly unattributed.</p>
+    <p>PostScript, the language inside every laser printer, is
+    Forth-based. HP’s RPL calculator language (the 48-series) is
+    Forth-derived. Factor, Joy, Cat, Kitten — a whole family of modern
+    concatenative languages traces directly back to Moore’s stack model.
+    The Ethereum Virtual Machine runs on a stack. WebAssembly uses a
+    stack model. Every time you interact with a PDF, a PostScript
+    printer, or certain smart contracts, you are, distantly, using Chuck
+    Moore’s 1968 insight.</p>
+    <p>The idea that software should fit in your head never went away;
+    it just stopped being mainstream. Every generation of programmers
+    rediscovers it. They call it different things: minimalism, systems
+    programming, bare-metal development, “just write C.” They reach the
+    same conclusion Moore reached in 1968: the simplest system that
+    solves the problem is usually the best system.</p>
+    <p>Moore just got there first and stayed there longest.</p>
+    <p>He’s still in Incline Village on Lake Tahoe, presumably still
+    writing code that fits entirely in his head; a man of 87 who built a
+    language in a carpet company’s computer room and never stopped
+    believing the most important constraint in software was what you
+    could understand all at once.</p>
+    <p>He’s not wrong. He never was. [THEN]</p>
+    <dl>
+    <dt>: .ln ( str len – ) type cr ;</dt>
+    <dd>
+    nl cr ;
+    </dd>
+    <dd>
+    .title s” The Language That Fit in Your Head” .ln s” Shammah
+    Chancellor” .ln s” Forth, Chuck Moore, and being right exactly when
+    it mattered” .ln nl ;
+    </dd>
+    <dd>
+    .opening s” In 1968, a programmer named Chuck Moore was writing
+    graphics software” .ln s” on an IBM 1130 at a carpet company in
+    Amsterdam, New York. No” .ln s” committee. No research lab. No
+    funding. He didn’t have enough memory” .ln s” to do it the normal
+    way, so he invented a new way. The IBM 1130 had” .ln s” 8 kilobytes
+    of RAM. He built a tiny programming environment that” .ln s” could
+    live inside that constraint; a language that could extend” .ln s”
+    itself, that compiled immediately, that left no fat on the bone.”
+    .ln nl s” He did it himself.” .ln nl s” He called it FORTH — because
+    he thought of it as a fourth-generation” .ln s” language — but the
+    operating system only allowed five characters for” .ln s” a
+    filename, so it became FORTH, then Forth.” .ln nl s” He didn’t know
+    he’d just built the most honest programming language” .ln s” ever
+    written.” .ln nl ;
+    </dd>
+    <dd>
+    .insight s” THE INSIGHT” .ln nl s” Forth is built around one radical
+    premise: software should fit in” .ln s” your head.” .ln nl s" Not
+    "software should be understandable in principle." Not "with” .ln s"
+    the right tooling, you can navigate large codebases." Literally:”
+    .ln s” every part of the running system should be something a single
+    human” .ln s” being can hold in working memory simultaneously.” .ln
+    nl s” Moore achieved this through two mechanisms. First, Forth
+    programs” .ln s” operate on a stack. You push values, call words
+    (Forth’s name for” .ln s” functions), and values come back out. No
+    complex argument-passing” .ln s” conventions, no hidden state;
+    everything visible. Second, Forth is a” .ln s” dictionary. You
+    define new words in terms of existing ones, and the” .ln s”
+    dictionary grows. The language is its own compiler; you define your”
+    .ln s” problem domain in Forth itself, then solve the problem in
+    that domain.” .ln nl s” The effect is strange and powerful. A Forth
+    programmer working on an” .ln s” embedded controller isn’t writing C
+    and hoping the runtime fits.” .ln s” They’re building a tiny
+    language tuned to the exact problem at hand.” .ln s” The system
+    knows exactly what you put in it because you put” .ln s” everything
+    in it.” .ln nl s” In 1971, Moore took this to the National Radio
+    Astronomy Observatory” .ln s” in Green Bank, West Virginia, then to
+    Kitt Peak in Arizona. He” .ln s” implemented Forth on a Nova
+    minicomputer to control an 11-meter radio” .ln s” telescope. The
+    implementation was complete; the system controlled the” .ln s”
+    telescope, processed data, and was extensible by astronomers who”
+    .ln s” weren’t programmers.” .ln nl s” Word spread.” .ln nl ;
+    </dd>
+    <dd>
+    .rather s” ELIZABETH RATHER AND THE FIRST SOFTWARE COMPANY” .ln nl
+    s” In 1970, Elizabeth Rather was a systems analyst at the University
+    of” .ln s” Arizona when she was brought in to provide support for
+    NRAO’s Forth” .ln s” installation. She learned Forth on the job. In
+    1973, she and Moore” .ln s” co-founded FORTH, Inc. — one of the
+    first commercial software” .ln s” companies in America.” .ln nl s”
+    Rather became its president and ran it for over thirty years.” .ln
+    nl s” The timing was extraordinary. Personal computing was about to”
+    .ln s” explode, and Forth had properties nobody else had. It ran in”
+    .ln s” kilobytes. It was interactive — you could type a word and
+    have it” .ln s” execute immediately, years before LISP machines made
+    this fashionable.” .ln s” It was self-hosting; you could modify the
+    language itself while” .ln s” running it. It ran on bare metal, no
+    operating system required.” .ln nl s” Forth spread into blood
+    analyzers, satellite systems, scientific” .ln s” instruments,
+    point-of-sale terminals, industrial controllers. NASA” .ln s” used
+    it. The Galileo probe carried Forth. The Voyager program used” .ln
+    s” Forth-based systems. A whole generation of engineers who needed”
+    .ln s” computation in hostile environments with no spare cycles
+    learned to” .ln s” think in stacks.” .ln nl s” In 1982, two British
+    engineers built the Jupiter ACE — a home” .ln s” computer designed
+    around Forth rather than BASIC. It sold about” .ln s” 5,000 units;
+    it was too strange for the mass market. But it was right.” .ln nl s”
+    Rather chaired the ANSI technical committee that produced the 1994”
+    .ln s” standard for Forth. The standard was carefully designed; it
+    specified” .ln s” a portable core while leaving room for the
+    customization that Forth” .ln s” programmers depended on. It was a
+    genuine achievement of practical” .ln s” standardization.” .ln nl s”
+    Forth, Inc. is still operating. Elizabeth Rather is in her” .ln s”
+    mid-eighties.” .ln nl ;
+    </dd>
+    <dd>
+    .brodie s” LEO BRODIE AND THE BOOKS THAT KEPT FORTH ALIVE” .ln nl s”
+    In 1981, a programmer named Leo Brodie published Starting Forth, a”
+    .ln s” cheerful introduction illustrated with cartoon characters
+    learning” .ln s” stack manipulation. In 1984, he published Thinking
+    Forth — a” .ln s” different kind of book entirely.” .ln nl s”
+    Thinking Forth isn’t really about Forth. It’s about how to think”
+    .ln s” about software problems before you write a line of code.
+    Brodie” .ln s” interviewed Moore and other Forth programmers
+    extensively and” .ln s” distilled a philosophy: decompose problems
+    into small, named, testable” .ln s” units; think about the problem
+    domain before committing to” .ln s” implementation; distrust
+    complexity. The book uses Forth as its medium” .ln s” but the ideas
+    apply everywhere.” .ln nl s” Decades after Forth faded from
+    commercial significance, Thinking Forth” .ln s” was still being
+    passed around as something important. Brodie released” .ln s” it
+    under a Creative Commons license; it’s still in print through his”
+    .ln s” own small publisher. He went on to a career in technical
+    communication” .ln s” and instruction design, married, raised
+    children; a quieter life than” .ln s” Moore’s.” .ln nl s” The books
+    survived because they were teaching something real,” .ln s”
+    something that C and Java and Python and their descendants don’t”
+    .ln s” naturally teach: that the right size for software is small,
+    and that” .ln s” getting there requires thinking before typing.” .ln
+    nl ;
+    </dd>
+    <dd>
+    .moore s” CHUCK MOORE’S LONGER ROAD” .ln nl s” Moore kept going.”
+    .ln nl s” Where the industry went toward abstraction and power —
+    more memory,” .ln s” faster processors, richer type systems, garbage
+    collection — Moore” .ln s” went the other direction. Every few
+    years, he produced a more minimal” .ln s” Forth, a leaner
+    architecture, a smaller target.” .ln nl s” In 2001, he created
+    colorForth. Instead of using delimiter characters” .ln s” to
+    separate words, colorForth used color. Red words compiled; green”
+    .ln s” words executed immediately; yellow words were data. The
+    implementation” .ln s” fit in a few hundred bytes. Almost nobody
+    adopted it; it required a” .ln s” specific editor, specific fonts, a
+    specific display mode. It was” .ln s” Moore’s language spoken in
+    Moore’s dialect, optimized for Moore’s mind.” .ln nl s” In 2009, he
+    co-founded GreenArrays with his longtime collaborator Jeff” .ln s”
+    Fox. The product was the GA144: a chip containing 144 individual
+    Forth” .ln s” processor cores, each with 64 words of RAM, each
+    running its own small” .ln s” program, coordinating through shared
+    ports. The architecture was” .ln s” elegant. Power consumption was
+    extraordinary. Each core used roughly” .ln s” 10 microwatts.” .ln nl
+    s” The GA144 attracted a small community of dedicated engineers who
+    saw” .ln s” what Moore was seeing: that parallelism solved through
+    many small” .ln s” coordinating agents was more efficient than
+    single fast cores. They” .ln s” were right. The mainstream, building
+    on Intel’s roadmap and NVIDIA’s” .ln s” CUDA models, built
+    complexity instead.” .ln nl s” GreenArrays still has a website. The
+    chips are still available. Chuck” .ln s” Moore is 87 years old and,
+    as of late 2025, still alive.” .ln nl ;
+    </dd>
+    <dd>
+    .happened s” WHAT ACTUALLY HAPPENED” .ln nl s” None of the Forth
+    authors died in obscurity. None of them recanted.” .ln s” Moore is
+    still writing minimalist code at 87; Rather ran her company” .ln s”
+    for thirty years and standardized the language; Brodie’s books are”
+    .ln s” still teaching programmers how to think. By most measures,
+    lives well” .ln s” spent.” .ln nl s” But Forth lost. Not because it
+    was wrong; because it was incompatible” .ln s” with how the industry
+    actually scaled.” .ln nl s” Forth’s greatest strength was that every
+    implementation was custom.” .ln s” You built the language to fit the
+    problem. Moore’s philosophy was” .ln s” explicit: don’t use other
+    people’s words; write your own. But custom” .ln s” implementations
+    don’t compose. You can’t take a Forth library from one” .ln s”
+    domain and drop it into another. The ecosystem never developed
+    because” .ln s” the philosophy was actively hostile to ecosystems.”
+    .ln nl s” C won by being portable and standardizable in a way that
+    preserved” .ln s” most of the performance advantages. Java won by
+    being portable across” .ln s” machines at the cost of performance.
+    Python won by being readable and” .ln s” composable at the cost of
+    both. Each tradeoff bought adoption; adoption” .ln s” bought
+    libraries; libraries bought more adoption. Forth’s tradeoff —” .ln
+    s” maximum fit to the specific problem, maximum efficiency, maximum”
+    .ln s” programmer comprehension — bought none of these things.” .ln
+    nl s” There’s also a memory issue; not in computers, in people.
+    Forth” .ln s” requires you to understand the stack at all times. The
+    discipline of” .ln s” visualizing stack state is learnable but never
+    fully intuitive for most” .ln s” programmers. As the pool of
+    programmers expanded from a few thousand” .ln s” specialists to tens
+    of millions of varied backgrounds, languages that” .ln s” were
+    forgiving won over languages that were honest.” .ln nl s” The
+    industry chose forgiveness over honesty. You can argue about” .ln s”
+    whether that was correct.” .ln nl ;
+    </dd>
+    <dd>
+    .residue s” THE RESIDUE” .ln nl s” Forth’s ideas are everywhere,
+    mostly unattributed.” .ln nl s” PostScript, the language inside
+    every laser printer, is Forth-based.” .ln s” HP’s RPL calculator
+    language (the 48-series) is Forth-derived. Factor,” .ln s” Joy, Cat,
+    Kitten — a whole family of modern concatenative languages” .ln s”
+    traces directly back to Moore’s stack model. The Ethereum Virtual”
+    .ln s” Machine runs on a stack. WebAssembly uses a stack model.
+    Every time” .ln s” you interact with a PDF, a PostScript printer, or
+    certain smart” .ln s” contracts, you are, distantly, using Chuck
+    Moore’s 1968 insight.” .ln nl s" The idea that software should fit
+    in your head never went away; it” .ln s" just stopped being
+    mainstream. Every generation of programmers” .ln s" rediscovers it.
+    They call it different things: minimalism, systems” .ln s"
+    programming, bare-metal development, "just write C." They reach the”
+    .ln s" same conclusion Moore reached in 1968: the simplest system
+    that solves” .ln s" the problem is usually the best system.” .ln nl
+    s” Moore just got there first and stayed there longest.” .ln nl s”
+    He’s still in Incline Village on Lake Tahoe, presumably still
+    writing” .ln s” code that fits entirely in his head; a man of 87 who
+    built a language” .ln s” in a carpet company’s computer room and
+    never stopped believing the” .ln s” most important constraint in
+    software was what you could understand” .ln s” all at once.” .ln nl
+    ;
+    </dd>
+    <dd>
+    verdict s” He’s not wrong. He never was.” .ln ;
+    </dd>
+    </dl>
+    <p>.title .opening .insight .rather .brodie .moore .happened
+    .residue verdict</p>
+    <p>bye</p>
+
+    
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html">← #!blag</a>
+            <a href="https://shablag.substack.com" target="_blank" rel="noopener">Subscribe</a>
+            <a href="https://darwin-finch.github.io" target="_blank" rel="noopener">Finch — Local AI</a>
+            <a href="https://givelotus.github.io" target="_blank" rel="noopener">Lotus Research</a>
+            <a href="https://github.com/schancel" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="footer-byline">Shammah Chancellor</div>
+    </footer>
+</body>
+</html>

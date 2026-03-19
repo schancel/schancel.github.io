@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Language That Fit in Your Head — #!blag</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
+        nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
+        nav a { color: #555; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2, h3 { margin-top: 2rem; margin-bottom: 0.5rem; }
+        .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #555; font-size: 1.05rem; font-style: italic; margin-bottom: 1rem; }
+        .substack-link { margin-bottom: 2rem; font-size: 0.9rem; color: #555; }
+        .substack-link a { color: #555; }
+        p { margin-top: 1rem; }
+        blockquote { border-left: 3px solid #ccc; margin: 1.5rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        hr { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+        footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #eee; font-size: 0.85rem; color: #999; }
+        footer a { color: #999; text-decoration: none; }
+        footer a:hover { color: #1a1a1a; text-decoration: underline; }
+        .footer-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-bottom: 0.75rem; }
+        .footer-byline { color: #bbb; font-size: 0.8rem; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+    <nav><a href="index.html">← #!blag</a></nav>
+
+    <h1>The Language That Fit in Your Head</h1>
+    <div class="meta">2026-03-13 · Shammah Chancellor</div>
+    <div class="subtitle">Forth, Chuck Moore, and being right exactly
+when it mattered</div>
+    
+
+    <p>#! /usr/bin/env gforth  The Language That Fit in Your Head
+     Shammah Chancellor  Forth, Chuck Moore, and being right exactly
+    when it mattered</p>
+    <p>0 [IF]</p>
+    <p>5 — on the stack. 3 — on the stack. + — takes both, leaves eight.
+    That’s a Forth program. You just ran one.</p>
+    <p>: double 2 * ; — a word. Takes the top, doubles it, returns it. 5
+    double — ten. You extended the language.</p>
+    <p>The stack is the only state. What you see is everything. What the
+    word takes is gone. What it leaves is the result.</p>
+    <p>In 1968, Chuck Moore wrote : point az el move ; on an IBM 1130.
+    Three words. The radio telescope moved.</p>
+    <p>Eight kilobytes. Carpet company. Amsterdam, New York. Not enough
+    memory to do it the normal way. So he invented the normal way.</p>
+    <p>He called it FORTH. He did it himself. FORTH became the language
+    inside blood analyzers, radio telescopes, the Galileo probe.</p>
+    <p>colorForth in 2001. Color replaces delimiters. Red compiles.
+    Green executes. Hundreds of bytes. GreenArrays in 2009. 144 cores.
+    10 microwatts each. Moore went smaller, again.</p>
+    <p>Elizabeth Rather. FORTH, Inc. 1973. Thirty years. Leo Brodie.
+    Thinking Forth. 1984. Still in print.</p>
+    <p>Chuck Moore is 87. Incline Village. Still writing.</p>
+    <p>Forth lost. Not because it was wrong. Because every Forth was
+    custom. Moore’s rule: write your own words, don’t use others’.
+    Custom implementations don’t compose.</p>
+    <p>No ecosystem. By design. C won by being portable. Python won by
+    being forgiving.</p>
+    <p>Adoption bought libraries. Libraries bought everything. The
+    forgiving won over the honest.</p>
+    <p>The industry chose forgiveness over honesty. Every generation
+    finds the same place Moore reached in 1968.</p>
+    <p>He just got there first. And stayed there longest.</p>
+    <p>I asked an AI to write a blog post about Forth. Then: run it.
+    Then: assemble it. Then: make it executable.</p>
+    <p>Blog post. Forth. ARM64. Machine code. Five words in _main. cffa
+    edfe. Then it ran.</p>
+    <p>Exit zero. True.</p>
+    <p>cat this-file | gforth. Anywhere. The blog speaks itself and
+    exits clean.</p>
+    <p>0 [IF] — zero is false. Forth skips this block. You are reading
+    the skipped block. The machine runs the other one.</p>
+    <p>Moore would recognize it. A system that knows what you put in it.
+    He built the thing that did that. He’s 87. I want to meet him.</p>
+    <p>He wasn’t right too early. He was right exactly when it mattered.
+    Small enough to understand. Large enough to do something real.</p>
+    <p>That window is closing. The machines are too large now. He left
+    the understanding in the language. Go get it.</p>
+    <p>He’s not wrong. He never was.</p>
+    <hr />
+    <p>cat this-file | gforth — exit zero. True.</p>
+    <dl>
+    <dt>[ELSE]</dt>
+    <dd>
+    .ln ( str len – ) type cr ;
+    </dd>
+    <dd>
+    <p>nl cr ;</p>
+    </dd>
+    <dd>
+    <p>.post ( – ) s” 5 — on the stack. 3 — on the stack. + — takes
+    both, leaves eight.” .ln s” That’s a Forth program. You just ran
+    one.” .ln nl s” : double 2 * ; — a word. Takes the top, doubles it,
+    returns it.” .ln s” 5 double — ten. You extended the language.” .ln
+    nl s” The stack is the only state. What you see is everything.” .ln
+    s” What the word takes is gone. What it leaves is the result.” .ln
+    nl s” In 1968, Chuck Moore wrote : point az el move ; on an IBM
+    1130.” .ln s” Three words. The radio telescope moved.” .ln nl s”
+    Eight kilobytes. Carpet company. Amsterdam, New York.” .ln s” Not
+    enough memory to do it the normal way. So he invented the normal
+    way.” .ln nl s” He called it FORTH. He did it himself.” .ln s” FORTH
+    became the language inside blood analyzers, radio telescopes, the
+    Galileo probe.” .ln nl s” colorForth in 2001. Color replaces
+    delimiters. Red compiles. Green executes. Hundreds of bytes.” .ln s”
+    GreenArrays in 2009. 144 cores. 10 microwatts each. Moore went
+    smaller, again.” .ln nl s” Elizabeth Rather. FORTH, Inc. 1973.
+    Thirty years.” .ln s” Leo Brodie. Thinking Forth. 1984. Still in
+    print.” .ln nl s” Chuck Moore is 87. Incline Village. Still
+    writing.” .ln nl s” Forth lost. Not because it was wrong. Because
+    every Forth was custom.” .ln s” Moore’s rule: write your own words,
+    don’t use others’. Custom implementations don’t compose.” .ln nl s”
+    No ecosystem. By design.” .ln s” C won by being portable. Python won
+    by being forgiving.” .ln nl s” Adoption bought libraries. Libraries
+    bought everything.” .ln s” The forgiving won over the honest.” .ln
+    nl s” The industry chose forgiveness over honesty.” .ln s” Every
+    generation finds the same place Moore reached in 1968.” .ln nl s” He
+    just got there first. And stayed there longest.” .ln nl s” I asked
+    an AI to write a blog post about Forth.” .ln s” Then: run it. Then:
+    assemble it. Then: make it executable.” .ln nl s” Blog post. Forth.
+    ARM64. Machine code.” .ln s” Five words in _main. cffa edfe. Then it
+    ran.” .ln nl s” Exit zero. True.” .ln nl s” cat this-file | gforth.
+    Anywhere.” .ln s” The blog speaks itself and exits clean.” .ln nl s”
+    0 [IF] — zero is false. Forth skips this block.” .ln s” You are
+    reading the skipped block. The machine runs the other one.” .ln nl
+    s” Moore would recognize it. A system that knows what you put in
+    it.” .ln s” He built the thing that did that. He’s 87. I want to
+    meet him.” .ln nl s” He wasn’t right too early. He was right exactly
+    when it mattered.” .ln s” Small enough to understand. Large enough
+    to do something real.” .ln nl s” That window is closing. The
+    machines are too large now.” .ln s” He left the understanding in the
+    language. Go get it.” .ln nl s” He’s not wrong. He never was.” .ln
+    nl ;</p>
+    </dd>
+    </dl>
+    <p> — self-compilation —  the linker writes cffa edfe. we didn’t put
+    it there. it appears.</p>
+    <dl>
+    <dt>: &gt;f ( str len fid – ) write-file throw ;</dt>
+    <dd>
+    <p>write-asm ( – ) s” /tmp/forth-blog.s” w/o create-file throw { fid
+    } s" .section __TEXT,__text” fid &gt;f s" .global _main” fid &gt;f
+    s" .align 2” fid &gt;f s" _say:” fid &gt;f s" stp x29, x30, [sp,
+    #-16]!” fid &gt;f s" mov x29, sp” fid &gt;f s" mov x2, x1” fid &gt;f
+    s" mov x1, x0” fid &gt;f s" mov x0, #1” fid &gt;f s" mov x16, #4”
+    fid &gt;f s" movk x16, #0x200, lsl #16” fid &gt;f s" svc #0x80” fid
+    &gt;f s" ldp x29, x30, [sp], #16” fid &gt;f s" ret” fid &gt;f s"
+    _main:” fid &gt;f s" stp x29, x30, [sp, #-16]!” fid &gt;f s" mov
+    x29, sp” fid &gt;f s" adrp x0, s_magic@PAGE” fid &gt;f s" add x0,
+    x0, s_magic@PAGEOFF” fid &gt;f s" mov x1, #s_magic_len” fid &gt;f s"
+    bl _say” fid &gt;f s" adrp x0, s_verdict@PAGE” fid &gt;f s" add x0,
+    x0, s_verdict@PAGEOFF” fid &gt;f s" mov x1, #s_verdict_len” fid
+    &gt;f s" bl _say” fid &gt;f s" mov x0, #0” fid &gt;f s" ldp x29,
+    x30, [sp], #16” fid &gt;f s" ret” fid &gt;f s" .section
+    __DATA,__data” fid &gt;f s" .align 0” fid &gt;f s" s_magic: .ascii
+    "cffa edfe\n"” fid &gt;f s" .ascii "The blog compiled itself to
+    ARM64.\n"” fid &gt;f s" .set s_magic_len, . - s_magic” fid &gt;f s"
+    s_verdict: .ascii "He’s not wrong. He never was.\n"” fid &gt;f s"
+    .set s_verdict_len, . - s_verdict” fid &gt;f fid close-file throw
+    ;</p>
+    </dd>
+    <dd>
+    <p>flush stdout flush-file drop ;</p>
+    </dd>
+    <dd>
+    <p>check-asm ( – ) s” test -f /tmp/forth-blog.o &amp;&amp; echo
+    ‘asm: ok’ || echo ‘asm: FAIL’” system ;</p>
+    </dd>
+    <dd>
+    <p>check-link ( – ) s” test -x /tmp/forth-blog &amp;&amp; echo
+    ‘link: ok’ || echo ‘link: FAIL’” system ;</p>
+    </dd>
+    <dd>
+    <p>check ( – ) check-asm flush check-link flush ;</p>
+    </dd>
+    <dd>
+    <p>compile-self ( – ) nl s” Now we write ARM64 assembly. The same
+    words, in the machine’s language.” .ln s” _say writes bytes to
+    stdout. _main calls five words and exits zero.” .ln nl flush
+    write-asm s” as -o /tmp/forth-blog.o /tmp/forth-blog.s 2&gt;&amp;1
+    || echo ‘ERROR: assembly failed’” system nl s” The assembler turned
+    text into object code.” .ln s” The linker is sealing it into a
+    Mach-O binary now.” .ln nl flush s” sh -c ’ld -o /tmp/forth-blog
+    -lSystem -syslibroot $(xcrun -sdk macosx –show-sdk-path) -e _main
+    -arch arm64 /tmp/forth-blog.o 2&gt;&amp;1 || echo ERROR: link
+    failed’” system nl check s” Every macOS binary starts with cffa
+    edfe. The magic number.” .ln s” The linker put it there. We didn’t.
+    It appears.” .ln nl flush s” xxd /tmp/forth-blog | head -1” system
+    nl s” Now it runs. The blog speaks itself in machine code.” .ln nl
+    flush s” /tmp/forth-blog” system ;</p>
+    </dd>
+    </dl>
+    <p>.post compile-self</p>
+    <p>[THEN] bye</p>
+
+    
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html">← #!blag</a>
+            <a href="https://shablag.substack.com" target="_blank" rel="noopener">Subscribe</a>
+            <a href="https://darwin-finch.github.io" target="_blank" rel="noopener">Finch — Local AI</a>
+            <a href="https://givelotus.github.io" target="_blank" rel="noopener">Lotus Research</a>
+            <a href="https://github.com/schancel" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="footer-byline">Shammah Chancellor</div>
+    </footer>
+</body>
+</html>
