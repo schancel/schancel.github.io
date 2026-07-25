@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Child Pays for Parent: Part 2 — #!blag</title>
-    <style>
+        <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
         nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
@@ -37,72 +37,24 @@
     
     <div class="substack-link">Also on <a href="https://web.archive.org/web/20210512005434/https://shablag.com/article/child-pays-for-parent-part-2/">Substack</a></div>
 
-    <h1 id="child-pays-for-parent-part-2">Child Pays for Parent: Part
-    2</h1>
-    <p><strong>Publication Date:</strong> April 7, 2019
-    <strong>Source:</strong> #!blag <strong>Categories:</strong> Bitcoin
-    Cash, Technical Analysis, Software Engineering <strong>Archive
-    URL:</strong>
-    https://web.archive.org/web/20210512005434/https://shablag.com/article/child-pays-for-parent-part-2/</p>
-    <p>After working for awhile toward the goals outlined in <a
-    href="https://shablag.com/article/child-pays-for-parent">Child Pays
-    For Parent</a> it has become apparent there was some problems with
-    my initial design. Originally, I was hoping to make a simple copy of
-    the <code>BlockAssembler</code> code. Then remove from it all the
-    complexity surrounding mempool packages, and convert it to a
-    long-lived object which can have transactions added and removed from
-    it.</p>
-    <p>However, the <code>BlockAssembler</code> needs to have a couple
-    things happend:</p>
+    <p><strong>Publication Date:</strong> April 7, 2019 <strong>Source:</strong> #!blag <strong>Categories:</strong> Bitcoin Cash, Technical Analysis, Software Engineering <strong>Archive URL:</strong> https://web.archive.org/web/20210512005434/https://shablag.com/article/child-pays-for-parent-part-2/</p>
+    <p>After working for awhile toward the goals outlined in <a href="https://shablag.com/article/child-pays-for-parent">Child Pays For Parent</a> it has become apparent there was some problems with my initial design. Originally, I was hoping to make a simple copy of the <code>BlockAssembler</code> code. Then remove from it all the complexity surrounding mempool packages, and convert it to a long-lived object which can have transactions added and removed from it.</p>
+    <p>However, the <code>BlockAssembler</code> needs to have a couple things happend:</p>
     <ol type="1">
-    <li>It needs to know which block it’s building on top of for
-    providing hashPrevBlock, and ensuring that only valid transactions
-    are being mined.</li>
-    <li>It needs to be able to be disposed of, or cleared, when a new
-    chainTip is found.</li>
+    <li>It needs to know which block it’s building on top of for providing hashPrevBlock, and ensuring that only valid transactions are being mined.</li>
+    <li>It needs to be able to be disposed of, or cleared, when a new chainTip is found.</li>
     </ol>
-    <p>Unfortunately, the <code>mempool</code> is currently a global
-    object. Meaning it’s initialization order is indeterminate with
-    other global objects. Therefor it cannot create a
-    <code>BlockAssembler</code> on startup given the dependency on a
-    chainTip. Additionally, the mempool is not currently notified when a
-    the chainTip is updated. Instead, it has calls such as
-    <code>removeForBlock</code> which reconcile the mempool to the
-    chainstate. but do not provide block information. Additionally,
-    these calls occur multiple times during
-    <code>ActivateBestChain</code> rather than only upon completion.</p>
-    <p>While we could add new notifications to the mempool to handle
-    this, it is not desirable. The reason being, is that when a new
-    block arrives, we should immediately dispose of the current
-    <code>BlockAssembler</code> and create a new blank one. If there are
-    any transactions remaining in the mempool, these need to be added to
-    the new <code>BlockAssembler.</code> Now, there normally should not
-    be any, but in the case where there is a large mempool due to a spam
-    attack, we want to be able to do this reprocessing out-of-line with
-    block processing for <code>ActivateBestChain</code>.</p>
+    <p>Unfortunately, the <code>mempool</code> is currently a global object. Meaning it’s initialization order is indeterminate with other global objects. Therefor it cannot create a <code>BlockAssembler</code> on startup given the dependency on a chainTip. Additionally, the mempool is not currently notified when a the chainTip is updated. Instead, it has calls such as <code>removeForBlock</code> which reconcile the mempool to the chainstate. but do not provide block information. Additionally, these calls occur multiple times during <code>ActivateBestChain</code> rather than only upon completion.</p>
+    <p>While we could add new notifications to the mempool to handle this, it is not desirable. The reason being, is that when a new block arrives, we should immediately dispose of the current <code>BlockAssembler</code> and create a new blank one. If there are any transactions remaining in the mempool, these need to be added to the new <code>BlockAssembler.</code> Now, there normally should not be any, but in the case where there is a large mempool due to a spam attack, we want to be able to do this reprocessing out-of-line with block processing for <code>ActivateBestChain</code>.</p>
     <p>As such, it seems to be a better idea to:</p>
     <ol type="1">
-    <li>Introduce a <code>BlockCandidate</code>, which is responsible
-    for maintaining a CBlockHeader (minus the nonce), the coinbase, and
-    a list of transactions. It will ensure that only transactions which
-    would not render the block invalid may be added or removed. This
-    take many of the responsibilities of
-    <code>BlockAssembler</code>.</li>
-    <li>Introduce a <code>Blockworks</code> which manages the lifetime
-    of all <code>BlockCandidate</code>, shovelling transations from the
-    mempool into the active BlockCandidate, and handling
-    <code>getblocktemplate</code> RPC requests.</li>
+    <li>Introduce a <code>BlockCandidate</code>, which is responsible for maintaining a CBlockHeader (minus the nonce), the coinbase, and a list of transactions. It will ensure that only transactions which would not render the block invalid may be added or removed. This take many of the responsibilities of <code>BlockAssembler</code>.</li>
+    <li>Introduce a <code>Blockworks</code> which manages the lifetime of all <code>BlockCandidate</code>, shovelling transations from the mempool into the active BlockCandidate, and handling <code>getblocktemplate</code> RPC requests.</li>
     </ol>
-    <p>This gives us the benefit that all our quality-of-service
-    priotiziation code can be in one place, handled outside of the
-    critical path. Additionally, all the validity checks for the block
-    candidate will be self-contained. The ultimate result will be
-    separation of concerns:</p>
+    <p>This gives us the benefit that all our quality-of-service priotiziation code can be in one place, handled outside of the critical path. Additionally, all the validity checks for the block candidate will be self-contained. The ultimate result will be separation of concerns:</p>
     <ol type="1">
-    <li>BlockCandiate will be limited to ensuring its own
-    consistency.</li>
-    <li>Blockworks will handle all transaciton prioritization code, and
-    BlockCandidate lifecycles.</li>
+    <li>BlockCandiate will be limited to ensuring its own consistency.</li>
+    <li>Blockworks will handle all transaciton prioritization code, and BlockCandidate lifecycles.</li>
     <li>Mempool will be limited to ensuring its own consistency.</li>
     </ol>
     <p>Onward…</p>

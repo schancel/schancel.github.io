@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is Reliability Engineering? — #!blag</title>
-    <style>
+        <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
         nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
@@ -37,61 +37,29 @@
     
     <div class="substack-link">Also on <a href="https://shablag.com/article/what-is-reliability-engineering/">Substack</a></div>
 
-    <h1 id="what-is-reliability-engineering">What is Reliability
-    Engineering?</h1>
-    <p>Site Reliability engineers engineer site reliability reliability
-    – obviously. In order to understand what it means to engineer
-    reliability we should first understand what it means to be reliable.
-    Google says that reliability is “the quality of being trustworthy or
-    of performing consistently well.” and also “the degree to which the
-    result of a measurement, calculation, or specification can be
-    depended on to be accurate.”</p>
-    <p>To put another way, something that is reliable performs in a way
-    that is unsurprising and meets expectations. With regards to a
-    particular computer service, when we think of reliability we think
-    that it has these characteristics:</p>
+    <p>Site Reliability engineers engineer site reliability reliability – obviously. In order to understand what it means to engineer reliability we should first understand what it means to be reliable. Google says that reliability is “the quality of being trustworthy or of performing consistently well.” and also “the degree to which the result of a measurement, calculation, or specification can be depended on to be accurate.”</p>
+    <p>To put another way, something that is reliable performs in a way that is unsurprising and meets expectations. With regards to a particular computer service, when we think of reliability we think that it has these characteristics:</p>
     <ol type="1">
     <li>Does the same thing each time (consistent behavior)</li>
-    <li>Takes the same amount of time (low response variance, consistent
-    latency)</li>
-    <li>Does it autonomously (does not require intervention, trustworthy
-    to complete)</li>
+    <li>Takes the same amount of time (low response variance, consistent latency)</li>
+    <li>Does it autonomously (does not require intervention, trustworthy to complete)</li>
     </ol>
-    <p>However, since site reliability engineers are not typically
-    responsible for writing, or maintaining services, how do they
-    engineer reliability into them? Conway’s observation tells us
-    that:</p>
-    <p>the software interface structure of a system will reflect the
-    social boundaries of the organization(s) that produced it, across
-    which communication is more difficult</p>
-    <p>Now, the sources of unreliability typically manifest in the
-    software interface structures. As such, if we want to engineer
-    reliability, we should actually start with teams of people, not
-    software. In order to ensure we’re producing reliable software we
-    want to ensure each team is:</p>
+    <p>However, since site reliability engineers are not typically responsible for writing, or maintaining services, how do they engineer reliability into them? Conway’s observation tells us that:</p>
+    <p>the software interface structure of a system will reflect the social boundaries of the organization(s) that produced it, across which communication is more difficult</p>
+    <p>Now, the sources of unreliability typically manifest in the software interface structures. As such, if we want to engineer reliability, we should actually start with teams of people, not software. In order to ensure we’re producing reliable software we want to ensure each team is:</p>
     <ol type="1">
     <li>Able to respond consistently to outside demands</li>
     <li>Have low variance in their response times.</li>
     <li>Are autonomous and can stay focused on the mission.</li>
     </ol>
-    <p>Teams operate most efficiently and reliably when they are
-    autonomous within their area of competency. Therefore, it is the job
-    of SREs to ensure that teams are able to operate autonomously. This
-    means an SRE ensures the team is:</p>
+    <p>Teams operate most efficiently and reliably when they are autonomous within their area of competency. Therefore, it is the job of SREs to ensure that teams are able to operate autonomously. This means an SRE ensures the team is:</p>
     <ol type="1">
-    <li>Ensures their team knows what they are expected to be
-    responsible for, and that other teams know what they are responsible
-    for as well.</li>
+    <li>Ensures their team knows what they are expected to be responsible for, and that other teams know what they are responsible for as well.</li>
     <li>Ensure they are autonomous</li>
-    <li>Ensure their team has the ability to make decisions within the
-    scope of their duties</li>
-    <li>That they are held accountable for the decisions they make which
-    affect their services.</li>
-    <li>Create cross-cutting standards and tools for repeat problems so
-    teams can keep a mission-focused mindset, rather than worrying about
-    reinventing the wheel. (PFE vs NIH)</li>
-    <li>Holding your team accountable for having proper monitoring,
-    alerting, and incident response procedures</li>
+    <li>Ensure their team has the ability to make decisions within the scope of their duties</li>
+    <li>That they are held accountable for the decisions they make which affect their services.</li>
+    <li>Create cross-cutting standards and tools for repeat problems so teams can keep a mission-focused mindset, rather than worrying about reinventing the wheel. (PFE vs NIH)</li>
+    <li>Holding your team accountable for having proper monitoring, alerting, and incident response procedures</li>
     <li>Ensure that individuals who are on call understand the need for:
     <ol type="1">
     <li>Integrity</li>
@@ -102,40 +70,22 @@
     <li>Forceful Backup</li>
     </ol></li>
     </ol>
-    <p>By ensuring the above things for the team which they are embedded
-    on, the team will produce more reliable services. As such, you will
-    find SREs doing a variety of tasks for the team they are embedded on
-    in order to meet the above goals. While the specific tasks an SRE
-    will be doing will depend on what they see as the most urgent area,
-    you can find them:</p>
+    <p>By ensuring the above things for the team which they are embedded on, the team will produce more reliable services. As such, you will find SREs doing a variety of tasks for the team they are embedded on in order to meet the above goals. While the specific tasks an SRE will be doing will depend on what they see as the most urgent area, you can find them:</p>
     <ol type="1">
-    <li>Demonstrating best practices for logging, monitoring, and
-    alerting.</li>
-    <li>Teaching best practices for deploying and managing software
-    services</li>
-    <li>Ensuring that data about services is being surfaced to the
-    correct people. (e.g. downstream consumers)</li>
-    <li>That the whole company is able to tell who is responsible for
-    what services.</li>
-    <li>Teaching appropriate formality when dealing with incident
-    response.</li>
-    <li>Be a resource for advice on best practices, architecture
-    decisions, and code reviews</li>
-    <li>Holding your team accountable for proper monitoring and
-    alerting.</li>
-    <li>Create cross-cutting standards and tools for repeat problems to
-    enable individual teams can keep a mission-focused mindset, rather
-    than worrying about reinventing the wheel. (PFE vs NIH)</li>
+    <li>Demonstrating best practices for logging, monitoring, and alerting.</li>
+    <li>Teaching best practices for deploying and managing software services</li>
+    <li>Ensuring that data about services is being surfaced to the correct people. (e.g. downstream consumers)</li>
+    <li>That the whole company is able to tell who is responsible for what services.</li>
+    <li>Teaching appropriate formality when dealing with incident response.</li>
+    <li>Be a resource for advice on best practices, architecture decisions, and code reviews</li>
+    <li>Holding your team accountable for proper monitoring and alerting.</li>
+    <li>Create cross-cutting standards and tools for repeat problems to enable individual teams can keep a mission-focused mindset, rather than worrying about reinventing the wheel. (PFE vs NIH)</li>
     </ol>
-    <h2 id="things-sre-is-not-responsible-for">Things SRE is NOT
-    responsible for:</h2>
+    <h2 id="things-sre-is-not-responsible-for">Things SRE is NOT responsible for:</h2>
     <ol type="1">
-    <li>Instrumenting services with logging, monitoring, and alerting –
-    although they can help where necessary.</li>
-    <li>Being on call for services they did not write – unless they are
-    helping train with the process.</li>
-    <li>Telling people what to do – software engineers own their code,
-    and the responsibility for their bugs.</li>
+    <li>Instrumenting services with logging, monitoring, and alerting – although they can help where necessary.</li>
+    <li>Being on call for services they did not write – unless they are helping train with the process.</li>
+    <li>Telling people what to do – software engineers own their code, and the responsibility for their bugs.</li>
     </ol>
 
     <p style="font-size:0.9rem;color:#555;margin-top:2rem">Read and subscribe on <a href="https://shablag.com/article/what-is-reliability-engineering/">Substack</a></p>

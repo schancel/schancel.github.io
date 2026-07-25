@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Child Pays for Parent — #!blag</title>
-    <style>
+        <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; color: #1a1a1a; line-height: 1.7; }
         nav { margin-bottom: 2.5rem; font-size: 0.9rem; }
@@ -37,32 +37,11 @@
     
     <div class="substack-link">Also on <a href="https://web.archive.org/web/20200928003927/https://shablag.com/article/child-pays-for-parent/">Substack</a></div>
 
-    <h1 id="child-pays-for-parent">Child Pays for Parent</h1>
-    <p><strong>Publication Date:</strong> March 31, 2019
-    <strong>Source:</strong> #!blag <strong>Categories:</strong> Bitcoin
-    Cash, Technical Analysis, Software Engineering <strong>Archive
-    URL:</strong>
-    https://web.archive.org/web/20200928003927/https://shablag.com/article/child-pays-for-parent/</p>
-    <p>Bitcoin-ABC inherited a feature from Bitcoin Core called “Child
-    Pays For Parent” (CPFP). The purpose of this feature is to allow
-    transactions which spend outputs from other transactions, which are
-    currently in the mempool, to pay fees on behalf of the parent
-    transactions. This is useful in the case where the parent would not
-    be included in the next block, and someone desires to spend it’s
-    output immediately. From a mining perspective, it would be more
-    profitable to include the pair of transactions, receiving both their
-    fees, than include some entirely different transaction.</p>
-    <p>While this seems like a useful feature, it causes several scaling
-    issues. When constructing a new block, the software needs to know
-    which transactions to include in the block – but it is no longer
-    based solely on individual transaction fees, but instead on
-    transaction fees of each chain of transactions (herein called a
-    package).</p>
-    <p>As new transactions in a package come in, we must look up all
-    their parents, and update the ancestors. This means, for a package
-    of size N, we must do this N! times:</p>
-    <div class="sourceCode" id="cb1"><pre
-    class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> CTxMemPool<span class="op">::</span>addUnchecked<span class="op">(...)</span> <span class="op">{</span></span>
+    <p><strong>Publication Date:</strong> March 31, 2019 <strong>Source:</strong> #!blag <strong>Categories:</strong> Bitcoin Cash, Technical Analysis, Software Engineering <strong>Archive URL:</strong> https://web.archive.org/web/20200928003927/https://shablag.com/article/child-pays-for-parent/</p>
+    <p>Bitcoin-ABC inherited a feature from Bitcoin Core called “Child Pays For Parent” (CPFP). The purpose of this feature is to allow transactions which spend outputs from other transactions, which are currently in the mempool, to pay fees on behalf of the parent transactions. This is useful in the case where the parent would not be included in the next block, and someone desires to spend it’s output immediately. From a mining perspective, it would be more profitable to include the pair of transactions, receiving both their fees, than include some entirely different transaction.</p>
+    <p>While this seems like a useful feature, it causes several scaling issues. When constructing a new block, the software needs to know which transactions to include in the block – but it is no longer based solely on individual transaction fees, but instead on transaction fees of each chain of transactions (herein called a package).</p>
+    <p>As new transactions in a package come in, we must look up all their parents, and update the ancestors. This means, for a package of size N, we must do this N! times:</p>
+    <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> CTxMemPool<span class="op">::</span>addUnchecked<span class="op">(...)</span> <span class="op">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">const</span> CTransaction <span class="op">&amp;</span>tx <span class="op">=</span> newit<span class="op">-&gt;</span>GetTx<span class="op">();</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>set<span class="op">&lt;</span>uint256<span class="op">&gt;</span> setParentTransactions<span class="op">;</span></span>
@@ -82,19 +61,8 @@
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    UpdateEntryForAncestors<span class="op">(</span>newit<span class="op">,</span> setAncestors<span class="op">);</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-    <p>Additionally, when a new block is found, it’s transactions must
-    be removed from the mempool. In this case, this extra accounting
-    must be updated again. In order to ensure that chains are not broken
-    up while updating the accounting, this needs to be done in
-    topological order. Since the introduction of CTOR, blocks are no
-    longer in topological order, so they must be first sorted. <a
-    href="https://en.wikipedia.org/wiki/Topological_sorting">Topological
-    sorting</a> is linear time in the number of nodes and
-    edges(approximately linear in terms of block size). Once we have
-    topologically ordered them, we must then update each each
-    descendants’s accounting. This is again N! time:</p>
-    <div class="sourceCode" id="cb2"><pre
-    class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> CTxMemPool<span class="op">::</span>removeForBlock<span class="op">(...)</span> <span class="op">{</span></span>
+    <p>Additionally, when a new block is found, it’s transactions must be removed from the mempool. In this case, this extra accounting must be updated again. In order to ensure that chains are not broken up while updating the accounting, this needs to be done in topological order. Since the introduction of CTOR, blocks are no longer in topological order, so they must be first sorted. <a href="https://en.wikipedia.org/wiki/Topological_sorting">Topological sorting</a> is linear time in the number of nodes and edges(approximately linear in terms of block size). Once we have topologically ordered them, we must then update each each descendants’s accounting. This is again N! time:</p>
+    <div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> CTxMemPool<span class="op">::</span>removeForBlock<span class="op">(...)</span> <span class="op">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="at">const</span> CTransactionRef <span class="op">&amp;</span>tx <span class="op">:</span> reverse_iterate<span class="op">(</span>disconnectpool<span class="op">.</span>GetQueuedTx<span class="op">().</span>get<span class="op">&lt;</span>insertion_order<span class="op">&gt;()))</span> <span class="op">{</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span></span>
@@ -108,11 +76,8 @@
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-    <p>Now, since the the algorithms required are nonlinear, making it
-    an excellent place to cause a DoS. So, the following code is added
-    when accepting transactions to the mempool:</p>
-    <div class="sourceCode" id="cb3"><pre
-    class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="at">static</span> <span class="dt">bool</span> AcceptToMemoryPoolWorker<span class="op">(...)</span> <span class="op">{</span></span>
+    <p>Now, since the the algorithms required are nonlinear, making it an excellent place to cause a DoS. So, the following code is added when accepting transactions to the mempool:</p>
+    <div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="at">static</span> <span class="dt">bool</span> AcceptToMemoryPoolWorker<span class="op">(...)</span> <span class="op">{</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>pool<span class="op">.</span>CalculateMemPoolAncestors<span class="op">(</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            entry<span class="op">,</span> setAncestors<span class="op">,</span> nLimitAncestors<span class="op">,</span> nLimitAncestorSize<span class="op">,</span></span>
@@ -122,102 +87,43 @@
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-    <p>So, while this feature appears useful, it causes a couple of
-    problems:</p>
+    <p>So, while this feature appears useful, it causes a couple of problems:</p>
     <ol type="1">
-    <li>It adds n! complexity to both accepting new chained
-    transactions.</li>
-    <li>It adds n! complexity to processing (not validating) a new
-    block.</li>
-    <li>It prevents long chains of zero-conf transactions for
-    high-frequency, in order to prevent DoS attacks.</li>
+    <li>It adds n! complexity to both accepting new chained transactions.</li>
+    <li>It adds n! complexity to processing (not validating) a new block.</li>
+    <li>It prevents long chains of zero-conf transactions for high-frequency, in order to prevent DoS attacks.</li>
     </ol>
     <figure>
-    <img
-    src="https://web.archive.org/web/20200928003927im_/https://shablag.com/20180331-MempoolAccept.png"
-    title="Performance Impacts of Raising the Ancestor andDescendant Transaction Limit for Bitcoin Cash"
-    alt="Effect of Raising Chained Tx Limit" />
-    <figcaption aria-hidden="true">Effect of Raising Chained Tx
-    Limit</figcaption>
+    <img src="https://web.archive.org/web/20200928003927im_/https://shablag.com/20180331-MempoolAccept.png" title="Performance Impacts of Raising the Ancestor andDescendant Transaction Limit for Bitcoin Cash" alt="Effect of Raising Chained Tx Limit" />
+    <figcaption aria-hidden="true">Effect of Raising Chained Tx Limit</figcaption>
     </figure>
-    <p>Taken from <a
-    href="https://shablag.com/20180331-ChainedTx.pdf">Raising the
-    Ancestor and Descendant Transaction Limit for Bitcoin Cash</a></p>
-    <p>Now, this feature only has practical applicability when the
-    mempool size is larger than the maximum blocksize for an extended
-    period of time. In the case where the mempool size is less than the
-    maximum blocksize, it will be cleared with each new block. In this
-    case, any logic to choose which transactions should be in a block is
-    rendered meaningless.</p>
-    <p>There are two conditions where the mempool size would be larger
-    than the block size in practice:</p>
+    <p>Taken from <a href="https://shablag.com/20180331-ChainedTx.pdf">Raising the Ancestor and Descendant Transaction Limit for Bitcoin Cash</a></p>
+    <p>Now, this feature only has practical applicability when the mempool size is larger than the maximum blocksize for an extended period of time. In the case where the mempool size is less than the maximum blocksize, it will be cleared with each new block. In this case, any logic to choose which transactions should be in a block is rendered meaningless.</p>
+    <p>There are two conditions where the mempool size would be larger than the block size in practice:</p>
     <ol type="1">
     <li>Sustained usage which exceeds demand for blockspace.</li>
-    <li>Attempts to DDoS Bitcoin by sending lots of transactions with
-    small fees.</li>
+    <li>Attempts to DDoS Bitcoin by sending lots of transactions with small fees.</li>
     </ol>
-    <p>For the first case, this is undesirable as it means the user
-    experience is bad. Additionally, if users are generating
-    transactions faster than they can be confirmed, new transactions may
-    never be confirmed, and possibly dropped from the mempool as it
-    grows larger. Bitcoin Cash is based on the belief that this
-    condition should never occur.</p>
-    <p>For the second case, we have not observed that this occurs for
-    any significant length of time. It is actually quite costly to carry
-    out such an attack, and gains the perpetrator nearly nothing. At
-    most, we need to ensure that we have some quality of service
-    mechanism in place.</p>
-    <p>So, we can replace this complicated accounting with the following
-    requirements:</p>
+    <p>For the first case, this is undesirable as it means the user experience is bad. Additionally, if users are generating transactions faster than they can be confirmed, new transactions may never be confirmed, and possibly dropped from the mempool as it grows larger. Bitcoin Cash is based on the belief that this condition should never occur.</p>
+    <p>For the second case, we have not observed that this occurs for any significant length of time. It is actually quite costly to carry out such an attack, and gains the perpetrator nearly nothing. At most, we need to ensure that we have some quality of service mechanism in place.</p>
+    <p>So, we can replace this complicated accounting with the following requirements:</p>
     <ol type="1">
-    <li>When receiving an orphan transaction which has a high fee,
-    request the transaction from your peers, in case you did not receive
-    the relayed transaction. Make a special exception for receiving this
-    transaction.</li>
-    <li>When a new transaction is admitted to the memory pool, if it’s
-    parent is not in the current block template, calculate a modified
-    fee for the immediate parents, and attempt to put them all in the
-    current block template. If this fails, place the transaction in a
-    reconsideration pool.</li>
-    <li>When a new block comes in, and it’s transactions have been
-    removed from the mempool, process the reconsideration pool.</li>
+    <li>When receiving an orphan transaction which has a high fee, request the transaction from your peers, in case you did not receive the relayed transaction. Make a special exception for receiving this transaction.</li>
+    <li>When a new transaction is admitted to the memory pool, if it’s parent is not in the current block template, calculate a modified fee for the immediate parents, and attempt to put them all in the current block template. If this fails, place the transaction in a reconsideration pool.</li>
+    <li>When a new block comes in, and it’s transactions have been removed from the mempool, process the reconsideration pool.</li>
     </ol>
-    <p>Now, currently the block template is not maintained concurrently
-    as new transactions are processed. Instead, when mining pool
-    software calls the <code>getblocktemplate</code> rpc, a new template
-    is created from scratch. Additionally, the template constructor uses
-    the mempool’s accounting data to include transactions in fee-order.
-    In order to carry out the above steps, we will need to invert this
-    process.</p>
-    <p>Replacing this code is tedious as any mistake can cost miners
-    significant amounts of money when if they produce an invalid block.
-    It could also cause a service outage if the problem is
-    deterministic, and user-triggerable, and no miners are able to
-    produce blocks until the problem is addressed. Therefor, we need to
-    have a solid plan to refactor the block template constructor.</p>
+    <p>Now, currently the block template is not maintained concurrently as new transactions are processed. Instead, when mining pool software calls the <code>getblocktemplate</code> rpc, a new template is created from scratch. Additionally, the template constructor uses the mempool’s accounting data to include transactions in fee-order. In order to carry out the above steps, we will need to invert this process.</p>
+    <p>Replacing this code is tedious as any mistake can cost miners significant amounts of money when if they produce an invalid block. It could also cause a service outage if the problem is deterministic, and user-triggerable, and no miners are able to produce blocks until the problem is addressed. Therefor, we need to have a solid plan to refactor the block template constructor.</p>
     <h2 id="process">Process</h2>
     <ol type="1">
-    <li><p>Create a new block template constructor that does not depend
-    on the mempool. Instead of querying the mempool for transactions,
-    the block template constructor will expect to be fed transactions
-    from some outside source(e.g. a test, or the mempool). The new
-    template constructor can simply add transactions to a list, while
-    ensuring all the validity of the block is maintained.</p></li>
-    <li><p>The mempool will be changed to start adding transactions to
-    this block template. It will need to add transactions to it when
-    <code>addUnchecked</code> is called, and carry out the logic in
-    requirement 2, and requirement 3.</p></li>
-    <li><p>Add a new <code>getblocktemplate2</code> call which is able
-    to fetch the current template from the mempool. This should only
-    return the header, unlike <code>getblocktemplate</code></p></li>
-    <li><p>Add logic to request orphan parents from requirement
-    1.</p></li>
-    <li><p>Update <code>getblocktemplate</code> to use the new template
-    generator, and deprecate the call.</p></li>
+    <li><p>Create a new block template constructor that does not depend on the mempool. Instead of querying the mempool for transactions, the block template constructor will expect to be fed transactions from some outside source(e.g. a test, or the mempool). The new template constructor can simply add transactions to a list, while ensuring all the validity of the block is maintained.</p></li>
+    <li><p>The mempool will be changed to start adding transactions to this block template. It will need to add transactions to it when <code>addUnchecked</code> is called, and carry out the logic in requirement 2, and requirement 3.</p></li>
+    <li><p>Add a new <code>getblocktemplate2</code> call which is able to fetch the current template from the mempool. This should only return the header, unlike <code>getblocktemplate</code></p></li>
+    <li><p>Add logic to request orphan parents from requirement 1.</p></li>
+    <li><p>Update <code>getblocktemplate</code> to use the new template generator, and deprecate the call.</p></li>
     <li><p>Remove excess accounting code from the mempool.</p></li>
     </ol>
-    <p>In its entirety, the whole process will probably take multiple
-    months.</p>
+    <p>In its entirety, the whole process will probably take multiple months.</p>
 
     <p style="font-size:0.9rem;color:#555;margin-top:2rem">Read and subscribe on <a href="https://web.archive.org/web/20200928003927/https://shablag.com/article/child-pays-for-parent/">Substack</a></p>
     <footer>
