@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "burst overlap clipped to offer window; exact derived per-class counts",
+    "exported complete configuration reproduces the identical schedule and results",
+    "zero rates produce zero payments, not an invalid workload",
+    "burst outside offer window has zero effective overlap",
+    "zero offer window, fractional integer-profile rate and browser payment cap reject explicitly",
+    "confirmed-only fee distributions preserve units and budget bounds; empty distributions are null"
+  ]
+}

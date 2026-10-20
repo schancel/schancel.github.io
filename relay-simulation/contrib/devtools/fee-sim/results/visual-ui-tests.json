@@ -1,0 +1,30 @@
+[
+  {
+    "page": "fee",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "questions": 5,
+    "payment": "Reactive wallets confirmed 1,360 of 1,360 ordinary payments; fixed bids confirmed 1,360 on the same arrivals. 0 ordinary payments are currently budget-limited and 0 still wait for service. This is a finite experiment, not a guarantee under continuing overload."
+  },
+  {
+    "page": "fee",
+    "width": 390,
+    "scrollWidth": 390,
+    "questions": 5,
+    "payment": "Reactive wallets confirmed 1,360 of 1,360 ordinary payments; fixed bids confirmed 1,360 on the same arrivals. 0 ordinary payments are currently budget-limited and 0 still wait for service. This is a finite experiment, not a guarantee under continuing overload."
+  },
+  {
+    "page": "fee-agreement",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "questions": 7,
+    "payment": "Reactive wallets confirmed 1,360 of 1,360 ordinary payments; fixed bids confirmed 1,360 on the same arrivals. 0 ordinary payments are currently budget-limited and 0 still wait for service. This is a finite experiment, not a guarantee under continuing overload."
+  },
+  {
+    "page": "fee-agreement",
+    "width": 390,
+    "scrollWidth": 390,
+    "questions": 7,
+    "payment": "Reactive wallets confirmed 1,360 of 1,360 ordinary payments; fixed bids confirmed 1,360 on the same arrivals. 0 ordinary payments are currently budget-limited and 0 still wait for service. This is a finite experiment, not a guarantee under continuing overload."
+  }
+]

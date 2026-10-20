@@ -1,0 +1,103 @@
+{
+  "receipts": [
+    {
+      "checks": [
+        "engine ready",
+        "advanced groups collapsed",
+        "default derived count visible before execution",
+        "preflight derives clipped burst counts",
+        "question run completes",
+        "C++ output matches planned per-class counts",
+        "only ordinary-payment comparisons lead",
+        "unique outcomes represented as stacked bars",
+        "numbered reader questions organize answers",
+        "displayed median is actual confirmed fee distribution: fixed",
+        "displayed median is actual confirmed fee distribution: reactive",
+        "explicit display unit profile",
+        "offer-window cutoff marked on timeline",
+        "fee unit switch updates actual plot",
+        "question layout fits viewport",
+        "browser cap fails inline without silently dropping arrivals",
+        "zero offer duration is explicitly rejected",
+        "restored default runs after validation error"
+      ],
+      "width": 1440,
+      "page": "/question-fee.html"
+    },
+    {
+      "checks": [
+        "engine ready",
+        "advanced groups collapsed",
+        "default derived count visible before execution",
+        "preflight derives clipped burst counts",
+        "question run completes",
+        "C++ output matches planned per-class counts",
+        "only ordinary-payment comparisons lead",
+        "unique outcomes represented as stacked bars",
+        "numbered reader questions organize answers",
+        "displayed median is actual confirmed fee distribution: fixed",
+        "displayed median is actual confirmed fee distribution: reactive",
+        "explicit display unit profile",
+        "offer-window cutoff marked on timeline",
+        "fee unit switch updates actual plot",
+        "question layout fits viewport",
+        "browser cap fails inline without silently dropping arrivals",
+        "zero offer duration is explicitly rejected",
+        "restored default runs after validation error"
+      ],
+      "width": 500,
+      "page": "/question-fee.html"
+    },
+    {
+      "checks": [
+        "engine ready",
+        "advanced groups collapsed",
+        "default derived count visible before execution",
+        "preflight derives clipped burst counts",
+        "question run completes",
+        "C++ output matches planned per-class counts",
+        "only ordinary-payment comparisons lead",
+        "unique outcomes represented as stacked bars",
+        "numbered reader questions organize answers",
+        "displayed median is actual confirmed fee distribution: fixed",
+        "displayed median is actual confirmed fee distribution: reactive",
+        "explicit display unit profile",
+        "offer-window cutoff marked on timeline",
+        "fee unit switch updates actual plot",
+        "question layout fits viewport",
+        "six controlled C++ runs produce three matched aggregation comparisons",
+        "browser cap fails inline without silently dropping arrivals",
+        "zero offer duration is explicitly rejected",
+        "restored default runs after validation error"
+      ],
+      "width": 1440,
+      "page": "/question-agreement.html"
+    },
+    {
+      "checks": [
+        "engine ready",
+        "advanced groups collapsed",
+        "default derived count visible before execution",
+        "preflight derives clipped burst counts",
+        "question run completes",
+        "C++ output matches planned per-class counts",
+        "only ordinary-payment comparisons lead",
+        "unique outcomes represented as stacked bars",
+        "numbered reader questions organize answers",
+        "displayed median is actual confirmed fee distribution: fixed",
+        "displayed median is actual confirmed fee distribution: reactive",
+        "explicit display unit profile",
+        "offer-window cutoff marked on timeline",
+        "fee unit switch updates actual plot",
+        "question layout fits viewport",
+        "six controlled C++ runs produce three matched aggregation comparisons",
+        "browser cap fails inline without silently dropping arrivals",
+        "zero offer duration is explicitly rejected",
+        "restored default runs after validation error"
+      ],
+      "width": 500,
+      "page": "/question-agreement.html"
+    }
+  ],
+  "screenshots": "external build directory; visually reviewed separately"
+}
