@@ -4,6 +4,7 @@
   "receipts": [
     {
       "checks": [
+        "exact proposed native/WASM: drained",
         "exact proposed native/WASM: honest",
         "exact proposed native/WASM: partition",
         "exact proposed native/WASM: burst",
@@ -16,6 +17,10 @@
         "proposed viewer engine ready",
         "proposed controls execute",
         "paired wallet outcomes render",
+        "human payments first",
+        "unique outcomes and attempts distinguished",
+        "resource plot percentage units",
+        "no implicit payment deadline",
         "desired working confirmed graph",
         "epoch decision provenance renders",
         "participant diagnostics selectable",
@@ -26,6 +31,7 @@
     },
     {
       "checks": [
+        "exact proposed native/WASM: drained",
         "exact proposed native/WASM: honest",
         "exact proposed native/WASM: partition",
         "exact proposed native/WASM: burst",
@@ -38,6 +44,10 @@
         "proposed viewer engine ready",
         "proposed controls execute",
         "paired wallet outcomes render",
+        "human payments first",
+        "unique outcomes and attempts distinguished",
+        "resource plot percentage units",
+        "no implicit payment deadline",
         "desired working confirmed graph",
         "epoch decision provenance renders",
         "participant diagnostics selectable",

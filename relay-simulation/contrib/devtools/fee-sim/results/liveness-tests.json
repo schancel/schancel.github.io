@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "default finite burst: 100% human confirmation with bounded fee caps, no deadline and bounded drain",
+    "negative control: disabling relay recovery strands affordable payments after temporary miner backpressure",
+    "reactive quotes and eventual block availability confirm all affordable payments across floor changes",
+    "offered load beyond service capacity remains unfinished at cutoff; no universal liveness claim",
+    "unique fee-cap and minimum-net snapshots are disjoint; blocked payments remain retryable",
+    "only an explicit payment deadline expires a payment",
+    "deterministic repeat, all unique outcome partitions, fee bounds and gross/net conservation"
+  ]
+}
