@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "tested_source_commit": "ef3ac6895b695561e54db28fc591c1e63258423e",
+  "normal_cpp_cases": 14,
+  "case_groups": {
+    "production_peer_manager": 3,
+    "production_reconciliation_actors": 7,
+    "virtual_network": 4
+  },
+  "normal_cases": [
+    "real_manager_outbound_stock_control_and_current_tick",
+    "real_manager_received_body_admission_is_actor_owned",
+    "stock_inbound_poisson_and_noban_bypass",
+    "actual_serialized_single_difference",
+    "bounded_trace_records_actual_admission_and_wire_lifecycle",
+    "actual_gf64_depth_and_terminal_fallback",
+    "three_actor_chain_independent_owned_sets",
+    "bounded_link_queue_reports_failed_convergence",
+    "admission_age_gate_is_per_actor",
+    "periodic_stream_uses_owned_admission_windows",
+    "stable_timers_and_no_inline_mailbox_delivery",
+    "directional_fifo_capacity_and_exact_virtual_serialization_time",
+    "event_budget_prevents_runaway_periodic_timers",
+    "invalid_link_and_serialized_size_fail_explicitly"
+  ],
+  "paired_native_runs": 2,
+  "all_transactions_delivered_each_run": 12,
+  "nodes_each_run": 6,
+  "actual_report_browser_assertions_each_viewport": 22,
+  "actual_report_viewports_css_px": [
+    1440,
+    390
+  ],
+  "synthetic_frontend_assertions_each_viewport": 26,
+  "synthetic_frontend_only": "The 1000-node renderer fixture is not a native 1000-node protocol result.",
+  "scope": "Focused normal C++ diagnostic, not full daemon, every build profile or consensus validation."
+}

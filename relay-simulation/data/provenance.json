@@ -1,0 +1,36 @@
+{
+  "experiment": "Matched native C++ relay-policy actors",
+  "source_commit": "ef3ac6895b695561e54db28fc591c1e63258423e",
+  "production_dependency_base": "81386ab04d633164a3bf679894906b704b5155ae",
+  "historical_abc_policy_reference": "1fb7db17c176cdea8a2c60d887891589382ee4e3",
+  "source_code_sha256": "51df1728d3cb3a9627c0599001fe5152c9b88685a40cb65fcd4324ffed602798",
+  "topology_sha256": "ce6278e4dc2f54c4971d7d8d8fac6bacd06c3a2e14862d7cab7abe5f0d19df66",
+  "offered_stream_sha256": "9c5e43d9c49146876d5b4bbb3c083ca8e9df2e253c7af459a4035f8c24d69376",
+  "build": {
+    "platform": "macOS arm64",
+    "compiler": "Apple Clang 21",
+    "language": "C++20",
+    "optimization": "Release -O3",
+    "immutable_dependency_inputs": 41,
+    "composition": "Normally compiled modified production net_processing.cpp and actor sources linked with older immutable fixture/dependency inputs; public virtual ABI and Options layout unchanged."
+  },
+  "reproduction": {
+    "native_runner": "python3 contrib/devtools/relay-sim/run-native-comparison.py --binary ./build/src/test/relay_node_sim_bench --config config.json --output results",
+    "available_public_material": "Recorded JSON/CSV, exact configs, source/code/topology/stream IDs and inline replay/plot code. The native C++ source and dependency archives are not included in this report publication.",
+    "seed": "One seed (1), one run for each policy; global fixture RNG pinned to zero; per-actor RNG seeded from configuration."
+  },
+  "limitations": [
+    "Historical ABC announcement policy on a common optimized engine, not the entire unmodified upstream daemon.",
+    "Catalog admission oracle, not UTXO/signature/fee or V2 witness validation.",
+    "Virtual FIFO links and ten-millisecond polling; no transport congestion control or virtual CPU service budget.",
+    "Six-node light-load plumbing comparison; default minimum fanout does not bind.",
+    "Replay only; live shared-core WASM and native 1000-node results are pending."
+  ],
+  "private_material_excluded": [
+    "Local file paths and build-input lists",
+    "Raw build/test logs",
+    "Credentials and binaries",
+    "Native source bundles",
+    "Historical Python-model results"
+  ]
+}

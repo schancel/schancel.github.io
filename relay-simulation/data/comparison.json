@@ -1,0 +1,34 @@
+[
+  {
+    "policy": "abc-1fb7-policy",
+    "source_commit": "ef3ac6895b695561e54db28fc591c1e63258423e",
+    "code_sha256": "51df1728d3cb3a9627c0599001fe5152c9b88685a40cb65fcd4324ffed602798",
+    "topology_sha256": "ce6278e4dc2f54c4971d7d8d8fac6bacd06c3a2e14862d7cab7abe5f0d19df66",
+    "offered_stream_sha256": "9c5e43d9c49146876d5b4bbb3c083ca8e9df2e253c7af459a4035f8c24d69376",
+    "nodes": 6,
+    "offered_transactions": 12,
+    "unoffered_transactions": 0,
+    "complete_transactions": 12,
+    "incomplete_transactions": 0,
+    "framed_bytes": 19524,
+    "queue_drops": 0,
+    "virtual_complete_us": 3290179,
+    "host_peak_rss_bytes": 229064704
+  },
+  {
+    "policy": "nucleation",
+    "source_commit": "ef3ac6895b695561e54db28fc591c1e63258423e",
+    "code_sha256": "51df1728d3cb3a9627c0599001fe5152c9b88685a40cb65fcd4324ffed602798",
+    "topology_sha256": "ce6278e4dc2f54c4971d7d8d8fac6bacd06c3a2e14862d7cab7abe5f0d19df66",
+    "offered_stream_sha256": "9c5e43d9c49146876d5b4bbb3c083ca8e9df2e253c7af459a4035f8c24d69376",
+    "nodes": 6,
+    "offered_transactions": 12,
+    "unoffered_transactions": 0,
+    "complete_transactions": 12,
+    "incomplete_transactions": 0,
+    "framed_bytes": 96576,
+    "queue_drops": 0,
+    "virtual_complete_us": 2950299,
+    "host_peak_rss_bytes": 231342080
+  }
+]

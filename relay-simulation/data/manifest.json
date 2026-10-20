@@ -1,0 +1,21 @@
+{
+  "format_version": 1,
+  "publication": "Native C++ relay policy report and recorded graph replay",
+  "tested_native_source_commit": "ef3ac6895b695561e54db28fc591c1e63258423e",
+  "validation": "tests.json",
+  "provenance": "provenance.json",
+  "files_sha256": {
+    "data/abc-1fb7-policy/config.json": "b3248659fb86268b45488f213080a188cdbc1f3e1b25f320b40dd0f4e76385bf",
+    "data/abc-1fb7-policy/run.csv": "c29c46cf18f73411270fded8d2aa84ddf7731f27c8d36c55f291b491dab39603",
+    "data/abc-1fb7-policy/run.json": "d29d2e09b132fd0f95686813a751dbbbed658bd05165f1de0b7bb8ba61e6a3c9",
+    "data/comparison.csv": "f692f0652c6e758629a5ff9d45e524e8c11f1af9b2ba49be4602797299e8945f",
+    "data/comparison.json": "3c5e4d775d5e22f02b7d1cec86ff6572139c6d2376f45374b9d799b92b195d67",
+    "data/nucleation/config.json": "19a679a3ca20783795c77fb6a8ad48cad7a90b4a5eb589b972cc35a6ca495884",
+    "data/nucleation/run.csv": "97e5cb6d9adbcd81ca228e24ca8f8edf11fd63c1309e366ecedd34f915e440fa",
+    "data/nucleation/run.json": "c332aada44c0a634c54479eb514fbb317fc6a6f0a7f5df168e52e8659c3187a8",
+    "data/provenance.json": "47b506c78140e8d5aaee970573c8852bdf0fb7691772de176efae66309b0c4f1",
+    "data/tests.json": "470567d0becf298a1dd4bb527537bf603be655bbb40ec05d89976687a5a6346b",
+    "index.html": "764781c2db8643656f4c8fcf3475a63cd1ae8549206ee804fdfcbd5f14d287b2",
+    "relay.html": "66ea61ae55e491ae8ee9b24b0d3cb2ecfb18e6bad2069789222f1c29aa9a0726"
+  }
+}

@@ -1,0 +1,9751 @@
+{
+  "status": "complete",
+  "actors": 6,
+  "actor_set_sizes": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    12
+  ],
+  "actor_probes": [
+    {
+      "actor": 0,
+      "rate_limited_messages": 0,
+      "malformed_messages": 0,
+      "unsolicited_shorttx_dropped": 0,
+      "recon_relay_missing": 0
+    },
+    {
+      "actor": 1,
+      "rate_limited_messages": 0,
+      "malformed_messages": 0,
+      "unsolicited_shorttx_dropped": 0,
+      "recon_relay_missing": 0
+    },
+    {
+      "actor": 2,
+      "rate_limited_messages": 0,
+      "malformed_messages": 0,
+      "unsolicited_shorttx_dropped": 0,
+      "recon_relay_missing": 0
+    },
+    {
+      "actor": 3,
+      "rate_limited_messages": 0,
+      "malformed_messages": 0,
+      "unsolicited_shorttx_dropped": 0,
+      "recon_relay_missing": 0
+    },
+    {
+      "actor": 4,
+      "rate_limited_messages": 0,
+      "malformed_messages": 0,
+      "unsolicited_shorttx_dropped": 0,
+      "recon_relay_missing": 0
+    },
+    {
+      "actor": 5,
+      "rate_limited_messages": 0,
+      "malformed_messages": 0,
+      "unsolicited_shorttx_dropped": 0,
+      "recon_relay_missing": 0
+    }
+  ],
+  "terminal_fallbacks": 0,
+  "transactions": [
+    {
+      "txid": "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968",
+      "received_actors": 6,
+      "first_admitted_us": 0,
+      "t50_us": 280179,
+      "t99_us": 550179,
+      "t100_us": 550179
+    },
+    {
+      "txid": "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e",
+      "received_actors": 6,
+      "first_admitted_us": 250000,
+      "t50_us": 270179,
+      "t99_us": 810179,
+      "t100_us": 810179
+    },
+    {
+      "txid": "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025",
+      "received_actors": 6,
+      "first_admitted_us": 500000,
+      "t50_us": 270179,
+      "t99_us": 540179,
+      "t100_us": 540179
+    },
+    {
+      "txid": "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf",
+      "received_actors": 6,
+      "first_admitted_us": 750000,
+      "t50_us": 270179,
+      "t99_us": 540179,
+      "t100_us": 540179
+    },
+    {
+      "txid": "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625",
+      "received_actors": 6,
+      "first_admitted_us": 1000000,
+      "t50_us": 270179,
+      "t99_us": 540179,
+      "t100_us": 540179
+    },
+    {
+      "txid": "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb",
+      "received_actors": 6,
+      "first_admitted_us": 1250000,
+      "t50_us": 270179,
+      "t99_us": 810179,
+      "t100_us": 810179
+    },
+    {
+      "txid": "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85",
+      "received_actors": 6,
+      "first_admitted_us": 1500000,
+      "t50_us": 270179,
+      "t99_us": 810179,
+      "t100_us": 810179
+    },
+    {
+      "txid": "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a",
+      "received_actors": 6,
+      "first_admitted_us": 1750000,
+      "t50_us": 270179,
+      "t99_us": 540179,
+      "t100_us": 540179
+    },
+    {
+      "txid": "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39",
+      "received_actors": 6,
+      "first_admitted_us": 2000000,
+      "t50_us": 270179,
+      "t99_us": 810179,
+      "t100_us": 810179
+    },
+    {
+      "txid": "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96",
+      "received_actors": 6,
+      "first_admitted_us": 2250000,
+      "t50_us": 270179,
+      "t99_us": 540179,
+      "t100_us": 540179
+    },
+    {
+      "txid": "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7",
+      "received_actors": 6,
+      "first_admitted_us": 2500000,
+      "t50_us": 270179,
+      "t99_us": 540179,
+      "t100_us": 540179
+    },
+    {
+      "txid": "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb",
+      "received_actors": 6,
+      "first_admitted_us": 2750000,
+      "t50_us": 270179,
+      "t99_us": 540179,
+      "t100_us": 540179
+    }
+  ],
+  "events": 1541,
+  "offered_transactions": 12,
+  "message_counts": {
+    "getdata": 60,
+    "inv": 144,
+    "tx": 60
+  },
+  "stock_framed_bytes": {
+    "getdata": 3660,
+    "inv": 8784,
+    "tx": 7080
+  },
+  "queue_drops": 0,
+  "delivered_frames": 264,
+  "peak_link_queue_bytes": 179,
+  "virtual_complete_us": 3290179,
+  "trace": [
+    {
+      "time_us": 0,
+      "type": "admit",
+      "from": -1,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 10000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 10000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 10061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 10061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 30061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 30061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 240000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 240000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 240061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 240061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 250000,
+      "type": "admit",
+      "from": -1,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 250000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 250000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 250061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 250061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 260061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 260061,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 260061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 260061,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 260179,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 260179,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 270061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 270061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 280179,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 280179,
+      "type": "admit",
+      "from": 1,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 280179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 280179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 280179,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 280179,
+      "type": "admit",
+      "from": 1,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 280179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 280179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 280240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 280240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 280240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 280240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 300240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 300240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 300240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 300240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 480000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 480000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 480061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 480061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 500000,
+      "type": "admit",
+      "from": -1,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 500000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 500000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 500061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 500061,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 500061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 500061,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 500061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 500061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 500179,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 500179,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 510000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 510000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 510000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 510061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 510061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 510061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 520061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 520061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 520179,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 520179,
+      "type": "admit",
+      "from": 0,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 520179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 520179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 520179,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 520179,
+      "type": "admit",
+      "from": 0,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 520179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 520179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 520240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 520240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 520240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 520240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 530061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 530061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 530061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 530061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 530061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 530061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 530179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 530179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 530179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 540240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 540240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 540240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 540240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "admit",
+      "from": 2,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "admit",
+      "from": 2,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "admit",
+      "from": 4,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 550240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 570240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 570240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 570240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 570240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 570240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 570240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 730000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 730000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 730061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 730061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750000,
+      "type": "admit",
+      "from": -1,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 750000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 750061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 750061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 750179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770061,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 770061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 770179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 770179,
+      "type": "admit",
+      "from": 4,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 770179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 770179,
+      "type": "admit",
+      "from": 4,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 770179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770179,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 770240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790179,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 790179,
+      "type": "admit",
+      "from": 1,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 790179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 790179,
+      "type": "admit",
+      "from": 4,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 790179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 790240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 810240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 810240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 810240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 810240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 960000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 960061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 980000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 980000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 980061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 980061,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 980061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 980061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 980122,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000000,
+      "type": "admit",
+      "from": -1,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1000000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000061,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 179,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1000061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000061,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 179,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1000061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 118,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 118,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000122,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 118,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000122,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 1000179,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000179,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1000240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 1,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 1020061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 1020061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020179,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1020179,
+      "type": "admit",
+      "from": 1,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1020179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020179,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1020179,
+      "type": "admit",
+      "from": 1,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1020179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 1020240,
+      "type": "admit",
+      "from": 2,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 1020240,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1020301,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 1040179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 1040179,
+      "type": "admit",
+      "from": 2,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 1040179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 1040179,
+      "type": "admit",
+      "from": 2,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+      ]
+    },
+    {
+      "time_us": 1040179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1040301,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1060179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 1060179,
+      "type": "admit",
+      "from": 2,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+      ]
+    },
+    {
+      "time_us": 1060179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1060179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1060240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1060240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1060240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1060240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1060240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1060240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1080240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1080240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1230000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1230000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1230061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1230061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250000,
+      "type": "admit",
+      "from": -1,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1250000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250061,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1250061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250061,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1250061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250179,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1250179,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1270061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1270061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "admit",
+      "from": 1,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "admit",
+      "from": 1,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1270240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "admit",
+      "from": 2,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "admit",
+      "from": 2,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "admit",
+      "from": 4,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1290240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1310240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1310240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1310240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1310240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1310240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1310240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1480000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1480000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1480061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1480061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500000,
+      "type": "admit",
+      "from": -1,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 1500000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500061,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1500061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500061,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1500061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500179,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1500179,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1520061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1520061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "admit",
+      "from": 0,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "admit",
+      "from": 0,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1520240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "admit",
+      "from": 2,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "admit",
+      "from": 2,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "admit",
+      "from": 4,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1540240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1560240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1560240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1560240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1560240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1560240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1560240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1730000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1730000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1730061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1730061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750000,
+      "type": "admit",
+      "from": -1,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 1750000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 1750061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 1750061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1750179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1770061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1770179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 1770179,
+      "type": "admit",
+      "from": 2,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 1770179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 1770179,
+      "type": "admit",
+      "from": 2,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 1770179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1770240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1790179,
+      "type": "admit",
+      "from": 4,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1790179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1790179,
+      "type": "admit",
+      "from": 4,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 1790179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1790240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1810240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1810240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1810240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1810240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1980000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 5,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1980000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 5,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1980061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 1980061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000000,
+      "type": "admit",
+      "from": -1,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2000000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 5,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000061,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2000061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 5,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000061,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2000061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000179,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2000179,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020061,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 2020061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020061,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 2020061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020179,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2020179,
+      "type": "admit",
+      "from": 5,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2020179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020179,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2020179,
+      "type": "admit",
+      "from": 5,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2020179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020179,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020179,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2020240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 2040179,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 2040179,
+      "type": "admit",
+      "from": 0,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 2040179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040179,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 2040179,
+      "type": "admit",
+      "from": 0,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 2040179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2040240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2060179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 2060179,
+      "type": "admit",
+      "from": 2,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+      ]
+    },
+    {
+      "time_us": 2060179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2060179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2060240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2060240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2060240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2060240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2060240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2060240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2080240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2080240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2230000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2230000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2230061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2230061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250000,
+      "type": "admit",
+      "from": -1,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2250000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250061,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2250061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250061,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2250061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250179,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2250179,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2270061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2270061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270061,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2270061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "admit",
+      "from": 0,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "admit",
+      "from": 0,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270179,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2270240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "admit",
+      "from": 2,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "admit",
+      "from": 2,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "admit",
+      "from": 1,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2290240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2310179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 2310179,
+      "type": "admit",
+      "from": 4,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+      ]
+    },
+    {
+      "time_us": 2310179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2310179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2310240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2310240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2310240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2310240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2310240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2310240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2310240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2310240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2330240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2330240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2480000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 3,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2480000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 3,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2480061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2480061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500000,
+      "type": "admit",
+      "from": -1,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 2500000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 3,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500061,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2500061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 3,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500061,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2500061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500179,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2500179,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2520061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2520179,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2520179,
+      "type": "admit",
+      "from": 3,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2520179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520179,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2520179,
+      "type": "admit",
+      "from": 3,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2520179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2520240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2540179,
+      "type": "admit",
+      "from": 4,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2540179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2540179,
+      "type": "admit",
+      "from": 4,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2540179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2540240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2560240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2560240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2560240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2560240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2730000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 5,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2730000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 5,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2730061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2730061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750000,
+      "type": "admit",
+      "from": -1,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 2750000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 5,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750061,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 2750061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 5,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750061,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 2750061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750179,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2750179,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770061,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2770061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2770061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2770061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "admit",
+      "from": 5,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "admit",
+      "from": 5,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2770240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "admit",
+      "from": 0,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "admit",
+      "from": 4,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 179,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "admit",
+      "from": 4,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 118,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2790240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2810179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2810179,
+      "type": "admit",
+      "from": 2,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+      ]
+    },
+    {
+      "time_us": 2810179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2810179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2810240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2810240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2810240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2810240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2810240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2810240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2810240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2810240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2830240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2830240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2980000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 3,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2980000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 3,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2980061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 2980061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3000000,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3000000,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3000000,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3000061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 3,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3000061,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3000061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 3,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3000061,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3000061,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3000061,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3000061,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3000179,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3000179,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020061,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 3020061,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 2,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020061,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 3020061,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 1,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020061,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "admit",
+      "from": 3,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "admit",
+      "from": 3,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020179,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3020240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "admit",
+      "from": 2,
+      "to": 0,
+      "node": 0,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "admit",
+      "from": 2,
+      "to": 3,
+      "node": 3,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "protocol_enqueue",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "admit",
+      "from": 1,
+      "to": 4,
+      "node": 4,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040179,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040240,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040240,
+      "type": "protocol_serialize_complete",
+      "from": 3,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3040240,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3060240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3060240,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3060240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3060240,
+      "type": "protocol_deliver",
+      "from": 3,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3060240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3060240,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3250000,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3250000,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3250000,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3250061,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3250061,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3250061,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3270061,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 0,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3270061,
+      "type": "protocol_enqueue",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3270061,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3270061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3270061,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 4,
+      "kind": "getdata",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3270061,
+      "type": "protocol_enqueue",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 118,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3270179,
+      "type": "protocol_serialize_complete",
+      "from": 0,
+      "to": 1,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3270179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 2,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3270179,
+      "type": "protocol_serialize_complete",
+      "from": 4,
+      "to": 5,
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "protocol_deliver",
+      "from": 0,
+      "to": 1,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "admit",
+      "from": 0,
+      "to": 1,
+      "node": 1,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "protocol_enqueue",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 2,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "admit",
+      "from": 4,
+      "to": 2,
+      "node": 2,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "protocol_enqueue",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "protocol_deliver",
+      "from": 4,
+      "to": 5,
+      "kind": "tx",
+      "bytes": 118,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "admit",
+      "from": 4,
+      "to": 5,
+      "node": 5,
+      "bytes": 0,
+      "queued_bytes": 0,
+      "txids": [
+        "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290179,
+      "type": "protocol_enqueue",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 61,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290240,
+      "type": "protocol_serialize_complete",
+      "from": 1,
+      "to": 4,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 0,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290240,
+      "type": "protocol_serialize_complete",
+      "from": 2,
+      "to": 3,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 1,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3290240,
+      "type": "protocol_serialize_complete",
+      "from": 5,
+      "to": 2,
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3310240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3310240,
+      "type": "protocol_deliver",
+      "from": 1,
+      "to": 4,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3310240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 0,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3310240,
+      "type": "protocol_deliver",
+      "from": 2,
+      "to": 3,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3310240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 1,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    },
+    {
+      "time_us": 3310240,
+      "type": "protocol_deliver",
+      "from": 5,
+      "to": 2,
+      "kind": "inv",
+      "bytes": 61,
+      "queued_bytes": 0,
+      "txids": [
+      ]
+    }
+  ],
+  "trace_events_dropped": 0,
+  "config": {
+    "nodes": 6,
+    "outbound": 2,
+    "transactions": 12,
+    "transactions_per_second": 4,
+    "seed": 1,
+    "horizon_us": 10000000,
+    "poll_interval_us": 10000,
+    "max_events": 1000000,
+    "max_trace_events": 100000,
+    "link_latency_us": 20000,
+    "link_bytes_per_second": 1000000,
+    "link_capacity_bytes": 1000000,
+    "fanout_min": 8,
+    "fanout_percent": 25,
+    "fanout_max": 32,
+    "policy": "abc-1fb7-policy"
+  },
+  "config_sha256": "9bcb54d737201171afc24220f09814ef0d799c0ce0e5c68377fedf0b440d8fc0",
+  "topology_outbound_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      2
+    ]
+  ],
+  "topology_sha256": "ce6278e4dc2f54c4971d7d8d8fac6bacd06c3a2e14862d7cab7abe5f0d19df66",
+  "offered_stream": [
+    {
+      "time_us": 0,
+      "node": 1,
+      "txid": "75a6540e024b360710cfedbeb38cf41ec97682f9c25d3fabdfd9a0f669c69968"
+    },
+    {
+      "time_us": 250000,
+      "node": 0,
+      "txid": "7b0047c725f10a3759f43f33fd6b35648bb35914ab13c5cfcf5b06f22978896e"
+    },
+    {
+      "time_us": 500000,
+      "node": 4,
+      "txid": "70afab845f1994a6760bc5eab702b78af284a5946834415c3f106716c6eb5025"
+    },
+    {
+      "time_us": 750000,
+      "node": 1,
+      "txid": "576bf237341cd891126ddad97b9ee6d949aa29d3b5e54da44497c9b8e10b9fbf"
+    },
+    {
+      "time_us": 1000000,
+      "node": 1,
+      "txid": "87cff87f20cc014afc1d9dcedd241ee56db458a6b9f33fb5c5d0b95d68598625"
+    },
+    {
+      "time_us": 1250000,
+      "node": 0,
+      "txid": "3749bf3f62461110b3e05a9be4666dc6cd824ddc83ad0fbee0641fd7bfd8d9cb"
+    },
+    {
+      "time_us": 1500000,
+      "node": 2,
+      "txid": "4461b4ebc9a8c344dded1f969e4c653ba0a5395f8515df5fcd454dec12345b85"
+    },
+    {
+      "time_us": 1750000,
+      "node": 5,
+      "txid": "4006c5257ebccf193de631f738311c69ef13e3f587d66ec1bb2ef1ab57192e4a"
+    },
+    {
+      "time_us": 2000000,
+      "node": 0,
+      "txid": "b0d56262ef41071d04cae2ef746f0f84ab9c5d6e5880c924bda6e8c09e892e39"
+    },
+    {
+      "time_us": 2250000,
+      "node": 3,
+      "txid": "9e884cad1f17783864487bec1d21e428ec78bd4cfa8059fb2ac88cb5bfba1a96"
+    },
+    {
+      "time_us": 2500000,
+      "node": 5,
+      "txid": "449c18870b2a841844c37b7c488a5857ce505dac6eaab6f3ebdf8fa744a978f7"
+    },
+    {
+      "time_us": 2750000,
+      "node": 3,
+      "txid": "597c476d13e686196e0dedc23815377c5032c6dfe5de6ef9eeb7766ddb614fdb"
+    }
+  ],
+  "offered_stream_sha256": "9c5e43d9c49146876d5b4bbb3c083ca8e9df2e253c7af459a4035f8c24d69376",
+  "source_commit": "ef3ac6895b695561e54db28fc591c1e63258423e",
+  "fixture_global_rng_seed": "0000000000000000000000000000000000000000000000000000000000000000",
+  "code_sha256": "51df1728d3cb3a9627c0599001fe5152c9b88685a40cb65fcd4324ffed602798",
+  "scope": "Actual PeerManager, request tracker, known filters, relay policies and reconciliation handlers; per-actor owned mempools; catalog admission oracle; modeled virtual links/poll cadence; fixture handshakes excluded. ABC policy control is not entire upstream daemon.",
+  "host_process_cpu_seconds": 0.021217,
+  "host_wall_seconds": 0.020706584,
+  "host_peak_rss_bytes": 229064704,
+  "host_load_average": [
+    9.9306640625,
+    9.1552734375,
+    9.52685546875
+  ]
+}

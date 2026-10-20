@@ -1,0 +1,15 @@
+{
+  "horizon_us": 10000000,
+  "link_bytes_per_second": 1000000,
+  "link_capacity_bytes": 1000000,
+  "link_latency_us": 20000,
+  "max_events": 1000000,
+  "max_trace_events": 100000,
+  "nodes": 6,
+  "outbound": 2,
+  "policy": "nucleation",
+  "poll_interval_us": 10000,
+  "seed": 1,
+  "transactions": 12,
+  "transactions_per_second": 4
+}
