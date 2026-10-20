@@ -5,6 +5,16 @@
   "validation": "tests.json",
   "provenance": "provenance.json",
   "files_sha256": {
+    "contrib/devtools/fee-sim/agreement-viewer.js": "1f23d59a513b94db745d4fc2028763c2f4ed82d3a344d97e41d13663da899dd5",
+    "contrib/devtools/fee-sim/provenance.json": "917a4ee5059d138289fcddefb1b49333bbb74bb08253ed0c8879ad5e54687158",
+    "contrib/devtools/fee-sim/results/agreement-browser-tests.json": "845493ead82cd045f940300ff0324a6665dc147c9115a4dd57150b6a365952ea",
+    "contrib/devtools/fee-sim/results/agreement-tests.json": "6ac125fe0ff83cfada5fb5512a5491e0693d700c3ce2a8720ecea607fcd1088e",
+    "contrib/devtools/fee-sim/results/browser-tests.json": "d41b962cd9abd07d6a5d1947e9f076a4e819fd19ff55fc7c8e8fb82b8f800607",
+    "contrib/devtools/fee-sim/results/liveness-tests.json": "3b91dc1c7c4e6fdfb68828f1a14e630d545ef487ced30cec6e433d940abb5c4a",
+    "contrib/devtools/fee-sim/results/native-tests.json": "055998aff2b1c7d5520598b1a9442c9e6772fbadac64cfa8f046ee7d3c6a89f1",
+    "contrib/devtools/fee-sim/results/startup-tests.json": "bee0a232c4470e148e5d69dce6d671a8238c81d47f5492df058abb64bd446487",
+    "contrib/devtools/fee-sim/viewer.css": "de16fe93d62c699b75de58affc7a6d484b585cdf45cd4547629de54509909312",
+    "contrib/devtools/fee-sim/viewer.js": "efb9bd1dc6a8b9b658334985e64b9c726256b04ddf154b563730f9425fa302e0",
     "data/abc-1fb7-policy/config.json": "b3248659fb86268b45488f213080a188cdbc1f3e1b25f320b40dd0f4e76385bf",
     "data/abc-1fb7-policy/run.csv": "c29c46cf18f73411270fded8d2aa84ddf7731f27c8d36c55f291b491dab39603",
     "data/abc-1fb7-policy/run.json": "d29d2e09b132fd0f95686813a751dbbbed658bd05165f1de0b7bb8ba61e6a3c9",
@@ -15,7 +25,13 @@
     "data/nucleation/run.json": "c332aada44c0a634c54479eb514fbb317fc6a6f0a7f5df168e52e8659c3187a8",
     "data/provenance.json": "47b506c78140e8d5aaee970573c8852bdf0fb7691772de176efae66309b0c4f1",
     "data/tests.json": "470567d0becf298a1dd4bb527537bf603be655bbb40ec05d89976687a5a6346b",
+    "data/topology500.json": "bed193bb55ef34e525a7bd021b4634f4a355d4298ea8a5238ff9c1fd67db7647",
+    "fee-agreement.html": "c7f7cf4485f2f131688e8ca20426fc0e62a3452f557a505134bd328170ad9106",
+    "fee-sim.js": "2c12ef9de55b01452c6102109df4d5bbcc5232780c52d615c99576dc0e047ccc",
+    "fee-sim.wasm": "7657c84115c5aa4b80bfd8a765930c83819bac553a09213ec1527a43f575769e",
+    "fee.html": "0ee7d5b4c0505bc472219162341d935a3fd0c3ed17781b969b22dd26102060d8",
     "index.html": "764781c2db8643656f4c8fcf3475a63cd1ae8549206ee804fdfcbd5f14d287b2",
-    "relay.html": "cfc2d7996c042fc4d0119f1ecc2ffd46a22e2fba0f5419efe0c1916c2b695c69"
+    "relay.html": "b894c0f373fb9f8cd32da14a4880a908dbc07e83cc3ff1c42c1367e7d72c3296",
+    "data/topology-validation.json": "51d06cf49a6f351765df3b55515a9f4c32e8459b414a885d6faf46d2e321d10e"
   }
 }

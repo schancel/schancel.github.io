@@ -1,0 +1,39 @@
+{
+  "native_source_commit": "9ea52f469821cf83f50eef3733fbe90fa326e59d",
+  "normal_cpp_cases_passed": 16,
+  "topology_only_fixture": {
+    "nodes": 500,
+    "mean_total_degree": 50,
+    "transactions_requested": 100000,
+    "protocol_execution": false
+  },
+  "paired_protocol_validation": [
+    {
+      "source_commit": "9ea52f469821cf83f50eef3733fbe90fa326e59d",
+      "code_sha256": "66f84470bae2fa89fed5f9c4ab1ea43a4072ed56c809a0e321e63a4d3b77f17c",
+      "policy": "abc-1fb7-policy",
+      "nodes": 24,
+      "complete_transactions": 12,
+      "offered_transactions": 12,
+      "topology_sha256": "5cca6a7d4e3bc7275dd4885a909a2bd4cd9728a2889226bd8c91f6b9d913eeab",
+      "offered_stream_sha256": "c1bc01ab63cbe2032bec403321cfa5cdf76997b139d921af306372186d99b6da",
+      "framed_bytes": 84376,
+      "queue_drops": 0,
+      "host_peak_rss_bytes": 628015104
+    },
+    {
+      "source_commit": "9ea52f469821cf83f50eef3733fbe90fa326e59d",
+      "code_sha256": "66f84470bae2fa89fed5f9c4ab1ea43a4072ed56c809a0e321e63a4d3b77f17c",
+      "policy": "nucleation",
+      "nodes": 24,
+      "complete_transactions": 12,
+      "offered_transactions": 12,
+      "topology_sha256": "5cca6a7d4e3bc7275dd4885a909a2bd4cd9728a2889226bd8c91f6b9d913eeab",
+      "offered_stream_sha256": "c1bc01ab63cbe2032bec403321cfa5cdf76997b139d921af306372186d99b6da",
+      "framed_bytes": 388824,
+      "queue_drops": 0,
+      "host_peak_rss_bytes": 636862464
+    }
+  ],
+  "scope": "Focused normal diagnostic using41older81386fixture/dependencyinputs; notcombineddaemonvalidation orrealnetworkperformance."
+}
