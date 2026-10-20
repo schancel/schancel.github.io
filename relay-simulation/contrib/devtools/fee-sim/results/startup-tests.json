@@ -1,0 +1,11 @@
+{
+  "browser": "Chrome headless",
+  "checks": [
+    "fee.html file protocol guard",
+    "fee-agreement.html file protocol guard",
+    "fee.html real HTTP startup",
+    "fee-agreement.html real HTTP startup",
+    "missing module reported",
+    "hung module times out"
+  ]
+}

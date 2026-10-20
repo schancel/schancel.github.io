@@ -1,0 +1,14 @@
+{
+  "scope": "experimental agreement model; actual VoteRecord primitive only",
+  "checks": [
+    "operator desired seed never overrides network-confirmed admission before activation",
+    "honest exact candidate confidence and delayed activation",
+    "deterministic repeat including seeded actual VoteRecord",
+    "partition holds confirmed rate; local proposal never becomes unilateral enforcement",
+    "admitted valid work drives separate bounded PI state; actuator-lag anti-windup exercised",
+    "high weighted adversarial reports can prevent liveness; no guaranteed robust convergence",
+    "10% recurring anchor manipulates recycled geometric working averages; median comparator differs, not a production exploit",
+    "bounded resource queues and emergency backpressure are independent of confirmed fee",
+    "PI/PID and slower-feedback comparison fixtures obey the same activation and budget invariants; no tuning optimality claim"
+  ]
+}

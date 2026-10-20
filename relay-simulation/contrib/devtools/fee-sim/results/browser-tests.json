@@ -1,0 +1,44 @@
+{
+  "live_wasm": true,
+  "browser": "Chrome headless",
+  "receipts": [
+    {
+      "checks": [
+        "exact native/WASM agreement: default",
+        "exact native/WASM agreement: crossing",
+        "exact native/WASM agreement: cohort-100x",
+        "exact native/WASM agreement: spam-negative",
+        "exact native/WASM agreement: disk",
+        "invalid config handled",
+        "viewer engine ready",
+        "real control submit executes",
+        "both scenarios and all classes render",
+        "paired backlog graph",
+        "RPC and relay graphs",
+        "viewport contains layout",
+        "reset restores defaults",
+        "recipient minimum error visible"
+      ],
+      "width": 1280
+    },
+    {
+      "checks": [
+        "exact native/WASM agreement: default",
+        "exact native/WASM agreement: crossing",
+        "exact native/WASM agreement: cohort-100x",
+        "exact native/WASM agreement: spam-negative",
+        "exact native/WASM agreement: disk",
+        "invalid config handled",
+        "viewer engine ready",
+        "real control submit executes",
+        "both scenarios and all classes render",
+        "paired backlog graph",
+        "RPC and relay graphs",
+        "viewport contains layout",
+        "reset restores defaults",
+        "recipient minimum error visible"
+      ],
+      "width": 500
+    }
+  ]
+}

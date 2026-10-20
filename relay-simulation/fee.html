@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fee market laboratory · Lotus</title><link rel="stylesheet" href="contrib/devtools/fee-sim/viewer.css"></head>
+<body><main><header><p class="eyebrow">LOTUS · MEMPOOL LABORATORY</p><nav><a href="relay.html">Relay experiment</a> · <a href="fee.html" aria-current="page">Local fee policy</a> · <a href="fee-agreement.html">Proposed fee agreement →</a></nav><h1>What does a fee quote cost?</h1><p class="intro">The sender chooses a gross payment; the wallet quotes a bounded fee and deducts it from that amount. Compare fixed and reactive bidding under the same demand, and see the recipient’s gross, fee, and net.</p><p class="muted">Local-policy baseline: the proposed Avalanche fee-agreement mechanism is not implemented in this experiment.</p><div id="status" role="status">Loading the C++ WebAssembly simulator…</div></header>
+<section class="workspace"><form id="controls"><div class="section-title"><h2>Experiment</h2><button type="button" id="reset">Reset</button></div><label>Demand preset<select id="preset"><option value="burst">Everyday burst</option><option value="cohort">100× human baseline bids</option><option value="disk">Synthetic disk congestion</option><option value="quiet">Room to breathe</option><option value="overload">Sustained competition</option><option value="spam">Spam can outbid</option><option value="crossing">One-atom boundary</option></select></label><button id="run" type="submit" disabled>Run paired simulation</button><div id="fields"></div></form><div class="results"><div id="summary" class="empty"><span class="orb">↗</span><h2>Follow the bid. Follow the backlog.</h2><p>Each run shares a seed and demand schedule across both scenarios. All controls change the simulator input.</p></div><div id="output" hidden><div id="cards" class="cards"></div><section class="panel"><h2>Backlog over time</h2><p class="muted">Bytes waiting in the simulated mempool · <span class="fixed">● Fixed</span> <span class="reactive">● Reactive</span></p><div id="queue-chart"></div></section><section id="disk-panel" class="panel" hidden><h2>Synthetic disk write queue</h2><p class="muted">Admitted transaction bytes waiting for modeled writes; configured byte-per-second drain. This is a synthetic queue, not measured disk I/O. Capacity is capped at mempool capacity; the congestion threshold uses this queue in disk mode.</p><div id="disk-chart"></div></section><section class="panel"><h2>Published fee signal</h2><p class="muted">Atoms / 1,000 bytes · solid: RPC quote; dashed: relay floor</p><div id="fee-chart"></div></section><section class="panel"><h2>Outcomes by sender</h2><p class="muted">Accepted counts unique transactions; deferred and rejected count attempts, and evicted counts per-node removal events. These outcomes are not mutually exclusive. Delay percentiles include confirmed transactions only. Pending and expired transactions are censored; a low percentile alone does not mean a healthy market.</p><div class="table-scroll"><table><thead><tr><th>Scenario / sender</th><th>Sent</th><th>Accepted</th><th>Confirmed</th><th>Deferred</th><th>Rejected</th><th>Evicted</th><th>Expired</th><th>Pending</th><th>Gross paid</th><th>Recipient net</th><th>Fees</th><th>Overspend</th><th>p50</th><th>p95</th><th>p99</th></tr></thead><tbody id="outcomes"></tbody></table></div></section><section class="panel export"><h2>Reproduce this run</h2><button type="button" id="export-config">Config JSON</button><button type="button" id="export-results">Results JSON</button><button type="button" id="export-csv">Outcomes CSV</button><p id="run-details" class="muted"></p></section></div></div></section>
+<footer><p>One synthetic miner confirms transactions from node 0. Peers form a complete graph; this does not run the full node relay or consensus implementation. Retry delays are uniform from the configured base to twice the base. Quote expiry controls how long a quote remains usable, rather than a periodic refresh. The accepted-transaction policy either retains admitted transactions as the floor changes or rechecks and removes them against the new RPC threshold.</p><p>Payment policy: the sender chooses the gross amount G. The wallet automatically quotes a bounded fee F, deducted from gross; the recipient receives a net UTXO of G − F and sees gross, processing fee, and net. The recipient bears this fee economically. Normal wallet use has no routine fee-rate prompt: the controls here are research controls. Invoice maximum-fee and minimum-net limits use quiet defaults; when a payment cannot fit them, the wallet defers it with a clear reason. The simulated cap is the smaller of the sender class budget and gross minus minimum recipient net. All amounts use the same native fee asset. This wallet policy requires no consensus change, auction, or refund.</p><p>The 100× preset gives humans a baseline bid of 100,000 atoms / 1,000 bytes (0.1 XPI / kB), versus 1,000 (0.001 XPI / kB) for background traffic, with ±1% jitter. Jitter near an exact floor can cause refusal; vary it to test the boundary. Fixed wallets use the chosen shared or cohort baseline. Reactive wallets bid the greater of that baseline and the controller SDK quote, subject to their transaction budget.</p><p>In synthetic disk mode, admitted transaction bytes enter a modeled write queue that drains at the configured rate. The actual controller congestion formula runs on this modeled queue. No measured disk I/O, unit-price forecast, or supply assumption is involved.</p><h2>Real primitives. Synthetic market.</h2><p>The compiled C++ simulator uses actual <code>CFeeRate</code> and <code>FeeHysteresisController</code> primitives and the shared relay <code>EventLoop</code>/<code>VirtualNetwork</code>. Wallets, mempools, and miners are synthetic actors. This is not full node validation, signature verification, or a benchmark of real CPU/network performance.</p><p>Sender classes receive no privileged priority: equal visible bids are interchangeable. Under overload, identical bids cannot all confirm; spam can outbid other senders. Fees use atoms: 1,000 atoms / 1,000 bytes = 1 atom / byte. One XEC = 100 atoms; one XPI = 1,000,000 atoms.</p></footer></main><script>
+(function () {
+  const status = document.getElementById('status');
+  const page = location.pathname.endsWith('fee-agreement.html') ? 'fee-agreement.html' : 'fee.html';
+  function fail(message) {
+    status.classList.add('error');
+    status.textContent = message;
+    document.getElementById('run').disabled = true;
+  }
+  if (location.protocol === 'file:') {
+    fail('This simulator cannot start from a file:// URL. Browsers block the module and WebAssembly fetches. Open it through HTTP instead. ');
+    const link = document.createElement('a');
+    link.href = 'http://127.0.0.1:18765/' + page;
+    link.textContent = 'Open the local HTTP simulator';
+    status.append(link);
+    const instructions = document.createElement('p');
+    instructions.textContent = 'If the local server is not running, run this command in a terminal, then open the link:';
+    const command = document.createElement('code');
+    const directory = decodeURIComponent(new URL('.', location.href).pathname);
+    const quoted = "'" + directory.replaceAll("'", "'\\''") + "'";
+    command.textContent = 'python3 -m http.server 18765 --bind 127.0.0.1 --directory ' + quoted;
+    status.append(instructions, command);
+    return;
+  }
+  const timeout = setTimeout(function () {
+    fail('Simulator startup timed out. Reload this HTTP page and check that fee-sim.js and fee-sim.wasm are served beside it.');
+  }, 20000);
+  const onError = function (event) { fail('Simulator startup failed: ' + (event.message || 'JavaScript loading error')); };
+  window.addEventListener('error', onError);
+  import('./contrib/devtools/fee-sim/viewer.js').catch(function (error) {
+    fail('Cannot load the simulator interface: ' + error.message + '. Serve this repository over HTTP and check the viewer assets.');
+  }).finally(function () {
+    clearTimeout(timeout);
+    window.removeEventListener('error', onError);
+  });
+})();
+</script>
+</body></html>

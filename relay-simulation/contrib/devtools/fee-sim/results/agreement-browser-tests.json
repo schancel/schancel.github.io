@@ -1,0 +1,50 @@
+{
+  "live_wasm": true,
+  "scope": "proposed synthetic agreement, actual VoteRecord primitive",
+  "receipts": [
+    {
+      "checks": [
+        "exact proposed native/WASM: honest",
+        "exact proposed native/WASM: partition",
+        "exact proposed native/WASM: burst",
+        "exact proposed native/WASM: bad",
+        "exact proposed native/WASM: anchor-geometric",
+        "exact proposed native/WASM: anchor-median",
+        "exact proposed native/WASM: anchor-arithmetic",
+        "exact proposed native/WASM: pid",
+        "exact proposed native/WASM: slow-pi",
+        "proposed viewer engine ready",
+        "proposed controls execute",
+        "paired wallet outcomes render",
+        "desired working confirmed graph",
+        "epoch decision provenance renders",
+        "participant diagnostics selectable",
+        "proposed viewport fits",
+        "C++ guard error visible"
+      ],
+      "width": 1280
+    },
+    {
+      "checks": [
+        "exact proposed native/WASM: honest",
+        "exact proposed native/WASM: partition",
+        "exact proposed native/WASM: burst",
+        "exact proposed native/WASM: bad",
+        "exact proposed native/WASM: anchor-geometric",
+        "exact proposed native/WASM: anchor-median",
+        "exact proposed native/WASM: anchor-arithmetic",
+        "exact proposed native/WASM: pid",
+        "exact proposed native/WASM: slow-pi",
+        "proposed viewer engine ready",
+        "proposed controls execute",
+        "paired wallet outcomes render",
+        "desired working confirmed graph",
+        "epoch decision provenance renders",
+        "participant diagnostics selectable",
+        "proposed viewport fits",
+        "C++ guard error visible"
+      ],
+      "width": 500
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "native synthetic-actor regression; actual fee primitives",
+  "checks": [
+    "actual CFeeRate floor/ceiling/one-atom rounding and controller history/reset",
+    "quiet fixed floor admission and gross/net accounting",
+    "full deterministic repeat/reset",
+    "one-atom floor crossing rejects fixed bids; quote cushion avoids boundary",
+    "expired quotes never dispatched by reactive wallet",
+    "recipient net minimum caps fee and defers without surprise spend",
+    "burst/backlog bound and explicit budget-limited starvation",
+    "already accepted retention versus explicit recheck policy",
+    "100x cohort separation and higher-bidding spam negative control",
+    "synthetic disk backlog resource bound"
+  ]
+}

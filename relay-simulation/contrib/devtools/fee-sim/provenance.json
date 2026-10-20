@@ -1,0 +1,64 @@
+{
+  "node_source_commit": "c005cc6a27ef4a870effb832345ac2113a084b25",
+  "node_source_tree": "b2f8dc589fc37afab85b77742251762505f36ec2",
+  "fee_controller_matches_study_source": "b2c08f5c005066bde5aa5960a3803e3ebe21eeb1",
+  "emscripten": "4.0.20",
+  "source_sha256": {
+    "src/feerate.cpp": "a0ccca4bd1a467819651581eb901f16f7a662b20a9acd8cfc05271ccdbed4aa2",
+    "src/feerate.h": "12e94843363ff27f3bfe71326b08dae55b1856d122216651b16f72f122336087",
+    "src/lotus_v2/fee_hysteresis.cpp": "979599e84962227bf435392c7ee0a3dca679699db9211fa7847da64ce8d419c0",
+    "src/lotus_v2/fee_hysteresis.h": "b2305b669883b01cd799a0589e7bb9a2e2152e1b5d583295b01a7e38b4b4547b",
+    "src/arith_uint256.cpp": "6484a18c0a41c7721a6fa695f166573e9e5db2869214a9ec336fc961a39d6eac",
+    "src/test/util/virtual_network.h": "df012f219fed20d83934d930b056fe1f736bd408314c4620e00f7dffe0ab2103",
+    "src/avalanche/voterecord.cpp": "3ff2eb1577d28c32ba10e6061247107fc43d8900dd847a272b62e8adb0631454",
+    "src/avalanche/voterecord.h": "038035ad9119f5834d932997287fab52aa8ac4f695f69a3b3dbb0c46443de290",
+    "src/util/bitmanip.h": "c554b667a89c30f30effcc92355ad60fac79247b0b77f686856e37ea1b804562"
+  },
+  "scope": "actual CFeeRate/FeeHysteresisController/VoteRecord/VirtualNetwork; synthetic wallets/mempools, resource PI/PID, geometric/median/mean gossip, fixed eligible weights and shared activation ledger; no production consensus/RPC/wire change",
+  "artifact_sha256": {
+    "fee-sim.js": "5d38f3ed7ac8086703d891d869ca81e4917a425206a7b7a02bebb45f52ed2469",
+    "fee-sim.wasm": "9706f2dfdc3140e0525c1d6a9c062017795c07fcb77b347e8cd7f4d1f87bff2b",
+    "contrib/devtools/fee-sim/main.cpp": "3e1255f1a5332b0c19a26a2192e80939723f18a7a7a5f5990024a946d46f006d",
+    "contrib/devtools/fee-sim/agreement.h": "0d098e2d0feafb07ebe12d0c9fe6b8e8e31f4e6a5572d41ed9f0f5f9514d8a48"
+  },
+  "build_warnings": [
+    "32-bit size_t assertion comparison in unchanged src/feerate.cpp",
+    "Emscripten sys/fcntl.h forwarding warning from unchanged node headers"
+  ],
+  "fixture_build_config": {
+    "HAVE_DECL___BUILTIN_POPCOUNT": 1,
+    "PACKAGE_BUGREPORT": "fee-sim-experimental"
+  },
+  "result_sha256": {
+    "contrib/devtools/fee-sim/results/agreement-partition.json": "3c8ffa51e7d08de7101105e8eb5aa52363c21cad1a01fae310f5eb7c85c8e0e0",
+    "contrib/devtools/fee-sim/results/agreement-anchor-median.json": "e018e9850e527606ac083067354ea952596f5e6b1d380003e137a136f24755fa",
+    "contrib/devtools/fee-sim/results/browser-tests.json": "d41b962cd9abd07d6a5d1947e9f076a4e819fd19ff55fc7c8e8fb82b8f800607",
+    "contrib/devtools/fee-sim/results/native-tests.json": "055998aff2b1c7d5520598b1a9442c9e6772fbadac64cfa8f046ee7d3c6a89f1",
+    "contrib/devtools/fee-sim/results/spam-negative.json": "0374aab925a50bd2d69bbd9b7706386b06dae65c395ed4e7ccb699153bbac7b9",
+    "contrib/devtools/fee-sim/results/agreement-pid.json": "6b52419c9fbfec106b1a1138351d60b1267485cf9e2682e0e25656d9d7933c73",
+    "contrib/devtools/fee-sim/results/agreement-tests.json": "6ac125fe0ff83cfada5fb5512a5491e0693d700c3ce2a8720ecea607fcd1088e",
+    "contrib/devtools/fee-sim/results/cohort-100x.json": "1eb0b4d39487f3d045433eecc50e4194c409025186c292f01f5654e3e1f3bc1c",
+    "contrib/devtools/fee-sim/results/agreement-browser-tests.json": "13e1528973cee8b25187ab080bfc402d282d939c5ef6fa58374305651bc40704",
+    "contrib/devtools/fee-sim/results/agreement-anchor-geometric.json": "f04db43f715a932a12b8e13af70c219ba834229877f9e97fcfe817c0f191f755",
+    "contrib/devtools/fee-sim/results/agreement-burst.json": "a1337913a50a3e28a48bd4cd21b5b89b0a50ef5158b4a7c86a97072f4c275302",
+    "contrib/devtools/fee-sim/results/crossing.json": "d3d4dfcec2fd3890be3b4932817c324a1765a44a90b54d5c79a58725ca45ee21",
+    "contrib/devtools/fee-sim/results/agreement-slow-pi.json": "a9bdc7112280d309169c6d9199e1c21789b65e5330a8ac0f59c232e7ad979585",
+    "contrib/devtools/fee-sim/results/agreement-anchor-arithmetic.json": "8e41f9dd80a0b309f226742804e909b42d95b8ef21d1eda1898239673e8474e7",
+    "contrib/devtools/fee-sim/results/disk.json": "387f595ba3ea1e81fbacc5e03dc1d4d444daa380975b3a0e6819737520363d6f",
+    "contrib/devtools/fee-sim/results/default.json": "dcafc3ad28f3846fc08481746b3ca6229bfb9e23ff903b45d28ac01fbb8bb0c3",
+    "contrib/devtools/fee-sim/results/agreement-honest.json": "40bf155b1936280647f17c37aa1c84fc625e5ff315e64ea04c9adf15c9c8c160",
+    "contrib/devtools/fee-sim/results/agreement-bad.json": "c69469b019918acfc375fac78e2e3b299aa042734b7b37ea2a1b689a6afe3d2a",
+    "contrib/devtools/fee-sim/results/startup-tests.json": "bee0a232c4470e148e5d69dce6d671a8238c81d47f5492df058abb64bd446487"
+  },
+  "simulator_source_commit": "5a1e3a610a01674a7b13fbe22b5b3fcf45623728",
+  "published_runtime_assets": {
+    "fee.html": "a30fba29fef2c07ecdaedfc0a9cd09131e4f725b329316f7930899f48a586d01",
+    "fee-agreement.html": "83eb23e4660723fb34bd5c5c1dd94b65f0e587cd18a8c85f6953c22d92122bc0",
+    "fee-sim.js": "5d38f3ed7ac8086703d891d869ca81e4917a425206a7b7a02bebb45f52ed2469",
+    "fee-sim.wasm": "9706f2dfdc3140e0525c1d6a9c062017795c07fcb77b347e8cd7f4d1f87bff2b",
+    "contrib/devtools/fee-sim/viewer.js": "ef7258da82279b1826d8c9a21ba1676909e9f4d57bd9ec1767f20add6268544a",
+    "contrib/devtools/fee-sim/agreement-viewer.js": "951916b22790d3e441c980fbb24ad184ee63b69e37a75afede06c982e42ccba3",
+    "contrib/devtools/fee-sim/viewer.css": "453917be0fbe0d7298c3b466bb0a769b815dd7ff838e6f57ac56999fd366ec7d"
+  },
+  "publication_scope": "Live compiled C++ WebAssembly; synthetic wallets, mempools and agreement mechanism, not full-node consensus or a daemon throughput benchmark."
+}
