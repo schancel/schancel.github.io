@@ -1,0 +1,22 @@
+{
+  "source_commit": "18f6e4cdc35323acb2ea70e4ca4830429badb27e",
+  "scope": "Same C++ topology generator only; no PeerManagers or relay protocol in WASM",
+  "toolchain": "Emscripten4.0.20; nativeAppleClang21; C++20-O2",
+  "sha256": {
+    "topology.cpp": "e5dfcf6668d864456e05b70dfa95c9dd0097537785f615e35c41b516934adee2",
+    "CMakeLists.txt": "ffcd0e055569d42ffccabd284f3e14c67a284efd5a9ab31b6f709c74a1a74f33",
+    "viewer/topology.js": "002f588178aa659a08a237130e1c7bae031c197d777fa65427b57ddc4a49907a",
+    "viewer/topology.wasm": "21fd990b265a2d4722f68489f5bb4896cb5e64fb7df243d9fc186875b5758e82",
+    "src/test/util/relay_topology.h": "c4595de8499a2589e5fcecc2c5840fb555c4a7a6b98233b3f555063d6b77e7f4"
+  },
+  "native_wasm_exact_configurations": 5,
+  "browser_validation": {
+    "actual_viewports_css_px": [
+      1440,
+      390
+    ],
+    "checks_each": 8,
+    "scope": "Actual WebAssembly Worker generates500nodes50totalneighbors12500edges, preflight memory, Cancel, unchanged1788eventreplay and viewport fit; topology only.",
+    "frontend_sha256_at_check": "3f079f7a92924a43238379450de47359e0da84ac8d4cf51266f5f6041adc47a3"
+  }
+}
